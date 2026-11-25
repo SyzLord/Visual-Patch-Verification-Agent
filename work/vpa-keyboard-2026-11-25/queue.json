@@ -1,0 +1,517 @@
+[
+  {
+    "position": 69,
+    "family": "air",
+    "panel": "flatpickr",
+    "number": 634,
+    "title": "Keyboard navigation mode exits browser's fullscreen mode on Esc",
+    "url": "https://github.com/t1m0n/air-datepicker/issues/634",
+    "promoted": false,
+    "cues": [
+      "keyboard",
+      "on esc"
+    ],
+    "bm25": [
+      "keys",
+      "range",
+      "month",
+      "manual",
+      "time"
+    ]
+  },
+  {
+    "position": 170,
+    "family": "flatpickr",
+    "panel": "flatpickr",
+    "number": 2376,
+    "title": "appendTo set to body breaks arrow keys on all unrelated input fields",
+    "url": "https://github.com/flatpickr/flatpickr/issues/2376",
+    "promoted": true,
+    "cues": [
+      "arrow keys"
+    ],
+    "bm25": [
+      "manual",
+      "time",
+      "month",
+      "keys",
+      "range"
+    ]
+  },
+  {
+    "position": 239,
+    "family": "flatpickr",
+    "panel": "flatpickr",
+    "number": 2328,
+    "title": "error when submitting with keyboard",
+    "url": "https://github.com/flatpickr/flatpickr/issues/2328",
+    "promoted": false,
+    "cues": [
+      "keyboard"
+    ],
+    "bm25": [
+      "keys",
+      "month",
+      "manual",
+      "range",
+      "time"
+    ]
+  },
+  {
+    "position": 495,
+    "family": "flatpickr",
+    "panel": "flatpickr",
+    "number": 2160,
+    "title": "Bug in the official example page. Keyboard entry in the time field is not as expected",
+    "url": "https://github.com/flatpickr/flatpickr/issues/2160",
+    "promoted": false,
+    "cues": [
+      "keyboard"
+    ],
+    "bm25": [
+      "time",
+      "keys",
+      "manual",
+      "month",
+      "range"
+    ]
+  },
+  {
+    "position": 555,
+    "family": "flatpickr",
+    "panel": "flatpickr",
+    "number": 2117,
+    "title": "Flatpickr Datepicker has issues with keyboard accessibility and behavior when used inside bootstrap modal",
+    "url": "https://github.com/flatpickr/flatpickr/issues/2117",
+    "promoted": false,
+    "cues": [
+      "keyboard"
+    ],
+    "bm25": [
+      "keys",
+      "month",
+      "manual",
+      "range",
+      "time"
+    ]
+  },
+  {
+    "position": 714,
+    "family": "flatpickr",
+    "panel": "flatpickr",
+    "number": 1943,
+    "title": "rangePlugin and allowInput: Left/right arrow keys doesn't work in second input",
+    "url": "https://github.com/flatpickr/flatpickr/issues/1943",
+    "promoted": true,
+    "cues": [
+      "arrow keys"
+    ],
+    "bm25": [
+      "manual",
+      "month",
+      "keys",
+      "range",
+      "time"
+    ]
+  },
+  {
+    "position": 719,
+    "family": "flatpickr",
+    "panel": "flatpickr",
+    "number": 1942,
+    "title": "rangePlugin and allowInput: Should look at both inputs when handling enter key",
+    "url": "https://github.com/flatpickr/flatpickr/issues/1942",
+    "promoted": true,
+    "cues": [
+      "enter key"
+    ],
+    "bm25": [
+      "manual",
+      "month",
+      "keys",
+      "range",
+      "time"
+    ]
+  },
+  {
+    "position": 911,
+    "family": "bootstrap-date",
+    "panel": "vanilla",
+    "number": 1877,
+    "title": "Disabled dates getting selected on \"ENTER\" key press",
+    "url": "https://github.com/uxsolutions/bootstrap-datepicker/issues/1877",
+    "promoted": false,
+    "cues": [
+      "key press"
+    ],
+    "bm25": [
+      "range",
+      "keys",
+      "month",
+      "manual"
+    ]
+  },
+  {
+    "position": 1050,
+    "family": "flatpickr",
+    "panel": "flatpickr",
+    "number": 1756,
+    "title": "Enter keypress on time inputs causes form submit",
+    "url": "https://github.com/flatpickr/flatpickr/issues/1756",
+    "promoted": true,
+    "cues": [
+      "keypress"
+    ],
+    "bm25": [
+      "time",
+      "manual",
+      "month",
+      "keys",
+      "range"
+    ]
+  },
+  {
+    "position": 1175,
+    "family": "flatpickr",
+    "panel": "flatpickr",
+    "number": 1688,
+    "title": "When allowInput=true and appendTo, left & right arrow keys prevented in the field",
+    "url": "https://github.com/flatpickr/flatpickr/issues/1688",
+    "promoted": true,
+    "cues": [
+      "arrow keys"
+    ],
+    "bm25": [
+      "manual",
+      "time",
+      "month",
+      "keys",
+      "range"
+    ]
+  },
+  {
+    "position": 1229,
+    "family": "flatpickr",
+    "panel": "flatpickr",
+    "number": 1661,
+    "title": "Tabbing/Focus issue with dateTime input and altInput and keyboard only navigation",
+    "url": "https://github.com/flatpickr/flatpickr/issues/1661",
+    "promoted": false,
+    "cues": [
+      "keyboard",
+      "tabbing"
+    ],
+    "bm25": [
+      "keys",
+      "manual",
+      "month",
+      "range",
+      "time"
+    ]
+  },
+  {
+    "position": 1275,
+    "family": "flatpickr",
+    "panel": "flatpickr",
+    "number": 1636,
+    "title": "Flatpickr has unexpected and missing keyboard navigation",
+    "url": "https://github.com/flatpickr/flatpickr/issues/1636",
+    "promoted": false,
+    "cues": [
+      "keyboard"
+    ],
+    "bm25": [
+      "keys",
+      "month",
+      "manual",
+      "range",
+      "time"
+    ]
+  },
+  {
+    "position": 1375,
+    "family": "flatpickr",
+    "panel": "flatpickr",
+    "number": 1574,
+    "title": "Feature Request: Keyboard Accessibility",
+    "url": "https://github.com/flatpickr/flatpickr/issues/1574",
+    "promoted": false,
+    "cues": [
+      "keyboard"
+    ],
+    "bm25": [
+      "keys",
+      "month",
+      "manual",
+      "range",
+      "time"
+    ]
+  },
+  {
+    "position": 1514,
+    "family": "flatpickr",
+    "panel": "flatpickr",
+    "number": 1476,
+    "title": "Focus lost on keyboard navigation using IE 11",
+    "url": "https://github.com/flatpickr/flatpickr/issues/1476",
+    "promoted": false,
+    "cues": [
+      "keyboard"
+    ],
+    "bm25": [
+      "keys",
+      "month",
+      "manual",
+      "range",
+      "time"
+    ]
+  },
+  {
+    "position": 1592,
+    "family": "flatpickr",
+    "panel": "flatpickr",
+    "number": 1432,
+    "title": "IE11 Keyboard Shortcuts not working as expected",
+    "url": "https://github.com/flatpickr/flatpickr/issues/1432",
+    "promoted": false,
+    "cues": [
+      "keyboard"
+    ],
+    "bm25": [
+      "keys",
+      "month",
+      "manual",
+      "range",
+      "time"
+    ]
+  },
+  {
+    "position": 1814,
+    "family": "flatpickr",
+    "panel": "flatpickr",
+    "number": 1303,
+    "title": "Unable to navigate to year, previous month, or next month via keyboard input",
+    "url": "https://github.com/flatpickr/flatpickr/issues/1303",
+    "promoted": false,
+    "cues": [
+      "keyboard"
+    ],
+    "bm25": [
+      "keys",
+      "month",
+      "manual",
+      "range",
+      "time"
+    ]
+  },
+  {
+    "position": 2471,
+    "family": "flatpickr",
+    "panel": "flatpickr",
+    "number": 895,
+    "title": "Accessibility and tabbing issue (trapping tab key event)",
+    "url": "https://github.com/flatpickr/flatpickr/issues/895",
+    "promoted": false,
+    "cues": [
+      "tab key",
+      "tabbing"
+    ],
+    "bm25": [
+      "month",
+      "keys",
+      "manual",
+      "range",
+      "time"
+    ]
+  },
+  {
+    "position": 2513,
+    "family": "flatpickr",
+    "panel": "flatpickr",
+    "number": 870,
+    "title": "onChange event is not fired when using arrow keys",
+    "url": "https://github.com/flatpickr/flatpickr/issues/870",
+    "promoted": false,
+    "cues": [
+      "arrow keys"
+    ],
+    "bm25": [
+      "month",
+      "keys",
+      "manual",
+      "range",
+      "time"
+    ]
+  },
+  {
+    "position": 2591,
+    "family": "flatpickr",
+    "panel": "flatpickr",
+    "number": 821,
+    "title": "Keyboard issue",
+    "url": "https://github.com/flatpickr/flatpickr/issues/821",
+    "promoted": false,
+    "cues": [
+      "keyboard"
+    ],
+    "bm25": [
+      "keys",
+      "month",
+      "manual",
+      "range",
+      "time"
+    ]
+  },
+  {
+    "position": 2621,
+    "family": "flatpickr",
+    "panel": "flatpickr",
+    "number": 804,
+    "title": "Inline picker loses keyboard focus on navigating",
+    "url": "https://github.com/flatpickr/flatpickr/issues/804",
+    "promoted": false,
+    "cues": [
+      "keyboard"
+    ],
+    "bm25": [
+      "keys",
+      "month",
+      "manual",
+      "range",
+      "time"
+    ]
+  },
+  {
+    "position": 2881,
+    "family": "flatpickr",
+    "panel": "flatpickr",
+    "number": 640,
+    "title": "Scroll Wheel up/down over time .arrowUp/Down buttons throwing .length error",
+    "url": "https://github.com/flatpickr/flatpickr/issues/640",
+    "promoted": true,
+    "cues": [
+      "arrowup"
+    ],
+    "bm25": [
+      "time",
+      "month",
+      "keys",
+      "manual",
+      "range"
+    ]
+  },
+  {
+    "position": 2905,
+    "family": "flatpickr",
+    "panel": "flatpickr",
+    "number": 623,
+    "title": "Keyboard support",
+    "url": "https://github.com/flatpickr/flatpickr/issues/623",
+    "promoted": false,
+    "cues": [
+      "keyboard"
+    ],
+    "bm25": [
+      "keys",
+      "month",
+      "manual",
+      "range",
+      "time"
+    ]
+  },
+  {
+    "position": 3029,
+    "family": "flatpickr",
+    "panel": "flatpickr",
+    "number": 539,
+    "title": "Accessibility of mode-range: Keypress to leave pickr?",
+    "url": "https://github.com/flatpickr/flatpickr/issues/539",
+    "promoted": true,
+    "cues": [
+      "keypress"
+    ],
+    "bm25": [
+      "range",
+      "manual",
+      "month",
+      "keys",
+      "time"
+    ]
+  },
+  {
+    "position": 3333,
+    "family": "flatpickr",
+    "panel": "flatpickr",
+    "number": 355,
+    "title": "allowInput=true and Enter keypress form submit",
+    "url": "https://github.com/flatpickr/flatpickr/issues/355",
+    "promoted": false,
+    "cues": [
+      "keypress"
+    ],
+    "bm25": [
+      "month",
+      "keys",
+      "manual",
+      "range",
+      "time"
+    ]
+  },
+  {
+    "position": 3351,
+    "family": "flatpickr",
+    "panel": "flatpickr",
+    "number": 342,
+    "title": "Not possible to move past datepicker using keyboard navigation",
+    "url": "https://github.com/flatpickr/flatpickr/issues/342",
+    "promoted": false,
+    "cues": [
+      "keyboard"
+    ],
+    "bm25": [
+      "keys",
+      "month",
+      "manual",
+      "range",
+      "time"
+    ]
+  },
+  {
+    "position": 3692,
+    "family": "flatpickr",
+    "panel": "flatpickr",
+    "number": 128,
+    "title": "Year input number issue when using backspace",
+    "url": "https://github.com/flatpickr/flatpickr/issues/128",
+    "promoted": true,
+    "cues": [
+      "using backspace"
+    ],
+    "bm25": [
+      "manual",
+      "month",
+      "keys",
+      "range",
+      "time"
+    ]
+  },
+  {
+    "position": 3702,
+    "family": "flatpickr",
+    "panel": "flatpickr",
+    "number": 117,
+    "title": "Keyboard accessibility ",
+    "url": "https://github.com/flatpickr/flatpickr/issues/117",
+    "promoted": false,
+    "cues": [
+      "keyboard"
+    ],
+    "bm25": [
+      "keys",
+      "month",
+      "manual",
+      "range",
+      "time"
+    ]
+  }
+]

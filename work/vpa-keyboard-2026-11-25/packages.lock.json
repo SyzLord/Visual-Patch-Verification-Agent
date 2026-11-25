@@ -1,0 +1,42 @@
+{
+  "flatpickr-4.5.4": {
+    "tarball": "https://registry.npmjs.org/flatpickr/-/flatpickr-4.5.4.tgz",
+    "integrity": "sha512-AZOu3l6jUJtNofUKW4UGf9R5wKoLBb52VcQJhbL88G1sekJiXTPqqWJyZwGShjIMFjAIgnajEPglRd2fv/FaYg==",
+    "published": "2019-02-23T07:23:41.536Z",
+    "sha256": "0a2db49826692fe45c82a3e647947ec156c1ffb1a3944da0db297ea0c7b7529c",
+    "assets": {
+      "js": "21e34ff1b800fbfedfa6ae535ba85dd0d2b98f329e99351cc2133f04ffc90c7d",
+      "css": "4d5eb03f979ffd46386cd15d0358768bc01273d1c772797cb9fc24f78fc73f83"
+    }
+  },
+  "flatpickr-4.5.5": {
+    "tarball": "https://registry.npmjs.org/flatpickr/-/flatpickr-4.5.5.tgz",
+    "integrity": "sha512-KgAJxBN1BWiOAkwvFSM/nS9YFESOh1yI7uQEd/HQqcTGev84ADO2Mx8C3bUKgIULscb+LireiSDe5D9fh3PFtQ==",
+    "published": "2019-03-04T04:19:49.563Z",
+    "sha256": "8c8a93118b1f66954f608e65fdc8bde45c8b525ef5712107662366117cce8f03",
+    "assets": {
+      "js": "381375d1d2c2987ecdf46bc58004141ba97278958bee4692bccb2ef1c344ec50",
+      "css": "5503aa8e0ab2bc88237f03ce696e12b5554d8c77067e353508cc01485ad040ad"
+    }
+  },
+  "flatpickr-4.6.10": {
+    "tarball": "https://registry.npmjs.org/flatpickr/-/flatpickr-4.6.10.tgz",
+    "integrity": "sha512-Z1rNbMAg7WmKPBVj0cOjO/4Ab5H3Of5MMohgVvJpFiEAcWFUcaGgN5yzizKGUUN1j6zXYeYASI2XxqrhbiRoig==",
+    "published": "2022-03-06T14:33:18.867Z",
+    "sha256": "2670431f566d4486ff5dfdb9ab6e4fcfb1c37e264d457510793b02ec7cba0ecb",
+    "assets": {
+      "js": "2102460d6ee22233a82a0dee7fbdb32fbc2314334d4c06e7a76a934ae417f2c4",
+      "css": "1b34a42552c96f10e4dfaaa4a367276b03868aacff63c1ac42ffe331352bc754"
+    }
+  },
+  "flatpickr-4.6.9": {
+    "tarball": "https://registry.npmjs.org/flatpickr/-/flatpickr-4.6.9.tgz",
+    "integrity": "sha512-F0azNNi8foVWKSF+8X+ZJzz8r9sE1G4hl06RyceIaLvyltKvDl6vqk9Lm/6AUUCi5HWaIjiUbk7UpeE/fOXOpw==",
+    "published": "2020-12-25T20:22:58.620Z",
+    "sha256": "365ec516b00b6609d0026e3962d44c936ceb3cfebde4b9fee367f929fad71ca6",
+    "assets": {
+      "js": "02441aa7dd6d0dc4b863241a658d95577e148520b1bb66c31088175d7b9fe478",
+      "css": "4573c0cb11d5c8c2f16f44d808cd8e5b947819691c0ded368dd620c99a78d4e5"
+    }
+  }
+}

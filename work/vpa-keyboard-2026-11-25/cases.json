@@ -1,0 +1,33 @@
+{
+  "cases": [
+    {
+      "id": "2376",
+      "family": "flatpickr",
+      "panel": "flatpickr",
+      "package": "flatpickr",
+      "old": "4.6.9",
+      "fixed": "4.6.10",
+      "issue": "https://github.com/flatpickr/flatpickr/issues/2376",
+      "repair": "https://github.com/flatpickr/flatpickr/pull/2329",
+      "mergeCommit": "cf77c7ce8f635f0f2757b704d0a8554276e16fe3",
+      "merged": "2021-01-09T03:09:21Z",
+      "target": "keys",
+      "why": "Reporter specified 4.6.9. The maintainer merged PR #2329 to scope keydown listeners to the date picker. 4.6.10 is the next published stable version."
+    },
+    {
+      "id": "1661",
+      "family": "flatpickr",
+      "panel": "flatpickr",
+      "package": "flatpickr",
+      "old": "4.5.4",
+      "fixed": "4.5.5",
+      "issue": "https://github.com/flatpickr/flatpickr/issues/1661",
+      "repair": "https://github.com/flatpickr/flatpickr/pull/1663",
+      "mergeCommit": "4d582a3ad50ac610f1bb357de8fa817c912b1716",
+      "merged": "2019-02-25T15:42:17Z",
+      "target": "keys",
+      "why": "The report names 4.5.4. The maintainer merged PR #1663, and 4.5.5 is the first stable release after it."
+    }
+  ],
+  "dependencies": []
+}

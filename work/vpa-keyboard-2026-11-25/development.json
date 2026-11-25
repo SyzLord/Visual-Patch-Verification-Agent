@@ -1,0 +1,270 @@
+[
+  {
+    "id": "2266",
+    "routing": {
+      "title": "next year button on top is disabled before correct year",
+      "ranking": [
+        {
+          "id": "month",
+          "description": "Move forward and backward between months and years and inspect the calendar heading and grid.",
+          "score": 1.1374957783202098
+        },
+        {
+          "id": "range",
+          "description": "Select dates in a range or multiple-date mode and check its endpoints and disabled dates.",
+          "score": 1.1374957783202098
+        },
+        {
+          "id": "keys",
+          "description": "Navigate with the keyboard and inspect the focused and selected date.",
+          "score": 0
+        },
+        {
+          "id": "manual",
+          "description": "Type or replace the input text, leave the field, and inspect the parsed value.",
+          "score": 0
+        }
+      ],
+      "cues": [],
+      "promoted": false,
+      "displaced": null,
+      "orders": {
+        "bm25": [
+          "month",
+          "range",
+          "keys",
+          "manual"
+        ],
+        "keyboard": [
+          "month",
+          "range",
+          "keys",
+          "manual"
+        ]
+      }
+    },
+    "hits": {
+      "bm25": 2,
+      "keyboard": 2
+    }
+  },
+  {
+    "id": "2058",
+    "routing": {
+      "title": "ViewMode 2: can access the previous/next decade where all years are disabled",
+      "ranking": [
+        {
+          "id": "month",
+          "description": "Move forward and backward between months and years and inspect the calendar heading and grid.",
+          "score": 1.1374957783202098
+        },
+        {
+          "id": "range",
+          "description": "Select dates in a range or multiple-date mode and check its endpoints and disabled dates.",
+          "score": 1.1374957783202098
+        },
+        {
+          "id": "keys",
+          "description": "Navigate with the keyboard and inspect the focused and selected date.",
+          "score": 0
+        },
+        {
+          "id": "manual",
+          "description": "Type or replace the input text, leave the field, and inspect the parsed value.",
+          "score": 0
+        }
+      ],
+      "cues": [],
+      "promoted": false,
+      "displaced": null,
+      "orders": {
+        "bm25": [
+          "month",
+          "range",
+          "keys",
+          "manual"
+        ],
+        "keyboard": [
+          "month",
+          "range",
+          "keys",
+          "manual"
+        ]
+      }
+    },
+    "hits": {
+      "bm25": 2,
+      "keyboard": 2
+    }
+  },
+  {
+    "id": "594-inner",
+    "routing": {
+      "title": "Calendar closes on date click using web components and appendTo.",
+      "ranking": [
+        {
+          "id": "range",
+          "description": "Select dates in a range or multiple-date mode and check its endpoints and disabled dates.",
+          "score": 1.3571734249234373
+        },
+        {
+          "id": "month",
+          "description": "Move forward and backward between months and years and inspect the calendar heading and grid.",
+          "score": 1.3510163707803646
+        },
+        {
+          "id": "keys",
+          "description": "Navigate with the keyboard and inspect the focused and selected date.",
+          "score": 1.027508143500491
+        },
+        {
+          "id": "manual",
+          "description": "Type or replace the input text, leave the field, and inspect the parsed value.",
+          "score": 0
+        },
+        {
+          "id": "time",
+          "description": "Change a time field, trigger a time update and inspect the selected hours, minutes and time limits.",
+          "score": 0
+        }
+      ],
+      "cues": [],
+      "promoted": false,
+      "displaced": null,
+      "orders": {
+        "bm25": [
+          "range",
+          "month",
+          "keys",
+          "manual",
+          "time"
+        ],
+        "keyboard": [
+          "range",
+          "month",
+          "keys",
+          "manual",
+          "time"
+        ]
+      }
+    },
+    "hits": {
+      "bm25": 2,
+      "keyboard": 2
+    }
+  },
+  {
+    "id": "594",
+    "routing": {
+      "title": "Calendar closes on date click using web components and appendTo.",
+      "ranking": [
+        {
+          "id": "range",
+          "description": "Select dates in a range or multiple-date mode and check its endpoints and disabled dates.",
+          "score": 1.3571734249234373
+        },
+        {
+          "id": "month",
+          "description": "Move forward and backward between months and years and inspect the calendar heading and grid.",
+          "score": 1.3510163707803646
+        },
+        {
+          "id": "keys",
+          "description": "Navigate with the keyboard and inspect the focused and selected date.",
+          "score": 1.027508143500491
+        },
+        {
+          "id": "manual",
+          "description": "Type or replace the input text, leave the field, and inspect the parsed value.",
+          "score": 0
+        },
+        {
+          "id": "time",
+          "description": "Change a time field, trigger a time update and inspect the selected hours, minutes and time limits.",
+          "score": 0
+        }
+      ],
+      "cues": [],
+      "promoted": false,
+      "displaced": null,
+      "orders": {
+        "bm25": [
+          "range",
+          "month",
+          "keys",
+          "manual",
+          "time"
+        ],
+        "keyboard": [
+          "range",
+          "month",
+          "keys",
+          "manual",
+          "time"
+        ]
+      }
+    },
+    "hits": {
+      "bm25": 2,
+      "keyboard": 2
+    }
+  },
+  {
+    "id": "1724",
+    "routing": {
+      "title": "Key up/down in the year input field moves to the time area ",
+      "ranking": [
+        {
+          "id": "time",
+          "description": "Change a time field, trigger a time update and inspect the selected hours, minutes and time limits.",
+          "score": 2.8430453728721212
+        },
+        {
+          "id": "month",
+          "description": "Move forward and backward between months and years and inspect the calendar heading and grid.",
+          "score": 2.7020327415607293
+        },
+        {
+          "id": "manual",
+          "description": "Type or replace the input text, leave the field, and inspect the parsed value.",
+          "score": 2.3018337045491135
+        },
+        {
+          "id": "keys",
+          "description": "Navigate with the keyboard and inspect the focused and selected date.",
+          "score": 0
+        },
+        {
+          "id": "range",
+          "description": "Select dates in a range or multiple-date mode and check its endpoints and disabled dates.",
+          "score": 0
+        }
+      ],
+      "cues": [
+        "key up/down"
+      ],
+      "promoted": true,
+      "displaced": "month",
+      "orders": {
+        "bm25": [
+          "time",
+          "month",
+          "manual",
+          "keys",
+          "range"
+        ],
+        "keyboard": [
+          "time",
+          "keys",
+          "month",
+          "manual",
+          "range"
+        ]
+      }
+    },
+    "hits": {
+      "bm25": null,
+      "keyboard": 3
+    }
+  }
+]

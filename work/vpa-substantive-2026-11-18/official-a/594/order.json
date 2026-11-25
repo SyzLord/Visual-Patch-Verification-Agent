@@ -1,0 +1,303 @@
+{
+  "ticket": "594",
+  "fixed": "2.4.0",
+  "query": "Calendar closes on date click using web components and appendTo.",
+  "margin": 0.004536674554631808,
+  "allText": [
+    {
+      "id": "range",
+      "description": "Select dates in a range or multiple-date mode and check its endpoints and disabled dates.",
+      "score": 1.3571734249234373,
+      "overlaps": [
+        {
+          "title": "date",
+          "action": [
+            "dates",
+            "date"
+          ],
+          "token": "date",
+          "substantive": true
+        }
+      ],
+      "substantive": [
+        {
+          "title": "date",
+          "action": [
+            "dates",
+            "date"
+          ],
+          "token": "date",
+          "substantive": true
+        }
+      ]
+    },
+    {
+      "id": "month",
+      "description": "Move forward and backward between months and years and inspect the calendar heading and grid.",
+      "score": 1.3510163707803646,
+      "overlaps": [
+        {
+          "title": "calendar",
+          "action": [
+            "calendar"
+          ],
+          "token": "calendar",
+          "substantive": true
+        }
+      ],
+      "substantive": [
+        {
+          "title": "calendar",
+          "action": [
+            "calendar"
+          ],
+          "token": "calendar",
+          "substantive": true
+        }
+      ]
+    },
+    {
+      "id": "keys",
+      "description": "Navigate with the keyboard and inspect the focused and selected date.",
+      "score": 1.027508143500491,
+      "overlaps": [
+        {
+          "title": "date",
+          "action": [
+            "date"
+          ],
+          "token": "date",
+          "substantive": true
+        }
+      ],
+      "substantive": [
+        {
+          "title": "date",
+          "action": [
+            "date"
+          ],
+          "token": "date",
+          "substantive": true
+        }
+      ]
+    },
+    {
+      "id": "manual",
+      "description": "Type or replace the input text, leave the field, and inspect the parsed value.",
+      "score": 0,
+      "overlaps": [],
+      "substantive": []
+    },
+    {
+      "id": "time",
+      "description": "Change a time field, trigger a time update and inspect the selected hours, minutes and time limits.",
+      "score": 0,
+      "overlaps": [],
+      "substantive": []
+    }
+  ],
+  "shortlist": [
+    {
+      "id": "range",
+      "description": "Select dates in a range or multiple-date mode and check its endpoints and disabled dates.",
+      "score": 1.3571734249234373,
+      "overlaps": [
+        {
+          "title": "date",
+          "action": [
+            "dates",
+            "date"
+          ],
+          "token": "date",
+          "substantive": true
+        }
+      ],
+      "substantive": [
+        {
+          "title": "date",
+          "action": [
+            "dates",
+            "date"
+          ],
+          "token": "date",
+          "substantive": true
+        }
+      ]
+    },
+    {
+      "id": "month",
+      "description": "Move forward and backward between months and years and inspect the calendar heading and grid.",
+      "score": 1.3510163707803646,
+      "overlaps": [
+        {
+          "title": "calendar",
+          "action": [
+            "calendar"
+          ],
+          "token": "calendar",
+          "substantive": true
+        }
+      ],
+      "substantive": [
+        {
+          "title": "calendar",
+          "action": [
+            "calendar"
+          ],
+          "token": "calendar",
+          "substantive": true
+        }
+      ]
+    },
+    {
+      "id": "keys",
+      "description": "Navigate with the keyboard and inspect the focused and selected date.",
+      "score": 1.027508143500491,
+      "overlaps": [
+        {
+          "title": "date",
+          "action": [
+            "date"
+          ],
+          "token": "date",
+          "substantive": true
+        }
+      ],
+      "substantive": [
+        {
+          "title": "date",
+          "action": [
+            "date"
+          ],
+          "token": "date",
+          "substantive": true
+        }
+      ]
+    }
+  ],
+  "pairs": [
+    {
+      "id": "range",
+      "frames": [
+        {
+          "file": "range-pre.png",
+          "sha256": "b4402ba3b331881216eb3a83416797a88067ef1b9058b2803ed14269c873f370",
+          "bytes": 11575
+        },
+        {
+          "file": "range-post.png",
+          "sha256": "dd10fe312b99fc9a6f0ce70dbcbbeec2b223a3c184fb56e246b22765eb0dceca",
+          "bytes": 13841
+        }
+      ],
+      "gestures": [
+        "click endpoint 16",
+        "click endpoint 18"
+      ],
+      "delta": 0.01561403248167954
+    },
+    {
+      "id": "month",
+      "frames": [
+        {
+          "file": "month-pre.png",
+          "sha256": "ae23e664ba0aa18a05b1f27fb9fbd2b4969abeb9fb51bd34d1ea40744eb31c21",
+          "bytes": 10577
+        },
+        {
+          "file": "month-post.png",
+          "sha256": "ae23e664ba0aa18a05b1f27fb9fbd2b4969abeb9fb51bd34d1ea40744eb31c21",
+          "bytes": 10577
+        }
+      ],
+      "gestures": [
+        "next month",
+        "prev month"
+      ],
+      "delta": 0
+    },
+    {
+      "id": "keys",
+      "frames": [
+        {
+          "file": "keys-pre.png",
+          "sha256": "ae23e664ba0aa18a05b1f27fb9fbd2b4969abeb9fb51bd34d1ea40744eb31c21",
+          "bytes": 10577
+        },
+        {
+          "file": "keys-post.png",
+          "sha256": "5a46de390fc5b8d114dd2af6b8975dae4809c288b2b02a37d8303faf7c5b1f06",
+          "bytes": 3873
+        }
+      ],
+      "gestures": [
+        "focus day 16",
+        "Enter"
+      ],
+      "delta": 0.017008962170726876
+    }
+  ],
+  "local": [
+    {
+      "id": "range",
+      "delta": 0.01561403248167954,
+      "textRank": 0,
+      "visualRank": 1,
+      "score": 1
+    },
+    {
+      "id": "keys",
+      "delta": 0.017008962170726876,
+      "textRank": 2,
+      "visualRank": 0,
+      "score": 2
+    },
+    {
+      "id": "month",
+      "delta": 0,
+      "textRank": 1,
+      "visualRank": 2,
+      "score": 3
+    }
+  ],
+  "zero": [
+    {
+      "id": "range",
+      "delta": 0,
+      "textRank": 0,
+      "visualRank": 1,
+      "score": 1
+    },
+    {
+      "id": "month",
+      "delta": 0,
+      "textRank": 1,
+      "visualRank": 1,
+      "score": 2
+    },
+    {
+      "id": "keys",
+      "delta": 0,
+      "textRank": 2,
+      "visualRank": 1,
+      "score": 3
+    }
+  ],
+  "orders": {
+    "bm25": [
+      "range",
+      "month",
+      "keys"
+    ],
+    "local": [
+      "range",
+      "keys",
+      "month"
+    ],
+    "zero": [
+      "range",
+      "month",
+      "keys"
+    ]
+  }
+}

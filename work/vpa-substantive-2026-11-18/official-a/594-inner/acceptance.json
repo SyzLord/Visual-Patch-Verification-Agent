@@ -1,0 +1,659 @@
+{
+  "ticket": "594-inner",
+  "config": {
+    "number": 594,
+    "variant": "inner",
+    "family": "flatpickr",
+    "panel": "flatpickr",
+    "package": "flatpickr",
+    "old": "2.3.7",
+    "fixed": "2.4.0",
+    "target": "range",
+    "source": "https://github.com/flatpickr/flatpickr/issues/594",
+    "repair": "https://github.com/flatpickr/flatpickr/commit/b104d302eb9cf5449b8c51f93eab8d4162ecce50",
+    "reason": "First directed variant, appendTo is an element inside the shadow tree. Test with the same range oracle as the host variant."
+  },
+  "browser": "157.0.8103.79",
+  "playwright": "1.62.1",
+  "qualified": true,
+  "reference": [
+    {
+      "action": "ordinary",
+      "initial": {
+        "open": true,
+        "month": 10,
+        "year": 2017,
+        "value": "2017-10-15",
+        "days": [
+          15
+        ],
+        "hours": [
+          0
+        ],
+        "disabled22": false,
+        "target": null
+      },
+      "gestures": [
+        "choose day 16"
+      ],
+      "trace": [
+        {
+          "open": false,
+          "month": 10,
+          "year": 2017,
+          "value": "2017-10-16",
+          "days": [
+            16
+          ],
+          "hours": [
+            0
+          ],
+          "disabled22": false,
+          "target": null
+        }
+      ],
+      "errors": [],
+      "pass": true,
+      "publicFailure": false
+    },
+    {
+      "action": "month",
+      "initial": {
+        "open": true,
+        "month": 10,
+        "year": 2017,
+        "value": "2017-10-15",
+        "days": [
+          15
+        ],
+        "hours": [
+          0
+        ],
+        "disabled22": false,
+        "target": null
+      },
+      "gestures": [
+        "next month",
+        "prev month"
+      ],
+      "trace": [
+        {
+          "open": true,
+          "month": 11,
+          "year": 2017,
+          "value": "2017-10-15",
+          "days": [
+            15
+          ],
+          "hours": [
+            0
+          ],
+          "disabled22": false,
+          "target": null
+        },
+        {
+          "open": true,
+          "month": 10,
+          "year": 2017,
+          "value": "2017-10-15",
+          "days": [
+            15
+          ],
+          "hours": [
+            0
+          ],
+          "disabled22": false,
+          "target": null
+        }
+      ],
+      "errors": [],
+      "pass": true,
+      "publicFailure": false
+    },
+    {
+      "action": "keys",
+      "initial": {
+        "open": true,
+        "month": 10,
+        "year": 2017,
+        "value": "2017-10-15",
+        "days": [
+          15
+        ],
+        "hours": [
+          0
+        ],
+        "disabled22": false,
+        "target": null
+      },
+      "gestures": [
+        "focus day 16",
+        "Enter"
+      ],
+      "trace": [
+        {
+          "open": true,
+          "month": 10,
+          "year": 2017,
+          "value": "2017-10-15",
+          "days": [
+            15
+          ],
+          "hours": [
+            0
+          ],
+          "disabled22": false,
+          "target": null
+        },
+        {
+          "open": false,
+          "month": 10,
+          "year": 2017,
+          "value": "2017-10-16",
+          "days": [
+            16
+          ],
+          "hours": [
+            0
+          ],
+          "disabled22": false,
+          "target": null
+        }
+      ],
+      "errors": [],
+      "pass": true,
+      "publicFailure": false
+    },
+    {
+      "action": "manual",
+      "initial": {
+        "open": true,
+        "month": 10,
+        "year": 2017,
+        "value": "2017-10-15",
+        "days": [
+          15
+        ],
+        "hours": [
+          0
+        ],
+        "disabled22": false,
+        "target": null
+      },
+      "gestures": [
+        "replace date",
+        "commit with Enter"
+      ],
+      "trace": [
+        {
+          "open": true,
+          "month": 10,
+          "year": 2017,
+          "value": "2017-10-18",
+          "days": [
+            15
+          ],
+          "hours": [
+            0
+          ],
+          "disabled22": false,
+          "target": null
+        },
+        {
+          "open": true,
+          "month": 10,
+          "year": 2017,
+          "value": "2017-10-18",
+          "days": [
+            18
+          ],
+          "hours": [
+            0
+          ],
+          "disabled22": false,
+          "target": null
+        }
+      ],
+      "errors": [],
+      "pass": true,
+      "publicFailure": false
+    },
+    {
+      "action": "range",
+      "initial": {
+        "open": true,
+        "month": 10,
+        "year": 2017,
+        "value": "",
+        "days": [],
+        "hours": [],
+        "disabled22": true,
+        "target": null
+      },
+      "gestures": [
+        "click endpoint 16",
+        "click endpoint 18"
+      ],
+      "trace": [
+        {
+          "open": true,
+          "month": 10,
+          "year": 2017,
+          "value": "2017-10-16",
+          "days": [
+            16
+          ],
+          "hours": [
+            0
+          ],
+          "disabled22": true,
+          "target": {
+            "element": "travel-range",
+            "insideAppend": false
+          }
+        },
+        {
+          "open": true,
+          "month": 10,
+          "year": 2017,
+          "value": "2017-10-16 to 2017-10-18",
+          "days": [
+            16,
+            18
+          ],
+          "hours": [
+            0,
+            0
+          ],
+          "disabled22": true,
+          "target": {
+            "element": "travel-range",
+            "insideAppend": false
+          }
+        }
+      ],
+      "errors": [],
+      "pass": true,
+      "publicFailure": false
+    },
+    {
+      "action": "time",
+      "initial": {
+        "open": true,
+        "month": 10,
+        "year": 2017,
+        "value": "2017-10-15 12:00",
+        "days": [
+          15
+        ],
+        "hours": [
+          12
+        ],
+        "disabled22": false,
+        "target": null
+      },
+      "gestures": [
+        "edit hour"
+      ],
+      "trace": [
+        {
+          "open": true,
+          "month": 10,
+          "year": 2017,
+          "value": "2017-10-15 14:00",
+          "days": [
+            15
+          ],
+          "hours": [
+            14
+          ],
+          "disabled22": false,
+          "target": null
+        }
+      ],
+      "errors": [],
+      "pass": true,
+      "publicFailure": false
+    }
+  ],
+  "candidate": [
+    {
+      "action": "ordinary",
+      "initial": {
+        "open": true,
+        "month": 10,
+        "year": 2017,
+        "value": "2017-10-15",
+        "days": [
+          15
+        ],
+        "hours": [
+          0
+        ],
+        "disabled22": false,
+        "target": null
+      },
+      "gestures": [
+        "choose day 16"
+      ],
+      "trace": [
+        {
+          "open": false,
+          "month": 10,
+          "year": 2017,
+          "value": "2017-10-16",
+          "days": [
+            16
+          ],
+          "hours": [
+            0
+          ],
+          "disabled22": false,
+          "target": null
+        }
+      ],
+      "errors": [],
+      "pass": true,
+      "publicFailure": false
+    },
+    {
+      "action": "month",
+      "initial": {
+        "open": true,
+        "month": 10,
+        "year": 2017,
+        "value": "2017-10-15",
+        "days": [
+          15
+        ],
+        "hours": [
+          0
+        ],
+        "disabled22": false,
+        "target": null
+      },
+      "gestures": [
+        "next month",
+        "prev month"
+      ],
+      "trace": [
+        {
+          "open": true,
+          "month": 11,
+          "year": 2017,
+          "value": "2017-10-15",
+          "days": [
+            15
+          ],
+          "hours": [
+            0
+          ],
+          "disabled22": false,
+          "target": null
+        },
+        {
+          "open": true,
+          "month": 10,
+          "year": 2017,
+          "value": "2017-10-15",
+          "days": [
+            15
+          ],
+          "hours": [
+            0
+          ],
+          "disabled22": false,
+          "target": null
+        }
+      ],
+      "errors": [],
+      "pass": true,
+      "publicFailure": false
+    },
+    {
+      "action": "keys",
+      "initial": {
+        "open": true,
+        "month": 10,
+        "year": 2017,
+        "value": "2017-10-15",
+        "days": [
+          15
+        ],
+        "hours": [
+          0
+        ],
+        "disabled22": false,
+        "target": null
+      },
+      "gestures": [
+        "focus day 16",
+        "Enter"
+      ],
+      "trace": [
+        {
+          "open": true,
+          "month": 10,
+          "year": 2017,
+          "value": "2017-10-15",
+          "days": [
+            15
+          ],
+          "hours": [
+            0
+          ],
+          "disabled22": false,
+          "target": null
+        },
+        {
+          "open": false,
+          "month": 10,
+          "year": 2017,
+          "value": "2017-10-16",
+          "days": [
+            16
+          ],
+          "hours": [
+            0
+          ],
+          "disabled22": false,
+          "target": null
+        }
+      ],
+      "errors": [],
+      "pass": true,
+      "publicFailure": false
+    },
+    {
+      "action": "manual",
+      "initial": {
+        "open": true,
+        "month": 10,
+        "year": 2017,
+        "value": "2017-10-15",
+        "days": [
+          15
+        ],
+        "hours": [
+          0
+        ],
+        "disabled22": false,
+        "target": null
+      },
+      "gestures": [
+        "replace date",
+        "commit with Enter"
+      ],
+      "trace": [
+        {
+          "open": true,
+          "month": 10,
+          "year": 2017,
+          "value": "2017-10-18",
+          "days": [
+            15
+          ],
+          "hours": [
+            0
+          ],
+          "disabled22": false,
+          "target": null
+        },
+        {
+          "open": true,
+          "month": 10,
+          "year": 2017,
+          "value": "2017-10-18",
+          "days": [
+            18
+          ],
+          "hours": [
+            0
+          ],
+          "disabled22": false,
+          "target": null
+        }
+      ],
+      "errors": [],
+      "pass": true,
+      "publicFailure": false
+    },
+    {
+      "action": "range",
+      "initial": {
+        "open": true,
+        "month": 10,
+        "year": 2017,
+        "value": "",
+        "days": [],
+        "hours": [],
+        "disabled22": true,
+        "target": null
+      },
+      "gestures": [
+        "click endpoint 16",
+        "click endpoint 18"
+      ],
+      "trace": [
+        {
+          "open": false,
+          "month": 10,
+          "year": 2017,
+          "value": "",
+          "days": [],
+          "hours": [],
+          "disabled22": true,
+          "target": {
+            "element": "travel-range",
+            "insideAppend": false
+          }
+        },
+        {
+          "open": false,
+          "month": 10,
+          "year": 2017,
+          "value": "",
+          "days": [],
+          "hours": [],
+          "disabled22": true,
+          "target": {
+            "element": "body",
+            "insideAppend": false
+          }
+        }
+      ],
+      "errors": [],
+      "pass": false,
+      "publicFailure": true
+    },
+    {
+      "action": "time",
+      "initial": {
+        "open": true,
+        "month": 10,
+        "year": 2017,
+        "value": "2017-10-15 12:00",
+        "days": [
+          15
+        ],
+        "hours": [
+          12
+        ],
+        "disabled22": false,
+        "target": null
+      },
+      "gestures": [
+        "edit hour"
+      ],
+      "trace": [
+        {
+          "open": true,
+          "month": 10,
+          "year": 2017,
+          "value": "2017-10-15 14:00",
+          "days": [
+            15
+          ],
+          "hours": [
+            14
+          ],
+          "disabled22": false,
+          "target": null
+        }
+      ],
+      "errors": [],
+      "pass": true,
+      "publicFailure": false
+    }
+  ],
+  "repeat": [
+    {
+      "action": "range",
+      "initial": {
+        "open": true,
+        "month": 10,
+        "year": 2017,
+        "value": "",
+        "days": [],
+        "hours": [],
+        "disabled22": true,
+        "target": null
+      },
+      "gestures": [
+        "click endpoint 16",
+        "click endpoint 18"
+      ],
+      "trace": [
+        {
+          "open": false,
+          "month": 10,
+          "year": 2017,
+          "value": "",
+          "days": [],
+          "hours": [],
+          "disabled22": true,
+          "target": {
+            "element": "travel-range",
+            "insideAppend": false
+          }
+        },
+        {
+          "open": false,
+          "month": 10,
+          "year": 2017,
+          "value": "",
+          "days": [],
+          "hours": [],
+          "disabled22": true,
+          "target": {
+            "element": "body",
+            "insideAppend": false
+          }
+        }
+      ],
+      "errors": [],
+      "pass": false,
+      "publicFailure": true
+    }
+  ]
+}

@@ -1,0 +1,588 @@
+{
+  "bm25": {
+    "hit": 2,
+    "at2": true,
+    "by3": true,
+    "exactly3": false,
+    "candidateActions": 2,
+    "candidateGestures": 7,
+    "trace": [
+      {
+        "action": "ordinary",
+        "initial": {
+          "open": true,
+          "year": 2017,
+          "month": 10,
+          "value": "2017-10-15",
+          "days": [
+            15
+          ],
+          "hours": [
+            0
+          ],
+          "active": "flatpickr-day today selected",
+          "activeInCalendar": true,
+          "otherValue": "alpha beta",
+          "selection": 0,
+          "end": 0,
+          "events": []
+        },
+        "gestures": [
+          "choose day 16"
+        ],
+        "trace": [
+          {
+            "open": false,
+            "year": 2017,
+            "month": 10,
+            "value": "2017-10-16",
+            "days": [
+              16
+            ],
+            "hours": [
+              0
+            ],
+            "active": "field",
+            "activeInCalendar": false,
+            "otherValue": "alpha beta",
+            "selection": 0,
+            "end": 0,
+            "events": []
+          }
+        ],
+        "errors": [],
+        "pass": true,
+        "publicFailure": false
+      },
+      {
+        "action": "keys",
+        "initial": {
+          "open": false,
+          "year": 2017,
+          "month": 10,
+          "value": "2017-10-15 12:00",
+          "days": [
+            15
+          ],
+          "hours": [
+            12
+          ],
+          "active": "before",
+          "activeInCalendar": false,
+          "otherValue": "alpha beta",
+          "selection": 0,
+          "end": 0,
+          "events": []
+        },
+        "gestures": [
+          "Tab",
+          "ArrowRight",
+          "Enter",
+          "Tab",
+          "Tab",
+          "Tab"
+        ],
+        "trace": [
+          {
+            "open": true,
+            "year": 2017,
+            "month": 10,
+            "value": "2017-10-15 12:00",
+            "days": [
+              15
+            ],
+            "hours": [
+              12
+            ],
+            "active": "flatpickr-day today selected",
+            "activeInCalendar": true,
+            "otherValue": "alpha beta",
+            "selection": 0,
+            "end": 0,
+            "events": [
+              {
+                "key": "Tab",
+                "target": "before",
+                "prevented": false
+              }
+            ]
+          },
+          {
+            "open": true,
+            "year": 2017,
+            "month": 10,
+            "value": "2017-10-15 12:00",
+            "days": [
+              15
+            ],
+            "hours": [
+              12
+            ],
+            "active": "flatpickr-day ",
+            "activeInCalendar": true,
+            "otherValue": "alpha beta",
+            "selection": 0,
+            "end": 0,
+            "events": [
+              {
+                "key": "Tab",
+                "target": "before",
+                "prevented": false
+              },
+              {
+                "key": "ArrowRight",
+                "target": "flatpickr-day today selected",
+                "prevented": true
+              }
+            ]
+          },
+          {
+            "open": true,
+            "year": 2017,
+            "month": 10,
+            "value": "2017-10-16 12:00",
+            "days": [
+              16
+            ],
+            "hours": [
+              12
+            ],
+            "active": "numInput flatpickr-hour",
+            "activeInCalendar": true,
+            "otherValue": "alpha beta",
+            "selection": 0,
+            "end": 0,
+            "events": [
+              {
+                "key": "Tab",
+                "target": "before",
+                "prevented": false
+              },
+              {
+                "key": "ArrowRight",
+                "target": "flatpickr-day today selected",
+                "prevented": true
+              }
+            ]
+          },
+          {
+            "open": true,
+            "year": 2017,
+            "month": 10,
+            "value": "2017-10-16 12:00",
+            "days": [
+              16
+            ],
+            "hours": [
+              12
+            ],
+            "active": "numInput flatpickr-minute",
+            "activeInCalendar": true,
+            "otherValue": "alpha beta",
+            "selection": 0,
+            "end": 0,
+            "events": [
+              {
+                "key": "Tab",
+                "target": "before",
+                "prevented": false
+              },
+              {
+                "key": "ArrowRight",
+                "target": "flatpickr-day today selected",
+                "prevented": true
+              },
+              {
+                "key": "Tab",
+                "target": "numInput flatpickr-hour",
+                "prevented": true
+              }
+            ]
+          },
+          {
+            "open": true,
+            "year": 2017,
+            "month": 10,
+            "value": "2017-10-16 12:00",
+            "days": [
+              16
+            ],
+            "hours": [
+              12
+            ],
+            "active": "body",
+            "activeInCalendar": false,
+            "otherValue": "alpha beta",
+            "selection": 0,
+            "end": 0,
+            "events": [
+              {
+                "key": "Tab",
+                "target": "before",
+                "prevented": false
+              },
+              {
+                "key": "ArrowRight",
+                "target": "flatpickr-day today selected",
+                "prevented": true
+              },
+              {
+                "key": "Tab",
+                "target": "numInput flatpickr-hour",
+                "prevented": true
+              },
+              {
+                "key": "Tab",
+                "target": "numInput flatpickr-minute",
+                "prevented": false
+              }
+            ]
+          },
+          {
+            "open": false,
+            "year": 2017,
+            "month": 10,
+            "value": "2017-10-16 12:00",
+            "days": [
+              16
+            ],
+            "hours": [
+              12
+            ],
+            "active": "before",
+            "activeInCalendar": false,
+            "otherValue": "alpha beta",
+            "selection": 0,
+            "end": 0,
+            "events": [
+              {
+                "key": "Tab",
+                "target": "before",
+                "prevented": false
+              },
+              {
+                "key": "ArrowRight",
+                "target": "flatpickr-day today selected",
+                "prevented": true
+              },
+              {
+                "key": "Tab",
+                "target": "numInput flatpickr-hour",
+                "prevented": true
+              },
+              {
+                "key": "Tab",
+                "target": "numInput flatpickr-minute",
+                "prevented": false
+              },
+              {
+                "key": "Tab",
+                "target": "",
+                "prevented": false
+              }
+            ]
+          }
+        ],
+        "errors": [],
+        "pass": false,
+        "publicFailure": true
+      }
+    ],
+    "referenceActions": 0,
+    "referenceImages": 0,
+    "referenceBytes": 0
+  },
+  "keyboard": {
+    "hit": 2,
+    "at2": true,
+    "by3": true,
+    "exactly3": false,
+    "candidateActions": 2,
+    "candidateGestures": 7,
+    "trace": [
+      {
+        "action": "ordinary",
+        "initial": {
+          "open": true,
+          "year": 2017,
+          "month": 10,
+          "value": "2017-10-15",
+          "days": [
+            15
+          ],
+          "hours": [
+            0
+          ],
+          "active": "flatpickr-day today selected",
+          "activeInCalendar": true,
+          "otherValue": "alpha beta",
+          "selection": 0,
+          "end": 0,
+          "events": []
+        },
+        "gestures": [
+          "choose day 16"
+        ],
+        "trace": [
+          {
+            "open": false,
+            "year": 2017,
+            "month": 10,
+            "value": "2017-10-16",
+            "days": [
+              16
+            ],
+            "hours": [
+              0
+            ],
+            "active": "field",
+            "activeInCalendar": false,
+            "otherValue": "alpha beta",
+            "selection": 0,
+            "end": 0,
+            "events": []
+          }
+        ],
+        "errors": [],
+        "pass": true,
+        "publicFailure": false
+      },
+      {
+        "action": "keys",
+        "initial": {
+          "open": false,
+          "year": 2017,
+          "month": 10,
+          "value": "2017-10-15 12:00",
+          "days": [
+            15
+          ],
+          "hours": [
+            12
+          ],
+          "active": "before",
+          "activeInCalendar": false,
+          "otherValue": "alpha beta",
+          "selection": 0,
+          "end": 0,
+          "events": []
+        },
+        "gestures": [
+          "Tab",
+          "ArrowRight",
+          "Enter",
+          "Tab",
+          "Tab",
+          "Tab"
+        ],
+        "trace": [
+          {
+            "open": true,
+            "year": 2017,
+            "month": 10,
+            "value": "2017-10-15 12:00",
+            "days": [
+              15
+            ],
+            "hours": [
+              12
+            ],
+            "active": "flatpickr-day today selected",
+            "activeInCalendar": true,
+            "otherValue": "alpha beta",
+            "selection": 0,
+            "end": 0,
+            "events": [
+              {
+                "key": "Tab",
+                "target": "before",
+                "prevented": false
+              }
+            ]
+          },
+          {
+            "open": true,
+            "year": 2017,
+            "month": 10,
+            "value": "2017-10-15 12:00",
+            "days": [
+              15
+            ],
+            "hours": [
+              12
+            ],
+            "active": "flatpickr-day ",
+            "activeInCalendar": true,
+            "otherValue": "alpha beta",
+            "selection": 0,
+            "end": 0,
+            "events": [
+              {
+                "key": "Tab",
+                "target": "before",
+                "prevented": false
+              },
+              {
+                "key": "ArrowRight",
+                "target": "flatpickr-day today selected",
+                "prevented": true
+              }
+            ]
+          },
+          {
+            "open": true,
+            "year": 2017,
+            "month": 10,
+            "value": "2017-10-16 12:00",
+            "days": [
+              16
+            ],
+            "hours": [
+              12
+            ],
+            "active": "numInput flatpickr-hour",
+            "activeInCalendar": true,
+            "otherValue": "alpha beta",
+            "selection": 0,
+            "end": 0,
+            "events": [
+              {
+                "key": "Tab",
+                "target": "before",
+                "prevented": false
+              },
+              {
+                "key": "ArrowRight",
+                "target": "flatpickr-day today selected",
+                "prevented": true
+              }
+            ]
+          },
+          {
+            "open": true,
+            "year": 2017,
+            "month": 10,
+            "value": "2017-10-16 12:00",
+            "days": [
+              16
+            ],
+            "hours": [
+              12
+            ],
+            "active": "numInput flatpickr-minute",
+            "activeInCalendar": true,
+            "otherValue": "alpha beta",
+            "selection": 0,
+            "end": 0,
+            "events": [
+              {
+                "key": "Tab",
+                "target": "before",
+                "prevented": false
+              },
+              {
+                "key": "ArrowRight",
+                "target": "flatpickr-day today selected",
+                "prevented": true
+              },
+              {
+                "key": "Tab",
+                "target": "numInput flatpickr-hour",
+                "prevented": true
+              }
+            ]
+          },
+          {
+            "open": true,
+            "year": 2017,
+            "month": 10,
+            "value": "2017-10-16 12:00",
+            "days": [
+              16
+            ],
+            "hours": [
+              12
+            ],
+            "active": "body",
+            "activeInCalendar": false,
+            "otherValue": "alpha beta",
+            "selection": 0,
+            "end": 0,
+            "events": [
+              {
+                "key": "Tab",
+                "target": "before",
+                "prevented": false
+              },
+              {
+                "key": "ArrowRight",
+                "target": "flatpickr-day today selected",
+                "prevented": true
+              },
+              {
+                "key": "Tab",
+                "target": "numInput flatpickr-hour",
+                "prevented": true
+              },
+              {
+                "key": "Tab",
+                "target": "numInput flatpickr-minute",
+                "prevented": false
+              }
+            ]
+          },
+          {
+            "open": false,
+            "year": 2017,
+            "month": 10,
+            "value": "2017-10-16 12:00",
+            "days": [
+              16
+            ],
+            "hours": [
+              12
+            ],
+            "active": "before",
+            "activeInCalendar": false,
+            "otherValue": "alpha beta",
+            "selection": 0,
+            "end": 0,
+            "events": [
+              {
+                "key": "Tab",
+                "target": "before",
+                "prevented": false
+              },
+              {
+                "key": "ArrowRight",
+                "target": "flatpickr-day today selected",
+                "prevented": true
+              },
+              {
+                "key": "Tab",
+                "target": "numInput flatpickr-hour",
+                "prevented": true
+              },
+              {
+                "key": "Tab",
+                "target": "numInput flatpickr-minute",
+                "prevented": false
+              },
+              {
+                "key": "Tab",
+                "target": "",
+                "prevented": false
+              }
+            ]
+          }
+        ],
+        "errors": [],
+        "pass": false,
+        "publicFailure": true
+      }
+    ],
+    "referenceActions": 0,
+    "referenceImages": 0,
+    "referenceBytes": 0
+  }
+}

@@ -1,0 +1,699 @@
+{
+  "ticket": "1724",
+  "config": {
+    "family": "flatpickr",
+    "number": 1724,
+    "panel": "flatpickr",
+    "package": "flatpickr",
+    "old": "4.5.7",
+    "fixed": "4.6.0",
+    "target": "keys",
+    "source": "https://github.com/flatpickr/flatpickr/issues/1724",
+    "repair": "https://github.com/flatpickr/flatpickr/pull/1807",
+    "mergedAt": "2019-05-15T19:43:48Z",
+    "mergeCommit": "e2a93f6e70028c94627308b9d03a7249baed58ed",
+    "reason": "4.5.7 is reported affected. 4.6.0 is the first stable npm release after upstream PR #1807. An open calendar with time enabled should keep year focus while ArrowUp and ArrowDown change the year and return to the starting year. Transfer to the time field on the first key is the specific old-version signature."
+  },
+  "browser": "157.0.8103.79",
+  "playwright": "1.62.1",
+  "reference": [
+    {
+      "action": "ordinary",
+      "initial": {
+        "focus": "body",
+        "open": true,
+        "year": 2017,
+        "month": 10,
+        "value": "2017-10-15",
+        "days": [
+          15
+        ],
+        "hours": [
+          0
+        ]
+      },
+      "gestures": [
+        "choose day 16"
+      ],
+      "trace": [
+        {
+          "focus": "input",
+          "open": false,
+          "year": 2017,
+          "month": 10,
+          "value": "2017-10-16",
+          "days": [
+            16
+          ],
+          "hours": [
+            0
+          ]
+        }
+      ],
+      "errors": [],
+      "pass": true,
+      "publicFailure": false
+    },
+    {
+      "action": "month",
+      "initial": {
+        "focus": "body",
+        "open": true,
+        "year": 2017,
+        "month": 10,
+        "value": "2017-10-15",
+        "days": [
+          15
+        ],
+        "hours": [
+          0
+        ]
+      },
+      "gestures": [
+        "next month",
+        "prev month"
+      ],
+      "trace": [
+        {
+          "focus": "div",
+          "open": true,
+          "year": 2017,
+          "month": 11,
+          "value": "2017-10-15",
+          "days": [
+            15
+          ],
+          "hours": [
+            0
+          ]
+        },
+        {
+          "focus": "div",
+          "open": true,
+          "year": 2017,
+          "month": 10,
+          "value": "2017-10-15",
+          "days": [
+            15
+          ],
+          "hours": [
+            0
+          ]
+        }
+      ],
+      "errors": [],
+      "pass": true,
+      "publicFailure": false
+    },
+    {
+      "action": "keys",
+      "initial": {
+        "focus": "body",
+        "open": true,
+        "year": 2017,
+        "month": 10,
+        "value": "2017-10-15 12:00",
+        "days": [
+          15
+        ],
+        "hours": [
+          12
+        ]
+      },
+      "gestures": [
+        "click year field",
+        "ArrowUp",
+        "ArrowDown"
+      ],
+      "trace": [
+        {
+          "focus": "year",
+          "open": true,
+          "year": 2017,
+          "month": 10,
+          "value": "2017-10-15 12:00",
+          "days": [
+            15
+          ],
+          "hours": [
+            12
+          ]
+        },
+        {
+          "focus": "year",
+          "open": true,
+          "year": 2018,
+          "month": 10,
+          "value": "2017-10-15 12:00",
+          "days": [
+            15
+          ],
+          "hours": [
+            12
+          ]
+        },
+        {
+          "focus": "year",
+          "open": true,
+          "year": 2017,
+          "month": 10,
+          "value": "2017-10-15 12:00",
+          "days": [
+            15
+          ],
+          "hours": [
+            12
+          ]
+        }
+      ],
+      "errors": [],
+      "pass": true,
+      "publicFailure": false
+    },
+    {
+      "action": "manual",
+      "initial": {
+        "focus": "body",
+        "open": true,
+        "year": 2017,
+        "month": 10,
+        "value": "2017-10-15",
+        "days": [
+          15
+        ],
+        "hours": [
+          0
+        ]
+      },
+      "gestures": [
+        "replace date",
+        "commit with Enter"
+      ],
+      "trace": [
+        {
+          "focus": "input",
+          "open": true,
+          "year": 2017,
+          "month": 10,
+          "value": "2017-10-18",
+          "days": [
+            15
+          ],
+          "hours": [
+            0
+          ]
+        },
+        {
+          "focus": "body",
+          "open": true,
+          "year": 2017,
+          "month": 10,
+          "value": "2017-10-18",
+          "days": [
+            18
+          ],
+          "hours": [
+            0
+          ]
+        }
+      ],
+      "errors": [],
+      "pass": true,
+      "publicFailure": false
+    },
+    {
+      "action": "range",
+      "initial": {
+        "focus": "body",
+        "open": true,
+        "year": 2017,
+        "month": 10,
+        "value": "",
+        "days": [],
+        "hours": []
+      },
+      "gestures": [
+        "click endpoint 16",
+        "click endpoint 18"
+      ],
+      "trace": [
+        {
+          "focus": "span",
+          "open": true,
+          "year": 2017,
+          "month": 10,
+          "value": "2017-10-16",
+          "days": [
+            16
+          ],
+          "hours": [
+            0
+          ]
+        },
+        {
+          "focus": "input",
+          "open": false,
+          "year": 2017,
+          "month": 10,
+          "value": "2017-10-16 to 2017-10-18",
+          "days": [
+            16,
+            18
+          ],
+          "hours": [
+            0,
+            0
+          ]
+        }
+      ],
+      "errors": [],
+      "pass": true,
+      "publicFailure": false
+    },
+    {
+      "action": "time",
+      "initial": {
+        "focus": "body",
+        "open": true,
+        "year": 2017,
+        "month": 10,
+        "value": "2017-10-15 12:00",
+        "days": [
+          15
+        ],
+        "hours": [
+          12
+        ]
+      },
+      "gestures": [
+        "click hour",
+        "increment hour"
+      ],
+      "trace": [
+        {
+          "focus": "hour",
+          "open": true,
+          "year": 2017,
+          "month": 10,
+          "value": "2017-10-15 12:00",
+          "days": [
+            15
+          ],
+          "hours": [
+            12
+          ]
+        },
+        {
+          "focus": "hour",
+          "open": true,
+          "year": 2017,
+          "month": 10,
+          "value": "2017-10-15 13:00",
+          "days": [
+            15
+          ],
+          "hours": [
+            13
+          ]
+        }
+      ],
+      "errors": [],
+      "pass": true,
+      "publicFailure": false
+    }
+  ],
+  "candidate": [
+    {
+      "action": "ordinary",
+      "initial": {
+        "focus": "body",
+        "open": true,
+        "year": 2017,
+        "month": 10,
+        "value": "2017-10-15",
+        "days": [
+          15
+        ],
+        "hours": [
+          0
+        ]
+      },
+      "gestures": [
+        "choose day 16"
+      ],
+      "trace": [
+        {
+          "focus": "input",
+          "open": false,
+          "year": 2017,
+          "month": 10,
+          "value": "2017-10-16",
+          "days": [
+            16
+          ],
+          "hours": [
+            0
+          ]
+        }
+      ],
+      "errors": [],
+      "pass": true,
+      "publicFailure": false
+    },
+    {
+      "action": "month",
+      "initial": {
+        "focus": "body",
+        "open": true,
+        "year": 2017,
+        "month": 10,
+        "value": "2017-10-15",
+        "days": [
+          15
+        ],
+        "hours": [
+          0
+        ]
+      },
+      "gestures": [
+        "next month",
+        "prev month"
+      ],
+      "trace": [
+        {
+          "focus": "body",
+          "open": true,
+          "year": 2017,
+          "month": 11,
+          "value": "2017-10-15",
+          "days": [
+            15
+          ],
+          "hours": [
+            0
+          ]
+        },
+        {
+          "focus": "body",
+          "open": true,
+          "year": 2017,
+          "month": 10,
+          "value": "2017-10-15",
+          "days": [
+            15
+          ],
+          "hours": [
+            0
+          ]
+        }
+      ],
+      "errors": [],
+      "pass": true,
+      "publicFailure": false
+    },
+    {
+      "action": "keys",
+      "initial": {
+        "focus": "body",
+        "open": true,
+        "year": 2017,
+        "month": 10,
+        "value": "2017-10-15 12:00",
+        "days": [
+          15
+        ],
+        "hours": [
+          12
+        ]
+      },
+      "gestures": [
+        "click year field",
+        "ArrowUp",
+        "ArrowDown"
+      ],
+      "trace": [
+        {
+          "focus": "year",
+          "open": true,
+          "year": 2017,
+          "month": 10,
+          "value": "2017-10-15 12:00",
+          "days": [
+            15
+          ],
+          "hours": [
+            12
+          ]
+        },
+        {
+          "focus": "hour",
+          "open": true,
+          "year": 2017,
+          "month": 10,
+          "value": "2017-10-15 12:00",
+          "days": [
+            15
+          ],
+          "hours": [
+            12
+          ]
+        },
+        {
+          "focus": "hour",
+          "open": true,
+          "year": 2017,
+          "month": 10,
+          "value": "2017-10-15 11:00",
+          "days": [
+            15
+          ],
+          "hours": [
+            11
+          ]
+        }
+      ],
+      "errors": [],
+      "pass": false,
+      "publicFailure": true
+    },
+    {
+      "action": "manual",
+      "initial": {
+        "focus": "body",
+        "open": true,
+        "year": 2017,
+        "month": 10,
+        "value": "2017-10-15",
+        "days": [
+          15
+        ],
+        "hours": [
+          0
+        ]
+      },
+      "gestures": [
+        "replace date",
+        "commit with Enter"
+      ],
+      "trace": [
+        {
+          "focus": "input",
+          "open": true,
+          "year": 2017,
+          "month": 10,
+          "value": "2017-10-18",
+          "days": [
+            15
+          ],
+          "hours": [
+            0
+          ]
+        },
+        {
+          "focus": "body",
+          "open": true,
+          "year": 2017,
+          "month": 10,
+          "value": "2017-10-18",
+          "days": [
+            18
+          ],
+          "hours": [
+            0
+          ]
+        }
+      ],
+      "errors": [],
+      "pass": true,
+      "publicFailure": false
+    },
+    {
+      "action": "range",
+      "initial": {
+        "focus": "body",
+        "open": true,
+        "year": 2017,
+        "month": 10,
+        "value": "",
+        "days": [],
+        "hours": []
+      },
+      "gestures": [
+        "click endpoint 16",
+        "click endpoint 18"
+      ],
+      "trace": [
+        {
+          "focus": "span",
+          "open": true,
+          "year": 2017,
+          "month": 10,
+          "value": "2017-10-16",
+          "days": [
+            16
+          ],
+          "hours": [
+            0
+          ]
+        },
+        {
+          "focus": "input",
+          "open": false,
+          "year": 2017,
+          "month": 10,
+          "value": "2017-10-16 to 2017-10-18",
+          "days": [
+            16,
+            18
+          ],
+          "hours": [
+            0,
+            0
+          ]
+        }
+      ],
+      "errors": [],
+      "pass": true,
+      "publicFailure": false
+    },
+    {
+      "action": "time",
+      "initial": {
+        "focus": "body",
+        "open": true,
+        "year": 2017,
+        "month": 10,
+        "value": "2017-10-15 12:00",
+        "days": [
+          15
+        ],
+        "hours": [
+          12
+        ]
+      },
+      "gestures": [
+        "click hour",
+        "increment hour"
+      ],
+      "trace": [
+        {
+          "focus": "hour",
+          "open": true,
+          "year": 2017,
+          "month": 10,
+          "value": "2017-10-15 12:00",
+          "days": [
+            15
+          ],
+          "hours": [
+            12
+          ]
+        },
+        {
+          "focus": "hour",
+          "open": true,
+          "year": 2017,
+          "month": 10,
+          "value": "2017-10-15 13:00",
+          "days": [
+            15
+          ],
+          "hours": [
+            13
+          ]
+        }
+      ],
+      "errors": [],
+      "pass": true,
+      "publicFailure": false
+    }
+  ],
+  "repeat": [
+    {
+      "action": "keys",
+      "initial": {
+        "focus": "body",
+        "open": true,
+        "year": 2017,
+        "month": 10,
+        "value": "2017-10-15 12:00",
+        "days": [
+          15
+        ],
+        "hours": [
+          12
+        ]
+      },
+      "gestures": [
+        "click year field",
+        "ArrowUp",
+        "ArrowDown"
+      ],
+      "trace": [
+        {
+          "focus": "year",
+          "open": true,
+          "year": 2017,
+          "month": 10,
+          "value": "2017-10-15 12:00",
+          "days": [
+            15
+          ],
+          "hours": [
+            12
+          ]
+        },
+        {
+          "focus": "hour",
+          "open": true,
+          "year": 2017,
+          "month": 10,
+          "value": "2017-10-15 12:00",
+          "days": [
+            15
+          ],
+          "hours": [
+            12
+          ]
+        },
+        {
+          "focus": "hour",
+          "open": true,
+          "year": 2017,
+          "month": 10,
+          "value": "2017-10-15 11:00",
+          "days": [
+            15
+          ],
+          "hours": [
+            11
+          ]
+        }
+      ],
+      "errors": [],
+      "pass": false,
+      "publicFailure": true
+    }
+  ],
+  "qualified": true
+}

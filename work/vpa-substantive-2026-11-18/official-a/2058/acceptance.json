@@ -1,0 +1,736 @@
+{
+  "ticket": "2058",
+  "config": {
+    "family": "bootstrap-date",
+    "panel": "vanilla",
+    "package": "bootstrap-datepicker",
+    "old": "1.6.4",
+    "fixed": "1.7.0",
+    "target": "month",
+    "source": "https://github.com/uxsolutions/bootstrap-datepicker/issues/2058",
+    "repair": "https://github.com/uxsolutions/bootstrap-datepicker/issues/2058#issuecomment-270802149",
+    "reason": "Reporter used 1.6.4. Maintainer confirmed the fix for the next release in January 2017. First subsequent stable npm version was 1.7.0 in June 2017."
+  },
+  "browser": "157.0.8103.79",
+  "playwright": "1.62.1",
+  "qualified": true,
+  "reference": [
+    {
+      "action": "ordinary",
+      "initial": {
+        "value": "10/15/2017",
+        "dates": [
+          [
+            2017,
+            10,
+            15
+          ]
+        ],
+        "year": 2017,
+        "month": 10,
+        "viewMode": 0,
+        "heading": "October 2017",
+        "prev": true,
+        "next": true,
+        "enabledYears": 0
+      },
+      "gestures": [
+        "choose day 16"
+      ],
+      "trace": [
+        {
+          "value": "10/16/2017",
+          "dates": [
+            [
+              2017,
+              10,
+              16
+            ]
+          ],
+          "year": 2017,
+          "month": 10,
+          "viewMode": 0,
+          "heading": "October 2017",
+          "prev": true,
+          "next": true,
+          "enabledYears": 0
+        }
+      ],
+      "errors": [],
+      "pass": true,
+      "publicFailure": false
+    },
+    {
+      "action": "month",
+      "initial": {
+        "value": "06/15/2015",
+        "dates": [
+          [
+            2015,
+            6,
+            15
+          ]
+        ],
+        "year": 2015,
+        "month": 6,
+        "viewMode": 2,
+        "heading": "2010-2019",
+        "prev": false,
+        "next": false,
+        "enabledYears": 3
+      },
+      "gestures": [
+        "click year header prev",
+        "click year header next"
+      ],
+      "trace": [
+        {
+          "value": "06/15/2015",
+          "dates": [
+            [
+              2015,
+              6,
+              15
+            ]
+          ],
+          "year": 2015,
+          "month": 6,
+          "viewMode": 2,
+          "heading": "2010-2019",
+          "prev": false,
+          "next": false,
+          "enabledYears": 3
+        },
+        {
+          "value": "06/15/2015",
+          "dates": [
+            [
+              2015,
+              6,
+              15
+            ]
+          ],
+          "year": 2015,
+          "month": 6,
+          "viewMode": 2,
+          "heading": "2010-2019",
+          "prev": false,
+          "next": false,
+          "enabledYears": 3
+        }
+      ],
+      "errors": [],
+      "pass": true,
+      "publicFailure": false
+    },
+    {
+      "action": "keys",
+      "initial": {
+        "value": "10/15/2017",
+        "dates": [
+          [
+            2017,
+            10,
+            15
+          ]
+        ],
+        "year": 2017,
+        "month": 10,
+        "viewMode": 0,
+        "heading": "October 2017",
+        "prev": true,
+        "next": true,
+        "enabledYears": 0
+      },
+      "gestures": [
+        "ArrowRight",
+        "Enter"
+      ],
+      "trace": [
+        {
+          "value": "10/15/2017",
+          "dates": [
+            [
+              2017,
+              10,
+              15
+            ]
+          ],
+          "year": 2017,
+          "month": 10,
+          "viewMode": 0,
+          "heading": "October 2017",
+          "prev": true,
+          "next": true,
+          "enabledYears": 0
+        },
+        {
+          "value": "10/16/2017",
+          "dates": [
+            [
+              2017,
+              10,
+              16
+            ]
+          ],
+          "year": 2017,
+          "month": 10,
+          "viewMode": 0,
+          "heading": "October 2017",
+          "prev": true,
+          "next": true,
+          "enabledYears": 0
+        }
+      ],
+      "errors": [],
+      "pass": true,
+      "publicFailure": false
+    },
+    {
+      "action": "manual",
+      "initial": {
+        "value": "10/15/2017",
+        "dates": [
+          [
+            2017,
+            10,
+            15
+          ]
+        ],
+        "year": 2017,
+        "month": 10,
+        "viewMode": 0,
+        "heading": "October 2017",
+        "prev": true,
+        "next": true,
+        "enabledYears": 0
+      },
+      "gestures": [
+        "replace date up to the final digit",
+        "type final digit 7",
+        "commit with Tab"
+      ],
+      "trace": [
+        {
+          "value": "10/18/201",
+          "dates": [
+            [
+              2017,
+              10,
+              15
+            ]
+          ],
+          "year": 2017,
+          "month": 10,
+          "viewMode": 0,
+          "heading": "October 2017",
+          "prev": true,
+          "next": true,
+          "enabledYears": 0
+        },
+        {
+          "value": "10/18/2017",
+          "dates": [
+            [
+              2017,
+              10,
+              18
+            ]
+          ],
+          "year": 2017,
+          "month": 10,
+          "viewMode": 0,
+          "heading": "October 2017",
+          "prev": true,
+          "next": true,
+          "enabledYears": 0
+        },
+        {
+          "value": "10/18/2017",
+          "dates": [
+            [
+              2017,
+              10,
+              18
+            ]
+          ],
+          "year": 2017,
+          "month": 10,
+          "viewMode": 0,
+          "heading": "",
+          "prev": false,
+          "next": false,
+          "enabledYears": 0
+        }
+      ],
+      "errors": [],
+      "pass": true,
+      "publicFailure": false
+    },
+    {
+      "action": "range",
+      "initial": {
+        "value": "10/15/2017",
+        "dates": [
+          [
+            2017,
+            10,
+            15
+          ]
+        ],
+        "year": 2017,
+        "month": 10,
+        "viewMode": 0,
+        "heading": "October 2017",
+        "prev": true,
+        "next": true,
+        "enabledYears": 0
+      },
+      "gestures": [
+        "click day 18",
+        "click day 17"
+      ],
+      "trace": [
+        {
+          "value": "10/15/2017,10/18/2017",
+          "dates": [
+            [
+              2017,
+              10,
+              15
+            ],
+            [
+              2017,
+              10,
+              18
+            ]
+          ],
+          "year": 2017,
+          "month": 10,
+          "viewMode": 0,
+          "heading": "October 2017",
+          "prev": true,
+          "next": true,
+          "enabledYears": 0
+        },
+        {
+          "value": "10/15/2017,10/18/2017",
+          "dates": [
+            [
+              2017,
+              10,
+              15
+            ],
+            [
+              2017,
+              10,
+              18
+            ]
+          ],
+          "year": 2017,
+          "month": 10,
+          "viewMode": 0,
+          "heading": "October 2017",
+          "prev": true,
+          "next": true,
+          "enabledYears": 0
+        }
+      ],
+      "errors": [],
+      "pass": true,
+      "publicFailure": false
+    }
+  ],
+  "candidate": [
+    {
+      "action": "ordinary",
+      "initial": {
+        "value": "10/15/2017",
+        "dates": [
+          [
+            2017,
+            10,
+            15
+          ]
+        ],
+        "year": 2017,
+        "month": 10,
+        "viewMode": 0,
+        "heading": "October 2017",
+        "prev": true,
+        "next": true,
+        "enabledYears": 0
+      },
+      "gestures": [
+        "choose day 16"
+      ],
+      "trace": [
+        {
+          "value": "10/16/2017",
+          "dates": [
+            [
+              2017,
+              10,
+              16
+            ]
+          ],
+          "year": 2017,
+          "month": 10,
+          "viewMode": 0,
+          "heading": "October 2017",
+          "prev": true,
+          "next": true,
+          "enabledYears": 0
+        }
+      ],
+      "errors": [],
+      "pass": true,
+      "publicFailure": false
+    },
+    {
+      "action": "month",
+      "initial": {
+        "value": "06/15/2015",
+        "dates": [
+          [
+            2015,
+            6,
+            15
+          ]
+        ],
+        "year": 2015,
+        "month": 6,
+        "viewMode": 2,
+        "heading": "2010-2019",
+        "prev": true,
+        "next": true,
+        "enabledYears": 3
+      },
+      "gestures": [
+        "click year header prev",
+        "click year header next"
+      ],
+      "trace": [
+        {
+          "value": "06/15/2015",
+          "dates": [
+            [
+              2015,
+              6,
+              15
+            ]
+          ],
+          "year": 2005,
+          "month": 6,
+          "viewMode": 2,
+          "heading": "2000-2009",
+          "prev": false,
+          "next": true,
+          "enabledYears": 0
+        },
+        {
+          "value": "06/15/2015",
+          "dates": [
+            [
+              2015,
+              6,
+              15
+            ]
+          ],
+          "year": 2015,
+          "month": 6,
+          "viewMode": 2,
+          "heading": "2010-2019",
+          "prev": true,
+          "next": true,
+          "enabledYears": 3
+        }
+      ],
+      "errors": [],
+      "pass": false,
+      "publicFailure": true
+    },
+    {
+      "action": "keys",
+      "initial": {
+        "value": "10/15/2017",
+        "dates": [
+          [
+            2017,
+            10,
+            15
+          ]
+        ],
+        "year": 2017,
+        "month": 10,
+        "viewMode": 0,
+        "heading": "October 2017",
+        "prev": true,
+        "next": true,
+        "enabledYears": 0
+      },
+      "gestures": [
+        "ArrowRight",
+        "Enter"
+      ],
+      "trace": [
+        {
+          "value": "10/15/2017",
+          "dates": [
+            [
+              2017,
+              10,
+              15
+            ]
+          ],
+          "year": 2017,
+          "month": 10,
+          "viewMode": 0,
+          "heading": "October 2017",
+          "prev": true,
+          "next": true,
+          "enabledYears": 0
+        },
+        {
+          "value": "10/16/2017",
+          "dates": [
+            [
+              2017,
+              10,
+              16
+            ]
+          ],
+          "year": 2017,
+          "month": 10,
+          "viewMode": 0,
+          "heading": "October 2017",
+          "prev": true,
+          "next": true,
+          "enabledYears": 0
+        }
+      ],
+      "errors": [],
+      "pass": true,
+      "publicFailure": false
+    },
+    {
+      "action": "manual",
+      "initial": {
+        "value": "10/15/2017",
+        "dates": [
+          [
+            2017,
+            10,
+            15
+          ]
+        ],
+        "year": 2017,
+        "month": 10,
+        "viewMode": 0,
+        "heading": "October 2017",
+        "prev": true,
+        "next": true,
+        "enabledYears": 0
+      },
+      "gestures": [
+        "replace date up to the final digit",
+        "type final digit 7",
+        "commit with Tab"
+      ],
+      "trace": [
+        {
+          "value": "10/18/201",
+          "dates": [
+            [
+              2017,
+              10,
+              15
+            ]
+          ],
+          "year": 2017,
+          "month": 10,
+          "viewMode": 0,
+          "heading": "October 2017",
+          "prev": true,
+          "next": true,
+          "enabledYears": 0
+        },
+        {
+          "value": "10/18/2017",
+          "dates": [
+            [
+              2017,
+              10,
+              18
+            ]
+          ],
+          "year": 2017,
+          "month": 10,
+          "viewMode": 0,
+          "heading": "October 2017",
+          "prev": true,
+          "next": true,
+          "enabledYears": 0
+        },
+        {
+          "value": "10/18/2017",
+          "dates": [
+            [
+              2017,
+              10,
+              18
+            ]
+          ],
+          "year": 2017,
+          "month": 10,
+          "viewMode": 0,
+          "heading": "",
+          "prev": false,
+          "next": false,
+          "enabledYears": 0
+        }
+      ],
+      "errors": [],
+      "pass": true,
+      "publicFailure": false
+    },
+    {
+      "action": "range",
+      "initial": {
+        "value": "10/15/2017",
+        "dates": [
+          [
+            2017,
+            10,
+            15
+          ]
+        ],
+        "year": 2017,
+        "month": 10,
+        "viewMode": 0,
+        "heading": "October 2017",
+        "prev": true,
+        "next": true,
+        "enabledYears": 0
+      },
+      "gestures": [
+        "click day 18",
+        "click day 17"
+      ],
+      "trace": [
+        {
+          "value": "10/15/2017,10/18/2017",
+          "dates": [
+            [
+              2017,
+              10,
+              15
+            ],
+            [
+              2017,
+              10,
+              18
+            ]
+          ],
+          "year": 2017,
+          "month": 10,
+          "viewMode": 0,
+          "heading": "October 2017",
+          "prev": true,
+          "next": true,
+          "enabledYears": 0
+        },
+        {
+          "value": "10/15/2017,10/18/2017",
+          "dates": [
+            [
+              2017,
+              10,
+              15
+            ],
+            [
+              2017,
+              10,
+              18
+            ]
+          ],
+          "year": 2017,
+          "month": 10,
+          "viewMode": 0,
+          "heading": "October 2017",
+          "prev": true,
+          "next": true,
+          "enabledYears": 0
+        }
+      ],
+      "errors": [],
+      "pass": true,
+      "publicFailure": false
+    }
+  ],
+  "repeat": [
+    {
+      "action": "month",
+      "initial": {
+        "value": "06/15/2015",
+        "dates": [
+          [
+            2015,
+            6,
+            15
+          ]
+        ],
+        "year": 2015,
+        "month": 6,
+        "viewMode": 2,
+        "heading": "2010-2019",
+        "prev": true,
+        "next": true,
+        "enabledYears": 3
+      },
+      "gestures": [
+        "click year header prev",
+        "click year header next"
+      ],
+      "trace": [
+        {
+          "value": "06/15/2015",
+          "dates": [
+            [
+              2015,
+              6,
+              15
+            ]
+          ],
+          "year": 2005,
+          "month": 6,
+          "viewMode": 2,
+          "heading": "2000-2009",
+          "prev": false,
+          "next": true,
+          "enabledYears": 0
+        },
+        {
+          "value": "06/15/2015",
+          "dates": [
+            [
+              2015,
+              6,
+              15
+            ]
+          ],
+          "year": 2015,
+          "month": 6,
+          "viewMode": 2,
+          "heading": "2010-2019",
+          "prev": true,
+          "next": true,
+          "enabledYears": 3
+        }
+      ],
+      "errors": [],
+      "pass": false,
+      "publicFailure": true
+    }
+  ]
+}

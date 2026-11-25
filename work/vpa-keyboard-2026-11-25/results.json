@@ -1,0 +1,293 @@
+[
+  {
+    "id": "2376",
+    "config": {
+      "id": "2376",
+      "family": "flatpickr",
+      "panel": "flatpickr",
+      "package": "flatpickr",
+      "old": "4.6.9",
+      "fixed": "4.6.10",
+      "issue": "https://github.com/flatpickr/flatpickr/issues/2376",
+      "repair": "https://github.com/flatpickr/flatpickr/pull/2329",
+      "mergeCommit": "cf77c7ce8f635f0f2757b704d0a8554276e16fe3",
+      "merged": "2021-01-09T03:09:21Z",
+      "target": "keys",
+      "why": "Reporter specified 4.6.9. The maintainer merged PR #2329 to scope keydown listeners to the date picker. 4.6.10 is the next published stable version."
+    },
+    "browser": "157.0.8103.80",
+    "playwright": "1.62.1",
+    "routing": {
+      "title": "appendTo set to body breaks arrow keys on all unrelated input fields",
+      "ranking": [
+        {
+          "id": "manual",
+          "description": "Type or replace the input text, leave the field, and inspect the parsed value.",
+          "score": 2.3018337045491135
+        },
+        {
+          "id": "time",
+          "description": "Change a time field, trigger a time update and inspect the selected hours, minutes and time limits.",
+          "score": 0.7864766936784818
+        },
+        {
+          "id": "month",
+          "description": "Move forward and backward between months and years and inspect the calendar heading and grid.",
+          "score": 0
+        },
+        {
+          "id": "keys",
+          "description": "Navigate with the keyboard and inspect the focused and selected date.",
+          "score": 0
+        },
+        {
+          "id": "range",
+          "description": "Select dates in a range or multiple-date mode and check its endpoints and disabled dates.",
+          "score": 0
+        }
+      ],
+      "cues": [
+        "arrow keys"
+      ],
+      "promoted": true,
+      "displaced": "time",
+      "orders": {
+        "bm25": [
+          "manual",
+          "time",
+          "month",
+          "keys",
+          "range"
+        ],
+        "keyboard": [
+          "manual",
+          "keys",
+          "time",
+          "month",
+          "range"
+        ]
+      }
+    },
+    "signatures": {
+      "reference": {
+        "cursor": [
+          6,
+          5,
+          6
+        ],
+        "prevented": [
+          false,
+          false
+        ]
+      },
+      "candidate": {
+        "cursor": [
+          6,
+          6,
+          6
+        ],
+        "prevented": [
+          true,
+          true
+        ]
+      },
+      "repeat": {
+        "cursor": [
+          6,
+          6,
+          6
+        ],
+        "prevented": [
+          true,
+          true
+        ]
+      }
+    },
+    "methods": {
+      "bm25": {
+        "hit": null,
+        "at2": false,
+        "by3": false,
+        "exactly3": false,
+        "candidateActions": 3,
+        "candidateGestures": 5,
+        "referenceActions": 0,
+        "referenceImages": 0,
+        "referenceBytes": 0,
+        "order": [
+          "ordinary",
+          "manual",
+          "time"
+        ]
+      },
+      "keyboard": {
+        "hit": 3,
+        "at2": false,
+        "by3": true,
+        "exactly3": true,
+        "candidateActions": 3,
+        "candidateGestures": 5,
+        "referenceActions": 0,
+        "referenceImages": 0,
+        "referenceBytes": 0,
+        "order": [
+          "ordinary",
+          "manual",
+          "keys"
+        ]
+      }
+    },
+    "acceptedPairs": 6,
+    "acceptanceImageBytes": 38244,
+    "secondBrowser": "157.0.8103.80",
+    "differentFiles": []
+  },
+  {
+    "id": "1661",
+    "config": {
+      "id": "1661",
+      "family": "flatpickr",
+      "panel": "flatpickr",
+      "package": "flatpickr",
+      "old": "4.5.4",
+      "fixed": "4.5.5",
+      "issue": "https://github.com/flatpickr/flatpickr/issues/1661",
+      "repair": "https://github.com/flatpickr/flatpickr/pull/1663",
+      "mergeCommit": "4d582a3ad50ac610f1bb357de8fa817c912b1716",
+      "merged": "2019-02-25T15:42:17Z",
+      "target": "keys",
+      "why": "The report names 4.5.4. The maintainer merged PR #1663, and 4.5.5 is the first stable release after it."
+    },
+    "browser": "157.0.8103.80",
+    "playwright": "1.62.1",
+    "routing": {
+      "title": "Tabbing/Focus issue with dateTime input and altInput and keyboard only navigation",
+      "ranking": [
+        {
+          "id": "keys",
+          "description": "Navigate with the keyboard and inspect the focused and selected date.",
+          "score": 1.6270469573189181
+        },
+        {
+          "id": "manual",
+          "description": "Type or replace the input text, leave the field, and inspect the parsed value.",
+          "score": 1.4108546942893374
+        },
+        {
+          "id": "month",
+          "description": "Move forward and backward between months and years and inspect the calendar heading and grid.",
+          "score": 0
+        },
+        {
+          "id": "range",
+          "description": "Select dates in a range or multiple-date mode and check its endpoints and disabled dates.",
+          "score": 0
+        },
+        {
+          "id": "time",
+          "description": "Change a time field, trigger a time update and inspect the selected hours, minutes and time limits.",
+          "score": 0
+        }
+      ],
+      "cues": [
+        "keyboard",
+        "tabbing"
+      ],
+      "promoted": false,
+      "displaced": null,
+      "orders": {
+        "bm25": [
+          "keys",
+          "manual",
+          "month",
+          "range",
+          "time"
+        ],
+        "keyboard": [
+          "keys",
+          "manual",
+          "month",
+          "range",
+          "time"
+        ]
+      }
+    },
+    "signatures": {
+      "reference": {
+        "focus": [
+          "alt",
+          "flatpickr-day ",
+          "numInput flatpickr-hour",
+          "numInput flatpickr-minute",
+          "other",
+          "body"
+        ],
+        "selected": [
+          16
+        ]
+      },
+      "candidate": {
+        "focus": [
+          "flatpickr-day today selected",
+          "flatpickr-day ",
+          "numInput flatpickr-hour",
+          "numInput flatpickr-minute",
+          "body",
+          "before"
+        ],
+        "selected": [
+          16
+        ]
+      },
+      "repeat": {
+        "focus": [
+          "flatpickr-day today selected",
+          "flatpickr-day ",
+          "numInput flatpickr-hour",
+          "numInput flatpickr-minute",
+          "body",
+          "before"
+        ],
+        "selected": [
+          16
+        ]
+      }
+    },
+    "methods": {
+      "bm25": {
+        "hit": 2,
+        "at2": true,
+        "by3": true,
+        "exactly3": false,
+        "candidateActions": 2,
+        "candidateGestures": 7,
+        "referenceActions": 0,
+        "referenceImages": 0,
+        "referenceBytes": 0,
+        "order": [
+          "ordinary",
+          "keys"
+        ]
+      },
+      "keyboard": {
+        "hit": 2,
+        "at2": true,
+        "by3": true,
+        "exactly3": false,
+        "candidateActions": 2,
+        "candidateGestures": 7,
+        "referenceActions": 0,
+        "referenceImages": 0,
+        "referenceBytes": 0,
+        "order": [
+          "ordinary",
+          "keys"
+        ]
+      }
+    },
+    "acceptedPairs": 6,
+    "acceptanceImageBytes": 42965,
+    "secondBrowser": "157.0.8103.80",
+    "differentFiles": []
+  }
+]

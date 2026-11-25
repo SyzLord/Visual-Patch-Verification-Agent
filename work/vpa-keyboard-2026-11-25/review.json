@@ -1,0 +1,82 @@
+[
+  {
+    "id": "634",
+    "url": "https://github.com/t1m0n/air-datepicker/issues/634",
+    "title": "Keyboard navigation mode exits browser's fullscreen mode on Esc",
+    "created": "2024-09-23T05:15:50Z",
+    "closed": "2024-09-23T16:05:27Z",
+    "reason": "Maintainer declined to change reserved Escape behavior in fullscreen; no repaired package.",
+    "comments": [
+      "https://github.com/t1m0n/air-datepicker/issues/634#issuecomment-2368735845",
+      "https://github.com/t1m0n/air-datepicker/issues/634#issuecomment-2368778431"
+    ]
+  },
+  {
+    "id": "1877",
+    "url": "https://github.com/uxsolutions/bootstrap-datepicker/issues/1877",
+    "title": "Disabled dates getting selected on \"ENTER\" key press",
+    "created": "2016-05-03T09:29:57Z",
+    "closed": "2016-05-09T06:57:36Z",
+    "reason": "Disabled-date selection on Enter. Maintainer confirmed a fix and user acknowledged the updated official demo. The report names the demo but gives no release number. In the plausible 1.6.0 and 1.6.1 packages the Enter branch and date-toggle validation contain the same selection logic. No defensible affected/fixed published pair was pinned.",
+    "comments": [
+      "https://github.com/uxsolutions/bootstrap-datepicker/issues/1877#issuecomment-216487088",
+      "https://github.com/uxsolutions/bootstrap-datepicker/issues/1877#issuecomment-217666177",
+      "https://github.com/uxsolutions/bootstrap-datepicker/issues/1877#issuecomment-217786174",
+      "https://github.com/uxsolutions/bootstrap-datepicker/issues/1877#issuecomment-217786827",
+      "https://github.com/uxsolutions/bootstrap-datepicker/issues/1877#issuecomment-217789384",
+      "https://github.com/uxsolutions/bootstrap-datepicker/issues/1877#issuecomment-217802553"
+    ]
+  },
+  {
+    "id": "2117",
+    "url": "https://github.com/flatpickr/flatpickr/issues/2117",
+    "title": "Flatpickr Datepicker has issues with keyboard accessibility and behavior when used inside bootstrap modal",
+    "created": "2020-02-26T17:23:44Z",
+    "closed": "2020-02-26T17:49:29Z",
+    "reason": "Reporter resolved the behavior with the static option; no fixed build.",
+    "comments": [
+      "https://github.com/flatpickr/flatpickr/issues/2117#issuecomment-591555484"
+    ]
+  },
+  {
+    "id": "2160",
+    "url": "https://github.com/flatpickr/flatpickr/issues/2160",
+    "title": "Bug in the official example page. Keyboard entry in the time field is not as expected",
+    "created": "2020-04-25T05:53:49Z",
+    "closed": "2020-04-25T06:27:23Z",
+    "reason": "Reporter confirmed a browser input extension caused the behavior.",
+    "comments": [
+      "https://github.com/flatpickr/flatpickr/issues/2160#issuecomment-619329797"
+    ]
+  },
+  {
+    "id": "2328",
+    "url": "https://github.com/flatpickr/flatpickr/issues/2328",
+    "title": "error when submitting with keyboard",
+    "created": "2020-11-17T12:29:36Z",
+    "closed": "2020-11-17T23:03:59Z",
+    "reason": "Reporter attributed the behavior to their React effect lifecycle.",
+    "comments": []
+  },
+  {
+    "id": "2376",
+    "url": "https://github.com/flatpickr/flatpickr/issues/2376",
+    "title": "appendTo set to body breaks arrow keys on all unrelated input fields",
+    "created": "2021-01-06T08:14:58Z",
+    "closed": "2021-01-11T06:20:08Z",
+    "reason": "Append date picker to the document body; unrelated text input should retain normal arrow navigation. Public reporter and merged upstream repair identify the pair.",
+    "comments": [
+      "https://github.com/flatpickr/flatpickr/issues/2376#issuecomment-757614294",
+      "https://github.com/flatpickr/flatpickr/issues/2376#issuecomment-757648457",
+      "https://github.com/flatpickr/flatpickr/issues/2376#issuecomment-787760073",
+      "https://github.com/flatpickr/flatpickr/issues/2376#issuecomment-788008526",
+      "https://github.com/flatpickr/flatpickr/issues/2376#issuecomment-828392193",
+      "https://github.com/flatpickr/flatpickr/issues/2376#issuecomment-843195401"
+    ]
+  },
+  {
+    "id": "1661",
+    "url": "https://github.com/flatpickr/flatpickr/issues/1661",
+    "reason": "Date-time keyboard tab order with altInput; reported 4.5.4, explicit fix #1663, first later stable 4.5.5."
+  }
+]

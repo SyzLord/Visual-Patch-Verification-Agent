@@ -1,0 +1,256 @@
+{
+  "ticket": "2058",
+  "fixed": "1.7.0",
+  "query": "ViewMode 2: can access the previous/next decade where all years are disabled",
+  "margin": 0,
+  "allText": [
+    {
+      "id": "month",
+      "description": "Move forward and backward between months and years and inspect the calendar heading and grid.",
+      "score": 1.1374957783202098,
+      "overlaps": [
+        {
+          "title": "years",
+          "action": [
+            "years"
+          ],
+          "token": "year",
+          "substantive": true
+        }
+      ],
+      "substantive": [
+        {
+          "title": "years",
+          "action": [
+            "years"
+          ],
+          "token": "year",
+          "substantive": true
+        }
+      ]
+    },
+    {
+      "id": "range",
+      "description": "Select dates in a range or multiple-date mode and check its endpoints and disabled dates.",
+      "score": 1.1374957783202098,
+      "overlaps": [
+        {
+          "title": "disabled",
+          "action": [
+            "disabled"
+          ],
+          "token": "disabl",
+          "substantive": true
+        }
+      ],
+      "substantive": [
+        {
+          "title": "disabled",
+          "action": [
+            "disabled"
+          ],
+          "token": "disabl",
+          "substantive": true
+        }
+      ]
+    },
+    {
+      "id": "keys",
+      "description": "Navigate with the keyboard and inspect the focused and selected date.",
+      "score": 0,
+      "overlaps": [],
+      "substantive": []
+    },
+    {
+      "id": "manual",
+      "description": "Type or replace the input text, leave the field, and inspect the parsed value.",
+      "score": 0,
+      "overlaps": [],
+      "substantive": []
+    }
+  ],
+  "shortlist": [
+    {
+      "id": "month",
+      "description": "Move forward and backward between months and years and inspect the calendar heading and grid.",
+      "score": 1.1374957783202098,
+      "overlaps": [
+        {
+          "title": "years",
+          "action": [
+            "years"
+          ],
+          "token": "year",
+          "substantive": true
+        }
+      ],
+      "substantive": [
+        {
+          "title": "years",
+          "action": [
+            "years"
+          ],
+          "token": "year",
+          "substantive": true
+        }
+      ]
+    },
+    {
+      "id": "range",
+      "description": "Select dates in a range or multiple-date mode and check its endpoints and disabled dates.",
+      "score": 1.1374957783202098,
+      "overlaps": [
+        {
+          "title": "disabled",
+          "action": [
+            "disabled"
+          ],
+          "token": "disabl",
+          "substantive": true
+        }
+      ],
+      "substantive": [
+        {
+          "title": "disabled",
+          "action": [
+            "disabled"
+          ],
+          "token": "disabl",
+          "substantive": true
+        }
+      ]
+    },
+    {
+      "id": "keys",
+      "description": "Navigate with the keyboard and inspect the focused and selected date.",
+      "score": 0,
+      "overlaps": [],
+      "substantive": []
+    }
+  ],
+  "pairs": [
+    {
+      "id": "month",
+      "frames": [
+        {
+          "file": "month-pre.png",
+          "sha256": "beda6c08df85bd32fe0e71c50d605743a1bb544412bea4828a03b97ffccb7993",
+          "bytes": 12567
+        },
+        {
+          "file": "month-post.png",
+          "sha256": "96df2aa59ac87847a170ef8fb2c74203ec917940ab6f52a97d5923251e6ce77e",
+          "bytes": 12448
+        }
+      ],
+      "gestures": [
+        "click year header prev",
+        "click year header next"
+      ],
+      "delta": 0.0030245428137585
+    },
+    {
+      "id": "range",
+      "frames": [
+        {
+          "file": "range-pre.png",
+          "sha256": "256afedef72df61a35f7e782e18aef833af92408a5af3eb0e483c6adcea8df07",
+          "bytes": 17801
+        },
+        {
+          "file": "range-post.png",
+          "sha256": "0438084c6a0f6cfed05664bc3fc98e5aacb151e4e4a8076c31bc675db3ba0155",
+          "bytes": 17699
+        }
+      ],
+      "gestures": [
+        "click day 18",
+        "click day 17"
+      ],
+      "delta": 0.009443107546048723
+    },
+    {
+      "id": "keys",
+      "frames": [
+        {
+          "file": "keys-pre.png",
+          "sha256": "449924a2a3197826399fadf999f3e05eebcc6c8f635ccd58df2db65e2040f118",
+          "bytes": 17747
+        },
+        {
+          "file": "keys-post.png",
+          "sha256": "cc2aac78d46c7aa6f1dafb58f14a052e751c581b495d2a138f02ba5fc6f280ae",
+          "bytes": 17777
+        }
+      ],
+      "gestures": [
+        "ArrowRight",
+        "Enter"
+      ],
+      "delta": 0.012121624744173764
+    }
+  ],
+  "local": [
+    {
+      "id": "month",
+      "delta": 0.0030245428137585,
+      "textRank": 0,
+      "visualRank": 2,
+      "score": 2
+    },
+    {
+      "id": "range",
+      "delta": 0.009443107546048723,
+      "textRank": 1,
+      "visualRank": 1,
+      "score": 2
+    },
+    {
+      "id": "keys",
+      "delta": 0.012121624744173764,
+      "textRank": 2,
+      "visualRank": 0,
+      "score": 2
+    }
+  ],
+  "zero": [
+    {
+      "id": "month",
+      "delta": 0,
+      "textRank": 0,
+      "visualRank": 1,
+      "score": 1
+    },
+    {
+      "id": "range",
+      "delta": 0,
+      "textRank": 1,
+      "visualRank": 1,
+      "score": 2
+    },
+    {
+      "id": "keys",
+      "delta": 0,
+      "textRank": 2,
+      "visualRank": 1,
+      "score": 3
+    }
+  ],
+  "orders": {
+    "bm25": [
+      "month",
+      "range",
+      "keys"
+    ],
+    "local": [
+      "month",
+      "range",
+      "keys"
+    ],
+    "zero": [
+      "month",
+      "range",
+      "keys"
+    ]
+  }
+}

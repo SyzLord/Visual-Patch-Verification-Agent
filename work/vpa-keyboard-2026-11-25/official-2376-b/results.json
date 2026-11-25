@@ -1,0 +1,421 @@
+{
+  "bm25": {
+    "hit": null,
+    "at2": false,
+    "by3": false,
+    "exactly3": false,
+    "candidateActions": 3,
+    "candidateGestures": 5,
+    "trace": [
+      {
+        "action": "ordinary",
+        "initial": {
+          "open": true,
+          "year": 2017,
+          "month": 10,
+          "value": "2017-10-15",
+          "days": [
+            15
+          ],
+          "hours": [
+            0
+          ],
+          "active": "body",
+          "activeInCalendar": false,
+          "otherValue": "alpha beta",
+          "selection": 0,
+          "end": 0,
+          "events": []
+        },
+        "gestures": [
+          "choose day 16"
+        ],
+        "trace": [
+          {
+            "open": false,
+            "year": 2017,
+            "month": 10,
+            "value": "2017-10-16",
+            "days": [
+              16
+            ],
+            "hours": [
+              0
+            ],
+            "active": "field",
+            "activeInCalendar": false,
+            "otherValue": "alpha beta",
+            "selection": 0,
+            "end": 0,
+            "events": []
+          }
+        ],
+        "errors": [],
+        "pass": true,
+        "publicFailure": false
+      },
+      {
+        "action": "manual",
+        "initial": {
+          "open": true,
+          "year": 2017,
+          "month": 10,
+          "value": "2017-10-15",
+          "days": [
+            15
+          ],
+          "hours": [
+            0
+          ],
+          "active": "body",
+          "activeInCalendar": false,
+          "otherValue": "alpha beta",
+          "selection": 0,
+          "end": 0,
+          "events": []
+        },
+        "gestures": [
+          "replace date",
+          "commit with Enter"
+        ],
+        "trace": [
+          {
+            "open": true,
+            "year": 2017,
+            "month": 10,
+            "value": "2017-10-18",
+            "days": [
+              15
+            ],
+            "hours": [
+              0
+            ],
+            "active": "field",
+            "activeInCalendar": false,
+            "otherValue": "alpha beta",
+            "selection": 0,
+            "end": 0,
+            "events": []
+          },
+          {
+            "open": true,
+            "year": 2017,
+            "month": 10,
+            "value": "2017-10-18",
+            "days": [
+              18
+            ],
+            "hours": [
+              0
+            ],
+            "active": "body",
+            "activeInCalendar": false,
+            "otherValue": "alpha beta",
+            "selection": 0,
+            "end": 0,
+            "events": [
+              {
+                "key": "Enter",
+                "target": "field",
+                "prevented": false
+              }
+            ]
+          }
+        ],
+        "errors": [],
+        "pass": true,
+        "publicFailure": false
+      },
+      {
+        "action": "time",
+        "initial": {
+          "open": true,
+          "year": 2017,
+          "month": 10,
+          "value": "2017-10-15 12:00",
+          "days": [
+            15
+          ],
+          "hours": [
+            12
+          ],
+          "active": "body",
+          "activeInCalendar": false,
+          "otherValue": "alpha beta",
+          "selection": 0,
+          "end": 0,
+          "events": []
+        },
+        "gestures": [
+          "click hour",
+          "increment hour"
+        ],
+        "trace": [
+          {
+            "open": true,
+            "year": 2017,
+            "month": 10,
+            "value": "2017-10-15 12:00",
+            "days": [
+              15
+            ],
+            "hours": [
+              12
+            ],
+            "active": "numInput flatpickr-hour",
+            "activeInCalendar": true,
+            "otherValue": "alpha beta",
+            "selection": 0,
+            "end": 0,
+            "events": []
+          },
+          {
+            "open": true,
+            "year": 2017,
+            "month": 10,
+            "value": "2017-10-15 13:00",
+            "days": [
+              15
+            ],
+            "hours": [
+              13
+            ],
+            "active": "numInput flatpickr-hour",
+            "activeInCalendar": true,
+            "otherValue": "alpha beta",
+            "selection": 0,
+            "end": 0,
+            "events": [
+              {
+                "key": "ArrowUp",
+                "target": "numInput flatpickr-hour",
+                "prevented": true
+              }
+            ]
+          }
+        ],
+        "errors": [],
+        "pass": true,
+        "publicFailure": false
+      }
+    ],
+    "referenceActions": 0,
+    "referenceImages": 0,
+    "referenceBytes": 0
+  },
+  "keyboard": {
+    "hit": 3,
+    "at2": false,
+    "by3": true,
+    "exactly3": true,
+    "candidateActions": 3,
+    "candidateGestures": 5,
+    "trace": [
+      {
+        "action": "ordinary",
+        "initial": {
+          "open": true,
+          "year": 2017,
+          "month": 10,
+          "value": "2017-10-15",
+          "days": [
+            15
+          ],
+          "hours": [
+            0
+          ],
+          "active": "body",
+          "activeInCalendar": false,
+          "otherValue": "alpha beta",
+          "selection": 0,
+          "end": 0,
+          "events": []
+        },
+        "gestures": [
+          "choose day 16"
+        ],
+        "trace": [
+          {
+            "open": false,
+            "year": 2017,
+            "month": 10,
+            "value": "2017-10-16",
+            "days": [
+              16
+            ],
+            "hours": [
+              0
+            ],
+            "active": "field",
+            "activeInCalendar": false,
+            "otherValue": "alpha beta",
+            "selection": 0,
+            "end": 0,
+            "events": []
+          }
+        ],
+        "errors": [],
+        "pass": true,
+        "publicFailure": false
+      },
+      {
+        "action": "manual",
+        "initial": {
+          "open": true,
+          "year": 2017,
+          "month": 10,
+          "value": "2017-10-15",
+          "days": [
+            15
+          ],
+          "hours": [
+            0
+          ],
+          "active": "body",
+          "activeInCalendar": false,
+          "otherValue": "alpha beta",
+          "selection": 0,
+          "end": 0,
+          "events": []
+        },
+        "gestures": [
+          "replace date",
+          "commit with Enter"
+        ],
+        "trace": [
+          {
+            "open": true,
+            "year": 2017,
+            "month": 10,
+            "value": "2017-10-18",
+            "days": [
+              15
+            ],
+            "hours": [
+              0
+            ],
+            "active": "field",
+            "activeInCalendar": false,
+            "otherValue": "alpha beta",
+            "selection": 0,
+            "end": 0,
+            "events": []
+          },
+          {
+            "open": true,
+            "year": 2017,
+            "month": 10,
+            "value": "2017-10-18",
+            "days": [
+              18
+            ],
+            "hours": [
+              0
+            ],
+            "active": "body",
+            "activeInCalendar": false,
+            "otherValue": "alpha beta",
+            "selection": 0,
+            "end": 0,
+            "events": [
+              {
+                "key": "Enter",
+                "target": "field",
+                "prevented": false
+              }
+            ]
+          }
+        ],
+        "errors": [],
+        "pass": true,
+        "publicFailure": false
+      },
+      {
+        "action": "keys",
+        "initial": {
+          "open": false,
+          "year": 2017,
+          "month": 10,
+          "value": "2017-10-15",
+          "days": [
+            15
+          ],
+          "hours": [
+            0
+          ],
+          "active": "other",
+          "activeInCalendar": false,
+          "otherValue": "alpha beta",
+          "selection": 6,
+          "end": 6,
+          "events": []
+        },
+        "gestures": [
+          "ArrowLeft",
+          "ArrowRight"
+        ],
+        "trace": [
+          {
+            "open": false,
+            "year": 2017,
+            "month": 10,
+            "value": "2017-10-15",
+            "days": [
+              15
+            ],
+            "hours": [
+              0
+            ],
+            "active": "other",
+            "activeInCalendar": false,
+            "otherValue": "alpha beta",
+            "selection": 6,
+            "end": 6,
+            "events": [
+              {
+                "key": "ArrowLeft",
+                "target": "other",
+                "prevented": true
+              }
+            ]
+          },
+          {
+            "open": false,
+            "year": 2017,
+            "month": 10,
+            "value": "2017-10-15",
+            "days": [
+              15
+            ],
+            "hours": [
+              0
+            ],
+            "active": "other",
+            "activeInCalendar": false,
+            "otherValue": "alpha beta",
+            "selection": 6,
+            "end": 6,
+            "events": [
+              {
+                "key": "ArrowLeft",
+                "target": "other",
+                "prevented": true
+              },
+              {
+                "key": "ArrowRight",
+                "target": "other",
+                "prevented": true
+              }
+            ]
+          }
+        ],
+        "errors": [],
+        "pass": false,
+        "publicFailure": true
+      }
+    ],
+    "referenceActions": 0,
+    "referenceImages": 0,
+    "referenceBytes": 0
+  }
+}

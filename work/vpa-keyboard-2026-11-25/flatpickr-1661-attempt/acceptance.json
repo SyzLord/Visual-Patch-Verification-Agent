@@ -1,0 +1,1325 @@
+{
+  "browser": "157.0.8103.80",
+  "playwright": "1.62.1",
+  "reference": [
+    {
+      "action": "ordinary",
+      "initial": {
+        "open": true,
+        "year": 2017,
+        "month": 10,
+        "value": "2017-10-15",
+        "days": [
+          15
+        ],
+        "hours": [
+          0
+        ],
+        "active": "body",
+        "otherValue": "alpha beta",
+        "selection": 0,
+        "end": 0,
+        "events": []
+      },
+      "gestures": [
+        "choose day 16"
+      ],
+      "trace": [
+        {
+          "open": false,
+          "year": 2017,
+          "month": 10,
+          "value": "2017-10-16",
+          "days": [
+            16
+          ],
+          "hours": [
+            0
+          ],
+          "active": "field",
+          "otherValue": "alpha beta",
+          "selection": 0,
+          "end": 0,
+          "events": []
+        }
+      ],
+      "errors": [],
+      "pass": true,
+      "publicFailure": false
+    },
+    {
+      "action": "month",
+      "initial": {
+        "open": true,
+        "year": 2017,
+        "month": 10,
+        "value": "2017-10-15",
+        "days": [
+          15
+        ],
+        "hours": [
+          0
+        ],
+        "active": "body",
+        "otherValue": "alpha beta",
+        "selection": 0,
+        "end": 0,
+        "events": []
+      },
+      "gestures": [
+        "next month",
+        "prev month"
+      ],
+      "trace": [
+        {
+          "open": true,
+          "year": 2017,
+          "month": 11,
+          "value": "2017-10-15",
+          "days": [
+            15
+          ],
+          "hours": [
+            0
+          ],
+          "active": "body",
+          "otherValue": "alpha beta",
+          "selection": 0,
+          "end": 0,
+          "events": []
+        },
+        {
+          "open": true,
+          "year": 2017,
+          "month": 10,
+          "value": "2017-10-15",
+          "days": [
+            15
+          ],
+          "hours": [
+            0
+          ],
+          "active": "body",
+          "otherValue": "alpha beta",
+          "selection": 0,
+          "end": 0,
+          "events": []
+        }
+      ],
+      "errors": [],
+      "pass": true,
+      "publicFailure": false
+    },
+    {
+      "action": "keys",
+      "initial": {
+        "open": false,
+        "year": 2017,
+        "month": 10,
+        "value": "2017-10-15 12:00",
+        "days": [
+          15
+        ],
+        "hours": [
+          12
+        ],
+        "active": "before",
+        "otherValue": "alpha beta",
+        "selection": 0,
+        "end": 0,
+        "events": []
+      },
+      "gestures": [
+        "Tab",
+        "ArrowRight",
+        "Enter",
+        "Tab",
+        "Tab",
+        "Tab"
+      ],
+      "trace": [
+        {
+          "open": true,
+          "year": 2017,
+          "month": 10,
+          "value": "2017-10-15 12:00",
+          "days": [
+            15
+          ],
+          "hours": [
+            12
+          ],
+          "active": "alt",
+          "otherValue": "alpha beta",
+          "selection": 0,
+          "end": 0,
+          "events": [
+            {
+              "key": "Tab",
+              "target": "before",
+              "prevented": false
+            }
+          ]
+        },
+        {
+          "open": true,
+          "year": 2017,
+          "month": 10,
+          "value": "2017-10-15 12:00",
+          "days": [
+            15
+          ],
+          "hours": [
+            12
+          ],
+          "active": "flatpickr-day ",
+          "otherValue": "alpha beta",
+          "selection": 0,
+          "end": 0,
+          "events": [
+            {
+              "key": "Tab",
+              "target": "before",
+              "prevented": false
+            },
+            {
+              "key": "ArrowRight",
+              "target": "flatpickr-input form-control input active",
+              "prevented": true
+            }
+          ]
+        },
+        {
+          "open": true,
+          "year": 2017,
+          "month": 10,
+          "value": "2017-10-16 12:00",
+          "days": [
+            16
+          ],
+          "hours": [
+            12
+          ],
+          "active": "numInput flatpickr-hour",
+          "otherValue": "alpha beta",
+          "selection": 0,
+          "end": 0,
+          "events": [
+            {
+              "key": "Tab",
+              "target": "before",
+              "prevented": false
+            },
+            {
+              "key": "ArrowRight",
+              "target": "flatpickr-input form-control input active",
+              "prevented": true
+            }
+          ]
+        },
+        {
+          "open": true,
+          "year": 2017,
+          "month": 10,
+          "value": "2017-10-16 12:00",
+          "days": [
+            16
+          ],
+          "hours": [
+            12
+          ],
+          "active": "numInput flatpickr-minute",
+          "otherValue": "alpha beta",
+          "selection": 0,
+          "end": 0,
+          "events": [
+            {
+              "key": "Tab",
+              "target": "before",
+              "prevented": false
+            },
+            {
+              "key": "ArrowRight",
+              "target": "flatpickr-input form-control input active",
+              "prevented": true
+            },
+            {
+              "key": "Tab",
+              "target": "numInput flatpickr-hour",
+              "prevented": true
+            }
+          ]
+        },
+        {
+          "open": false,
+          "year": 2017,
+          "month": 10,
+          "value": "2017-10-16 12:00",
+          "days": [
+            16
+          ],
+          "hours": [
+            12
+          ],
+          "active": "other",
+          "otherValue": "alpha beta",
+          "selection": 0,
+          "end": 10,
+          "events": [
+            {
+              "key": "Tab",
+              "target": "before",
+              "prevented": false
+            },
+            {
+              "key": "ArrowRight",
+              "target": "flatpickr-input form-control input active",
+              "prevented": true
+            },
+            {
+              "key": "Tab",
+              "target": "numInput flatpickr-hour",
+              "prevented": true
+            },
+            {
+              "key": "Tab",
+              "target": "numInput flatpickr-minute",
+              "prevented": false
+            }
+          ]
+        },
+        {
+          "open": false,
+          "year": 2017,
+          "month": 10,
+          "value": "2017-10-16 12:00",
+          "days": [
+            16
+          ],
+          "hours": [
+            12
+          ],
+          "active": "body",
+          "otherValue": "alpha beta",
+          "selection": 0,
+          "end": 10,
+          "events": [
+            {
+              "key": "Tab",
+              "target": "before",
+              "prevented": false
+            },
+            {
+              "key": "ArrowRight",
+              "target": "flatpickr-input form-control input active",
+              "prevented": true
+            },
+            {
+              "key": "Tab",
+              "target": "numInput flatpickr-hour",
+              "prevented": true
+            },
+            {
+              "key": "Tab",
+              "target": "numInput flatpickr-minute",
+              "prevented": false
+            },
+            {
+              "key": "Tab",
+              "target": "other",
+              "prevented": false
+            }
+          ]
+        }
+      ],
+      "errors": [],
+      "pass": true,
+      "publicFailure": false
+    },
+    {
+      "action": "manual",
+      "initial": {
+        "open": true,
+        "year": 2017,
+        "month": 10,
+        "value": "2017-10-15",
+        "days": [
+          15
+        ],
+        "hours": [
+          0
+        ],
+        "active": "body",
+        "otherValue": "alpha beta",
+        "selection": 0,
+        "end": 0,
+        "events": []
+      },
+      "gestures": [
+        "replace date",
+        "commit with Enter"
+      ],
+      "trace": [
+        {
+          "open": true,
+          "year": 2017,
+          "month": 10,
+          "value": "2017-10-18",
+          "days": [
+            15
+          ],
+          "hours": [
+            0
+          ],
+          "active": "field",
+          "otherValue": "alpha beta",
+          "selection": 0,
+          "end": 0,
+          "events": []
+        },
+        {
+          "open": true,
+          "year": 2017,
+          "month": 10,
+          "value": "2017-10-18",
+          "days": [
+            18
+          ],
+          "hours": [
+            0
+          ],
+          "active": "body",
+          "otherValue": "alpha beta",
+          "selection": 0,
+          "end": 0,
+          "events": [
+            {
+              "key": "Enter",
+              "target": "field",
+              "prevented": false
+            }
+          ]
+        }
+      ],
+      "errors": [],
+      "pass": true,
+      "publicFailure": false
+    },
+    {
+      "action": "range",
+      "initial": {
+        "open": true,
+        "year": 2017,
+        "month": 10,
+        "value": "",
+        "days": [],
+        "hours": [],
+        "active": "body",
+        "otherValue": "alpha beta",
+        "selection": 0,
+        "end": 0,
+        "events": []
+      },
+      "gestures": [
+        "click endpoint 16",
+        "click endpoint 18"
+      ],
+      "trace": [
+        {
+          "open": true,
+          "year": 2017,
+          "month": 10,
+          "value": "2017-10-16",
+          "days": [
+            16
+          ],
+          "hours": [
+            0
+          ],
+          "active": "flatpickr-day selected endRange",
+          "otherValue": "alpha beta",
+          "selection": 0,
+          "end": 0,
+          "events": []
+        },
+        {
+          "open": false,
+          "year": 2017,
+          "month": 10,
+          "value": "2017-10-16 to 2017-10-18",
+          "days": [
+            16,
+            18
+          ],
+          "hours": [
+            0,
+            0
+          ],
+          "active": "field",
+          "otherValue": "alpha beta",
+          "selection": 0,
+          "end": 0,
+          "events": []
+        }
+      ],
+      "errors": [],
+      "pass": true,
+      "publicFailure": false
+    },
+    {
+      "action": "time",
+      "initial": {
+        "open": true,
+        "year": 2017,
+        "month": 10,
+        "value": "2017-10-15 12:00",
+        "days": [
+          15
+        ],
+        "hours": [
+          12
+        ],
+        "active": "body",
+        "otherValue": "alpha beta",
+        "selection": 0,
+        "end": 0,
+        "events": []
+      },
+      "gestures": [
+        "click hour",
+        "increment hour"
+      ],
+      "trace": [
+        {
+          "open": true,
+          "year": 2017,
+          "month": 10,
+          "value": "2017-10-15 12:00",
+          "days": [
+            15
+          ],
+          "hours": [
+            12
+          ],
+          "active": "numInput flatpickr-hour",
+          "otherValue": "alpha beta",
+          "selection": 0,
+          "end": 0,
+          "events": []
+        },
+        {
+          "open": true,
+          "year": 2017,
+          "month": 10,
+          "value": "2017-10-15 13:00",
+          "days": [
+            15
+          ],
+          "hours": [
+            13
+          ],
+          "active": "numInput flatpickr-hour",
+          "otherValue": "alpha beta",
+          "selection": 0,
+          "end": 0,
+          "events": [
+            {
+              "key": "ArrowUp",
+              "target": "numInput flatpickr-hour",
+              "prevented": true
+            }
+          ]
+        }
+      ],
+      "errors": [],
+      "pass": true,
+      "publicFailure": false
+    }
+  ],
+  "candidate": [
+    {
+      "action": "ordinary",
+      "initial": {
+        "open": true,
+        "year": 2017,
+        "month": 10,
+        "value": "2017-10-15",
+        "days": [
+          15
+        ],
+        "hours": [
+          0
+        ],
+        "active": "flatpickr-day today selected",
+        "otherValue": "alpha beta",
+        "selection": 0,
+        "end": 0,
+        "events": []
+      },
+      "gestures": [
+        "choose day 16"
+      ],
+      "trace": [
+        {
+          "open": false,
+          "year": 2017,
+          "month": 10,
+          "value": "2017-10-16",
+          "days": [
+            16
+          ],
+          "hours": [
+            0
+          ],
+          "active": "field",
+          "otherValue": "alpha beta",
+          "selection": 0,
+          "end": 0,
+          "events": []
+        }
+      ],
+      "errors": [],
+      "pass": true,
+      "publicFailure": false
+    },
+    {
+      "action": "month",
+      "initial": {
+        "open": true,
+        "year": 2017,
+        "month": 10,
+        "value": "2017-10-15",
+        "days": [
+          15
+        ],
+        "hours": [
+          0
+        ],
+        "active": "flatpickr-day today selected",
+        "otherValue": "alpha beta",
+        "selection": 0,
+        "end": 0,
+        "events": []
+      },
+      "gestures": [
+        "next month",
+        "prev month"
+      ],
+      "trace": [
+        {
+          "open": true,
+          "year": 2017,
+          "month": 11,
+          "value": "2017-10-15",
+          "days": [
+            15
+          ],
+          "hours": [
+            0
+          ],
+          "active": "body",
+          "otherValue": "alpha beta",
+          "selection": 0,
+          "end": 0,
+          "events": []
+        },
+        {
+          "open": true,
+          "year": 2017,
+          "month": 10,
+          "value": "2017-10-15",
+          "days": [
+            15
+          ],
+          "hours": [
+            0
+          ],
+          "active": "body",
+          "otherValue": "alpha beta",
+          "selection": 0,
+          "end": 0,
+          "events": []
+        }
+      ],
+      "errors": [],
+      "pass": true,
+      "publicFailure": false
+    },
+    {
+      "action": "keys",
+      "initial": {
+        "open": false,
+        "year": 2017,
+        "month": 10,
+        "value": "2017-10-15 12:00",
+        "days": [
+          15
+        ],
+        "hours": [
+          12
+        ],
+        "active": "before",
+        "otherValue": "alpha beta",
+        "selection": 0,
+        "end": 0,
+        "events": []
+      },
+      "gestures": [
+        "Tab",
+        "ArrowRight",
+        "Enter",
+        "Tab",
+        "Tab",
+        "Tab"
+      ],
+      "trace": [
+        {
+          "open": true,
+          "year": 2017,
+          "month": 10,
+          "value": "2017-10-15 12:00",
+          "days": [
+            15
+          ],
+          "hours": [
+            12
+          ],
+          "active": "flatpickr-day today selected",
+          "otherValue": "alpha beta",
+          "selection": 0,
+          "end": 0,
+          "events": [
+            {
+              "key": "Tab",
+              "target": "before",
+              "prevented": false
+            }
+          ]
+        },
+        {
+          "open": true,
+          "year": 2017,
+          "month": 10,
+          "value": "2017-10-15 12:00",
+          "days": [
+            15
+          ],
+          "hours": [
+            12
+          ],
+          "active": "flatpickr-day ",
+          "otherValue": "alpha beta",
+          "selection": 0,
+          "end": 0,
+          "events": [
+            {
+              "key": "Tab",
+              "target": "before",
+              "prevented": false
+            },
+            {
+              "key": "ArrowRight",
+              "target": "flatpickr-day today selected",
+              "prevented": true
+            }
+          ]
+        },
+        {
+          "open": true,
+          "year": 2017,
+          "month": 10,
+          "value": "2017-10-16 12:00",
+          "days": [
+            16
+          ],
+          "hours": [
+            12
+          ],
+          "active": "numInput flatpickr-hour",
+          "otherValue": "alpha beta",
+          "selection": 0,
+          "end": 0,
+          "events": [
+            {
+              "key": "Tab",
+              "target": "before",
+              "prevented": false
+            },
+            {
+              "key": "ArrowRight",
+              "target": "flatpickr-day today selected",
+              "prevented": true
+            }
+          ]
+        },
+        {
+          "open": true,
+          "year": 2017,
+          "month": 10,
+          "value": "2017-10-16 12:00",
+          "days": [
+            16
+          ],
+          "hours": [
+            12
+          ],
+          "active": "numInput flatpickr-minute",
+          "otherValue": "alpha beta",
+          "selection": 0,
+          "end": 0,
+          "events": [
+            {
+              "key": "Tab",
+              "target": "before",
+              "prevented": false
+            },
+            {
+              "key": "ArrowRight",
+              "target": "flatpickr-day today selected",
+              "prevented": true
+            },
+            {
+              "key": "Tab",
+              "target": "numInput flatpickr-hour",
+              "prevented": true
+            }
+          ]
+        },
+        {
+          "open": true,
+          "year": 2017,
+          "month": 10,
+          "value": "2017-10-16 12:00",
+          "days": [
+            16
+          ],
+          "hours": [
+            12
+          ],
+          "active": "body",
+          "otherValue": "alpha beta",
+          "selection": 0,
+          "end": 0,
+          "events": [
+            {
+              "key": "Tab",
+              "target": "before",
+              "prevented": false
+            },
+            {
+              "key": "ArrowRight",
+              "target": "flatpickr-day today selected",
+              "prevented": true
+            },
+            {
+              "key": "Tab",
+              "target": "numInput flatpickr-hour",
+              "prevented": true
+            },
+            {
+              "key": "Tab",
+              "target": "numInput flatpickr-minute",
+              "prevented": false
+            }
+          ]
+        },
+        {
+          "open": false,
+          "year": 2017,
+          "month": 10,
+          "value": "2017-10-16 12:00",
+          "days": [
+            16
+          ],
+          "hours": [
+            12
+          ],
+          "active": "before",
+          "otherValue": "alpha beta",
+          "selection": 0,
+          "end": 0,
+          "events": [
+            {
+              "key": "Tab",
+              "target": "before",
+              "prevented": false
+            },
+            {
+              "key": "ArrowRight",
+              "target": "flatpickr-day today selected",
+              "prevented": true
+            },
+            {
+              "key": "Tab",
+              "target": "numInput flatpickr-hour",
+              "prevented": true
+            },
+            {
+              "key": "Tab",
+              "target": "numInput flatpickr-minute",
+              "prevented": false
+            },
+            {
+              "key": "Tab",
+              "target": "",
+              "prevented": false
+            }
+          ]
+        }
+      ],
+      "errors": [],
+      "pass": false,
+      "publicFailure": false
+    },
+    {
+      "action": "manual",
+      "initial": {
+        "open": true,
+        "year": 2017,
+        "month": 10,
+        "value": "2017-10-15",
+        "days": [
+          15
+        ],
+        "hours": [
+          0
+        ],
+        "active": "flatpickr-day today selected",
+        "otherValue": "alpha beta",
+        "selection": 0,
+        "end": 0,
+        "events": []
+      },
+      "gestures": [
+        "replace date",
+        "commit with Enter"
+      ],
+      "trace": [
+        {
+          "open": true,
+          "year": 2017,
+          "month": 10,
+          "value": "2017-10-18",
+          "days": [
+            15
+          ],
+          "hours": [
+            0
+          ],
+          "active": "field",
+          "otherValue": "alpha beta",
+          "selection": 0,
+          "end": 0,
+          "events": []
+        },
+        {
+          "open": true,
+          "year": 2017,
+          "month": 10,
+          "value": "2017-10-18",
+          "days": [
+            18
+          ],
+          "hours": [
+            0
+          ],
+          "active": "body",
+          "otherValue": "alpha beta",
+          "selection": 0,
+          "end": 0,
+          "events": [
+            {
+              "key": "Enter",
+              "target": "field",
+              "prevented": false
+            }
+          ]
+        }
+      ],
+      "errors": [],
+      "pass": true,
+      "publicFailure": false
+    },
+    {
+      "action": "range",
+      "initial": {
+        "open": true,
+        "year": 2017,
+        "month": 10,
+        "value": "",
+        "days": [],
+        "hours": [],
+        "active": "flatpickr-day today",
+        "otherValue": "alpha beta",
+        "selection": 0,
+        "end": 0,
+        "events": []
+      },
+      "gestures": [
+        "click endpoint 16",
+        "click endpoint 18"
+      ],
+      "trace": [
+        {
+          "open": true,
+          "year": 2017,
+          "month": 10,
+          "value": "2017-10-16",
+          "days": [
+            16
+          ],
+          "hours": [
+            0
+          ],
+          "active": "flatpickr-day selected endRange",
+          "otherValue": "alpha beta",
+          "selection": 0,
+          "end": 0,
+          "events": []
+        },
+        {
+          "open": false,
+          "year": 2017,
+          "month": 10,
+          "value": "2017-10-16 to 2017-10-18",
+          "days": [
+            16,
+            18
+          ],
+          "hours": [
+            0,
+            0
+          ],
+          "active": "field",
+          "otherValue": "alpha beta",
+          "selection": 0,
+          "end": 0,
+          "events": []
+        }
+      ],
+      "errors": [],
+      "pass": true,
+      "publicFailure": false
+    },
+    {
+      "action": "time",
+      "initial": {
+        "open": true,
+        "year": 2017,
+        "month": 10,
+        "value": "2017-10-15 12:00",
+        "days": [
+          15
+        ],
+        "hours": [
+          12
+        ],
+        "active": "flatpickr-day today selected",
+        "otherValue": "alpha beta",
+        "selection": 0,
+        "end": 0,
+        "events": []
+      },
+      "gestures": [
+        "click hour",
+        "increment hour"
+      ],
+      "trace": [
+        {
+          "open": true,
+          "year": 2017,
+          "month": 10,
+          "value": "2017-10-15 12:00",
+          "days": [
+            15
+          ],
+          "hours": [
+            12
+          ],
+          "active": "numInput flatpickr-hour",
+          "otherValue": "alpha beta",
+          "selection": 0,
+          "end": 0,
+          "events": []
+        },
+        {
+          "open": true,
+          "year": 2017,
+          "month": 10,
+          "value": "2017-10-15 13:00",
+          "days": [
+            15
+          ],
+          "hours": [
+            13
+          ],
+          "active": "numInput flatpickr-hour",
+          "otherValue": "alpha beta",
+          "selection": 0,
+          "end": 0,
+          "events": [
+            {
+              "key": "ArrowUp",
+              "target": "numInput flatpickr-hour",
+              "prevented": true
+            }
+          ]
+        }
+      ],
+      "errors": [],
+      "pass": true,
+      "publicFailure": false
+    }
+  ],
+  "repeat": [
+    {
+      "action": "keys",
+      "initial": {
+        "open": false,
+        "year": 2017,
+        "month": 10,
+        "value": "2017-10-15 12:00",
+        "days": [
+          15
+        ],
+        "hours": [
+          12
+        ],
+        "active": "before",
+        "otherValue": "alpha beta",
+        "selection": 0,
+        "end": 0,
+        "events": []
+      },
+      "gestures": [
+        "Tab",
+        "ArrowRight",
+        "Enter",
+        "Tab",
+        "Tab",
+        "Tab"
+      ],
+      "trace": [
+        {
+          "open": true,
+          "year": 2017,
+          "month": 10,
+          "value": "2017-10-15 12:00",
+          "days": [
+            15
+          ],
+          "hours": [
+            12
+          ],
+          "active": "flatpickr-day today selected",
+          "otherValue": "alpha beta",
+          "selection": 0,
+          "end": 0,
+          "events": [
+            {
+              "key": "Tab",
+              "target": "before",
+              "prevented": false
+            }
+          ]
+        },
+        {
+          "open": true,
+          "year": 2017,
+          "month": 10,
+          "value": "2017-10-15 12:00",
+          "days": [
+            15
+          ],
+          "hours": [
+            12
+          ],
+          "active": "flatpickr-day ",
+          "otherValue": "alpha beta",
+          "selection": 0,
+          "end": 0,
+          "events": [
+            {
+              "key": "Tab",
+              "target": "before",
+              "prevented": false
+            },
+            {
+              "key": "ArrowRight",
+              "target": "flatpickr-day today selected",
+              "prevented": true
+            }
+          ]
+        },
+        {
+          "open": true,
+          "year": 2017,
+          "month": 10,
+          "value": "2017-10-16 12:00",
+          "days": [
+            16
+          ],
+          "hours": [
+            12
+          ],
+          "active": "numInput flatpickr-hour",
+          "otherValue": "alpha beta",
+          "selection": 0,
+          "end": 0,
+          "events": [
+            {
+              "key": "Tab",
+              "target": "before",
+              "prevented": false
+            },
+            {
+              "key": "ArrowRight",
+              "target": "flatpickr-day today selected",
+              "prevented": true
+            }
+          ]
+        },
+        {
+          "open": true,
+          "year": 2017,
+          "month": 10,
+          "value": "2017-10-16 12:00",
+          "days": [
+            16
+          ],
+          "hours": [
+            12
+          ],
+          "active": "numInput flatpickr-minute",
+          "otherValue": "alpha beta",
+          "selection": 0,
+          "end": 0,
+          "events": [
+            {
+              "key": "Tab",
+              "target": "before",
+              "prevented": false
+            },
+            {
+              "key": "ArrowRight",
+              "target": "flatpickr-day today selected",
+              "prevented": true
+            },
+            {
+              "key": "Tab",
+              "target": "numInput flatpickr-hour",
+              "prevented": true
+            }
+          ]
+        },
+        {
+          "open": true,
+          "year": 2017,
+          "month": 10,
+          "value": "2017-10-16 12:00",
+          "days": [
+            16
+          ],
+          "hours": [
+            12
+          ],
+          "active": "body",
+          "otherValue": "alpha beta",
+          "selection": 0,
+          "end": 0,
+          "events": [
+            {
+              "key": "Tab",
+              "target": "before",
+              "prevented": false
+            },
+            {
+              "key": "ArrowRight",
+              "target": "flatpickr-day today selected",
+              "prevented": true
+            },
+            {
+              "key": "Tab",
+              "target": "numInput flatpickr-hour",
+              "prevented": true
+            },
+            {
+              "key": "Tab",
+              "target": "numInput flatpickr-minute",
+              "prevented": false
+            }
+          ]
+        },
+        {
+          "open": false,
+          "year": 2017,
+          "month": 10,
+          "value": "2017-10-16 12:00",
+          "days": [
+            16
+          ],
+          "hours": [
+            12
+          ],
+          "active": "before",
+          "otherValue": "alpha beta",
+          "selection": 0,
+          "end": 0,
+          "events": [
+            {
+              "key": "Tab",
+              "target": "before",
+              "prevented": false
+            },
+            {
+              "key": "ArrowRight",
+              "target": "flatpickr-day today selected",
+              "prevented": true
+            },
+            {
+              "key": "Tab",
+              "target": "numInput flatpickr-hour",
+              "prevented": true
+            },
+            {
+              "key": "Tab",
+              "target": "numInput flatpickr-minute",
+              "prevented": false
+            },
+            {
+              "key": "Tab",
+              "target": "",
+              "prevented": false
+            }
+          ]
+        }
+      ],
+      "errors": [],
+      "pass": false,
+      "publicFailure": false
+    }
+  ],
+  "screenshots": [
+    {
+      "file": "reference-before.png",
+      "bytes": 10712,
+      "sha256": "345d490bad3836d2ae087508b5bfa98819a3a85f6aae2727e965a6e1b8d7b779"
+    },
+    {
+      "file": "reference-after.png",
+      "bytes": 10673,
+      "sha256": "f0791bf3535a2fa82f990039ed93735f91a80296c6e02f9c37a73b920060d7a5"
+    },
+    {
+      "file": "candidate-before.png",
+      "bytes": 10712,
+      "sha256": "345d490bad3836d2ae087508b5bfa98819a3a85f6aae2727e965a6e1b8d7b779"
+    },
+    {
+      "file": "candidate-after.png",
+      "bytes": 10868,
+      "sha256": "2a0a54a2368f0fd3282e55dacdd094c4e3e1887c4bac96059ba8315ce2098ae7"
+    }
+  ],
+  "qualified": false
+}

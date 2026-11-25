@@ -1,0 +1,347 @@
+{
+  "ticket": "1724",
+  "fixed": "4.6.0",
+  "query": "Key up/down in the year input field moves to the time area ",
+  "margin": 0.04959914908742283,
+  "allText": [
+    {
+      "id": "time",
+      "description": "Change a time field, trigger a time update and inspect the selected hours, minutes and time limits.",
+      "score": 2.8430453728721212,
+      "overlaps": [
+        {
+          "title": "field",
+          "action": [
+            "field"
+          ],
+          "token": "field",
+          "substantive": false
+        },
+        {
+          "title": "time",
+          "action": [
+            "time"
+          ],
+          "token": "time",
+          "substantive": true
+        }
+      ],
+      "substantive": [
+        {
+          "title": "time",
+          "action": [
+            "time"
+          ],
+          "token": "time",
+          "substantive": true
+        }
+      ]
+    },
+    {
+      "id": "month",
+      "description": "Move forward and backward between months and years and inspect the calendar heading and grid.",
+      "score": 2.7020327415607293,
+      "overlaps": [
+        {
+          "title": "year",
+          "action": [
+            "years"
+          ],
+          "token": "year",
+          "substantive": true
+        },
+        {
+          "title": "moves",
+          "action": [
+            "move"
+          ],
+          "token": "move",
+          "substantive": false
+        }
+      ],
+      "substantive": [
+        {
+          "title": "year",
+          "action": [
+            "years"
+          ],
+          "token": "year",
+          "substantive": true
+        }
+      ]
+    },
+    {
+      "id": "manual",
+      "description": "Type or replace the input text, leave the field, and inspect the parsed value.",
+      "score": 2.3018337045491135,
+      "overlaps": [
+        {
+          "title": "input",
+          "action": [
+            "input"
+          ],
+          "token": "input",
+          "substantive": true
+        },
+        {
+          "title": "field",
+          "action": [
+            "field"
+          ],
+          "token": "field",
+          "substantive": false
+        }
+      ],
+      "substantive": [
+        {
+          "title": "input",
+          "action": [
+            "input"
+          ],
+          "token": "input",
+          "substantive": true
+        }
+      ]
+    },
+    {
+      "id": "keys",
+      "description": "Navigate with the keyboard and inspect the focused and selected date.",
+      "score": 0,
+      "overlaps": [],
+      "substantive": []
+    },
+    {
+      "id": "range",
+      "description": "Select dates in a range or multiple-date mode and check its endpoints and disabled dates.",
+      "score": 0,
+      "overlaps": [],
+      "substantive": []
+    }
+  ],
+  "shortlist": [
+    {
+      "id": "time",
+      "description": "Change a time field, trigger a time update and inspect the selected hours, minutes and time limits.",
+      "score": 2.8430453728721212,
+      "overlaps": [
+        {
+          "title": "field",
+          "action": [
+            "field"
+          ],
+          "token": "field",
+          "substantive": false
+        },
+        {
+          "title": "time",
+          "action": [
+            "time"
+          ],
+          "token": "time",
+          "substantive": true
+        }
+      ],
+      "substantive": [
+        {
+          "title": "time",
+          "action": [
+            "time"
+          ],
+          "token": "time",
+          "substantive": true
+        }
+      ]
+    },
+    {
+      "id": "month",
+      "description": "Move forward and backward between months and years and inspect the calendar heading and grid.",
+      "score": 2.7020327415607293,
+      "overlaps": [
+        {
+          "title": "year",
+          "action": [
+            "years"
+          ],
+          "token": "year",
+          "substantive": true
+        },
+        {
+          "title": "moves",
+          "action": [
+            "move"
+          ],
+          "token": "move",
+          "substantive": false
+        }
+      ],
+      "substantive": [
+        {
+          "title": "year",
+          "action": [
+            "years"
+          ],
+          "token": "year",
+          "substantive": true
+        }
+      ]
+    },
+    {
+      "id": "manual",
+      "description": "Type or replace the input text, leave the field, and inspect the parsed value.",
+      "score": 2.3018337045491135,
+      "overlaps": [
+        {
+          "title": "input",
+          "action": [
+            "input"
+          ],
+          "token": "input",
+          "substantive": true
+        },
+        {
+          "title": "field",
+          "action": [
+            "field"
+          ],
+          "token": "field",
+          "substantive": false
+        }
+      ],
+      "substantive": [
+        {
+          "title": "input",
+          "action": [
+            "input"
+          ],
+          "token": "input",
+          "substantive": true
+        }
+      ]
+    }
+  ],
+  "pairs": [
+    {
+      "id": "time",
+      "gestures": [
+        "click hour",
+        "increment hour"
+      ],
+      "frames": [
+        {
+          "file": "time-pre.png",
+          "bytes": 11274,
+          "sha256": "ffc9fb8d7d3654270c8c6185600a14b8299de149a1f4b852c22bbec1e10aa995"
+        },
+        {
+          "file": "time-post.png",
+          "bytes": 11207,
+          "sha256": "66c73dc20de6091393fb744a714ace41344655e5894c07793d3afea6d534256f"
+        }
+      ],
+      "delta": 0.04905714002772826
+    },
+    {
+      "id": "month",
+      "gestures": [
+        "next month",
+        "prev month"
+      ],
+      "frames": [
+        {
+          "file": "month-pre.png",
+          "bytes": 10740,
+          "sha256": "403c7cba3d1c620cc71aebb8c1ea85d9177599feec3c4fa1efff47e20b3c4533"
+        },
+        {
+          "file": "month-post.png",
+          "bytes": 10740,
+          "sha256": "403c7cba3d1c620cc71aebb8c1ea85d9177599feec3c4fa1efff47e20b3c4533"
+        }
+      ],
+      "delta": 0
+    },
+    {
+      "id": "manual",
+      "gestures": [
+        "replace date",
+        "commit with Enter"
+      ],
+      "frames": [
+        {
+          "file": "manual-pre.png",
+          "bytes": 10740,
+          "sha256": "403c7cba3d1c620cc71aebb8c1ea85d9177599feec3c4fa1efff47e20b3c4533"
+        },
+        {
+          "file": "manual-post.png",
+          "bytes": 10796,
+          "sha256": "ef0994d0d0606d7d1d3d4fa0d4f0288a5426718241e0bb52b73639e46695637a"
+        }
+      ],
+      "delta": 0.0002571301247771836
+    }
+  ],
+  "local": [
+    {
+      "id": "time",
+      "delta": 0.04905714002772826,
+      "textRank": 0,
+      "visualRank": 0,
+      "score": 0
+    },
+    {
+      "id": "month",
+      "delta": 0,
+      "textRank": 1,
+      "visualRank": 2,
+      "score": 3
+    },
+    {
+      "id": "manual",
+      "delta": 0.0002571301247771836,
+      "textRank": 2,
+      "visualRank": 1,
+      "score": 3
+    }
+  ],
+  "zero": [
+    {
+      "id": "time",
+      "delta": 0,
+      "textRank": 0,
+      "visualRank": 1,
+      "score": 1
+    },
+    {
+      "id": "month",
+      "delta": 0,
+      "textRank": 1,
+      "visualRank": 1,
+      "score": 2
+    },
+    {
+      "id": "manual",
+      "delta": 0,
+      "textRank": 2,
+      "visualRank": 1,
+      "score": 3
+    }
+  ],
+  "orders": {
+    "bm25": [
+      "time",
+      "month",
+      "manual"
+    ],
+    "local": [
+      "time",
+      "month",
+      "manual"
+    ],
+    "zero": [
+      "time",
+      "month",
+      "manual"
+    ]
+  }
+}

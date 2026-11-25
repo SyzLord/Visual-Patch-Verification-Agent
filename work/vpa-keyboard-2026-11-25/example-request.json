@@ -1,0 +1,29 @@
+{
+  "title": "appendTo set to body breaks arrow keys on all unrelated input fields",
+  "menu": [
+    {
+      "id": "ordinary",
+      "description": "Open a plain date picker and select a day in the current month."
+    },
+    {
+      "id": "month",
+      "description": "Move forward and backward between months and years and inspect the calendar heading and grid."
+    },
+    {
+      "id": "keys",
+      "description": "Navigate with the keyboard and inspect the focused and selected date."
+    },
+    {
+      "id": "manual",
+      "description": "Type or replace the input text, leave the field, and inspect the parsed value."
+    },
+    {
+      "id": "range",
+      "description": "Select dates in a range or multiple-date mode and check its endpoints and disabled dates."
+    },
+    {
+      "id": "time",
+      "description": "Change a time field, trigger a time update and inspect the selected hours, minutes and time limits."
+    }
+  ]
+}
