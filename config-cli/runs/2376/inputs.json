@@ -1,0 +1,547 @@
+{
+  "config": {
+    "schema": 1,
+    "id": "flatpickr-2376",
+    "ticket": {
+      "title": "appendTo set to body breaks arrow keys on all unrelated input fields",
+      "issue": "https://github.com/flatpickr/flatpickr/issues/2376",
+      "repair": "https://github.com/flatpickr/flatpickr/pull/2329"
+    },
+    "budget": 3,
+    "fixture": {
+      "adapter": "flatpickr",
+      "html": {
+        "path": "container.html",
+        "sha256": "0e757eab28dde47cf3aff7690a9b0fa77d870a171917063a152e055f784262e1"
+      },
+      "css": {
+        "path": "container.css",
+        "sha256": "3f59fc23b4dd8d204561875564d995b8df423c1213b078123009c187235c33cd"
+      },
+      "input": "#field",
+      "other": "#other",
+      "clock": "2017-10-15T12:00:00Z"
+    },
+    "builds": {
+      "reference": {
+        "version": "4.6.10",
+        "script": {
+          "path": "assets/4.6.10/library.js",
+          "sha256": "2102460d6ee22233a82a0dee7fbdb32fbc2314334d4c06e7a76a934ae417f2c4"
+        },
+        "style": {
+          "path": "assets/4.6.10/library.css",
+          "sha256": "1b34a42552c96f10e4dfaaa4a367276b03868aacff63c1ac42ffe331352bc754"
+        }
+      },
+      "candidate": {
+        "version": "4.6.9",
+        "script": {
+          "path": "assets/4.6.9/library.js",
+          "sha256": "02441aa7dd6d0dc4b863241a658d95577e148520b1bb66c31088175d7b9fe478"
+        },
+        "style": {
+          "path": "assets/4.6.9/library.css",
+          "sha256": "4573c0cb11d5c8c2f16f44d808cd8e5b947819691c0ded368dd620c99a78d4e5"
+        }
+      }
+    },
+    "keyboardAction": "keys",
+    "actions": [
+      {
+        "id": "ordinary",
+        "description": "Open a plain date picker and select a day in the current month.",
+        "scenario": {
+          "options": {
+            "disableMobile": true,
+            "dateFormat": "Y-m-d",
+            "defaultDate": "2017-10-15"
+          },
+          "open": true,
+          "setup": []
+        },
+        "steps": [
+          {
+            "op": "click",
+            "selector": ".flatpickr-day:not(.prevMonthDay):not(.nextMonthDay)",
+            "text": "16"
+          }
+        ],
+        "expect": [
+          {
+            "at": "last",
+            "field": "days",
+            "equals": [
+              16
+            ]
+          }
+        ]
+      },
+      {
+        "id": "month",
+        "description": "Move forward and backward between months and years and inspect the calendar heading and grid.",
+        "scenario": {
+          "options": {
+            "disableMobile": true,
+            "dateFormat": "Y-m-d",
+            "defaultDate": "2017-10-15"
+          },
+          "open": true,
+          "setup": []
+        },
+        "steps": [
+          {
+            "op": "click",
+            "selector": ".flatpickr-next-month"
+          },
+          {
+            "op": "click",
+            "selector": ".flatpickr-prev-month"
+          }
+        ],
+        "expect": [
+          {
+            "at": 0,
+            "field": "month",
+            "equals": 10
+          },
+          {
+            "at": 1,
+            "field": "month",
+            "equals": 11
+          },
+          {
+            "at": "last",
+            "field": "month",
+            "equals": 10
+          },
+          {
+            "at": "last",
+            "field": "year",
+            "equals": 2017
+          }
+        ]
+      },
+      {
+        "id": "keys",
+        "description": "Navigate with the keyboard and inspect the focused and selected date.",
+        "scenario": {
+          "options": {
+            "disableMobile": true,
+            "dateFormat": "Y-m-d",
+            "defaultDate": "2017-10-15",
+            "appendTo": "body"
+          },
+          "open": false,
+          "setup": [
+            {
+              "op": "focus",
+              "selector": "#other"
+            },
+            {
+              "op": "selectText",
+              "selector": "#other",
+              "start": 6,
+              "end": 6
+            }
+          ]
+        },
+        "steps": [
+          {
+            "op": "press",
+            "key": "ArrowLeft"
+          },
+          {
+            "op": "press",
+            "key": "ArrowRight"
+          }
+        ],
+        "expect": [
+          {
+            "at": 0,
+            "field": "open",
+            "equals": false
+          },
+          {
+            "at": 0,
+            "field": "active",
+            "equals": "other"
+          },
+          {
+            "at": 0,
+            "field": "otherValue",
+            "equals": "alpha beta"
+          },
+          {
+            "at": 1,
+            "field": "active",
+            "equals": "other"
+          },
+          {
+            "at": 1,
+            "field": "otherValue",
+            "equals": "alpha beta"
+          },
+          {
+            "at": 2,
+            "field": "active",
+            "equals": "other"
+          },
+          {
+            "at": 2,
+            "field": "otherValue",
+            "equals": "alpha beta"
+          },
+          {
+            "at": 0,
+            "field": "selectionStart",
+            "equals": 6
+          },
+          {
+            "at": 0,
+            "field": "selectionEnd",
+            "equals": 6
+          },
+          {
+            "at": 2,
+            "field": "events.0.key",
+            "equals": "ArrowLeft"
+          },
+          {
+            "at": 2,
+            "field": "events.0.target",
+            "equals": "other"
+          },
+          {
+            "at": 2,
+            "field": "events.1.key",
+            "equals": "ArrowRight"
+          },
+          {
+            "at": 2,
+            "field": "events.1.target",
+            "equals": "other"
+          },
+          {
+            "at": 1,
+            "field": "selectionStart",
+            "equals": 5
+          },
+          {
+            "at": 1,
+            "field": "selectionEnd",
+            "equals": 5
+          },
+          {
+            "at": 2,
+            "field": "selectionStart",
+            "equals": 6
+          },
+          {
+            "at": 2,
+            "field": "selectionEnd",
+            "equals": 6
+          },
+          {
+            "at": 2,
+            "field": "events.0.prevented",
+            "equals": false
+          },
+          {
+            "at": 2,
+            "field": "events.1.prevented",
+            "equals": false
+          }
+        ],
+        "failure": [
+          {
+            "at": 0,
+            "field": "open",
+            "equals": false
+          },
+          {
+            "at": 0,
+            "field": "active",
+            "equals": "other"
+          },
+          {
+            "at": 0,
+            "field": "otherValue",
+            "equals": "alpha beta"
+          },
+          {
+            "at": 1,
+            "field": "active",
+            "equals": "other"
+          },
+          {
+            "at": 1,
+            "field": "otherValue",
+            "equals": "alpha beta"
+          },
+          {
+            "at": 2,
+            "field": "active",
+            "equals": "other"
+          },
+          {
+            "at": 2,
+            "field": "otherValue",
+            "equals": "alpha beta"
+          },
+          {
+            "at": 0,
+            "field": "selectionStart",
+            "equals": 6
+          },
+          {
+            "at": 0,
+            "field": "selectionEnd",
+            "equals": 6
+          },
+          {
+            "at": 2,
+            "field": "events.0.key",
+            "equals": "ArrowLeft"
+          },
+          {
+            "at": 2,
+            "field": "events.0.target",
+            "equals": "other"
+          },
+          {
+            "at": 2,
+            "field": "events.1.key",
+            "equals": "ArrowRight"
+          },
+          {
+            "at": 2,
+            "field": "events.1.target",
+            "equals": "other"
+          },
+          {
+            "at": 1,
+            "field": "selectionStart",
+            "equals": 6
+          },
+          {
+            "at": 1,
+            "field": "selectionEnd",
+            "equals": 6
+          },
+          {
+            "at": 2,
+            "field": "selectionStart",
+            "equals": 6
+          },
+          {
+            "at": 2,
+            "field": "selectionEnd",
+            "equals": 6
+          },
+          {
+            "at": 2,
+            "field": "events.0.prevented",
+            "equals": true
+          },
+          {
+            "at": 2,
+            "field": "events.1.prevented",
+            "equals": true
+          }
+        ]
+      },
+      {
+        "id": "manual",
+        "description": "Type or replace the input text, leave the field, and inspect the parsed value.",
+        "scenario": {
+          "options": {
+            "disableMobile": true,
+            "dateFormat": "Y-m-d",
+            "defaultDate": "2017-10-15",
+            "allowInput": true
+          },
+          "open": true,
+          "setup": []
+        },
+        "steps": [
+          {
+            "op": "fill",
+            "selector": "#field",
+            "value": "2017-10-18"
+          },
+          {
+            "op": "press",
+            "key": "Enter",
+            "selector": "#field"
+          }
+        ],
+        "expect": [
+          {
+            "at": "last",
+            "field": "days",
+            "equals": [
+              18
+            ]
+          },
+          {
+            "at": "last",
+            "field": "value",
+            "equals": "2017-10-18"
+          }
+        ]
+      },
+      {
+        "id": "range",
+        "description": "Select dates in a range or multiple-date mode and check its endpoints and disabled dates.",
+        "scenario": {
+          "options": {
+            "disableMobile": true,
+            "dateFormat": "Y-m-d",
+            "defaultDate": null,
+            "mode": "range",
+            "disable": [
+              "2017-10-22"
+            ]
+          },
+          "open": true,
+          "setup": []
+        },
+        "steps": [
+          {
+            "op": "click",
+            "selector": ".flatpickr-day:not(.prevMonthDay):not(.nextMonthDay)",
+            "text": "16"
+          },
+          {
+            "op": "click",
+            "selector": ".flatpickr-day:not(.prevMonthDay):not(.nextMonthDay)",
+            "text": "18"
+          }
+        ],
+        "expect": [
+          {
+            "at": 1,
+            "field": "open",
+            "equals": true
+          },
+          {
+            "at": 1,
+            "field": "days",
+            "equals": [
+              16
+            ]
+          },
+          {
+            "at": 2,
+            "field": "days",
+            "equals": [
+              16,
+              18
+            ]
+          }
+        ]
+      },
+      {
+        "id": "time",
+        "description": "Change a time field, trigger a time update and inspect the selected hours, minutes and time limits.",
+        "scenario": {
+          "options": {
+            "disableMobile": true,
+            "dateFormat": "Y-m-d H:i",
+            "defaultDate": "2017-10-15 12:00",
+            "enableTime": true,
+            "time_24hr": true
+          },
+          "open": true,
+          "setup": []
+        },
+        "steps": [
+          {
+            "op": "click",
+            "selector": ".flatpickr-hour"
+          },
+          {
+            "op": "press",
+            "key": "ArrowUp"
+          }
+        ],
+        "expect": [
+          {
+            "at": 0,
+            "field": "hours",
+            "equals": [
+              12
+            ]
+          },
+          {
+            "at": "last",
+            "field": "hours",
+            "equals": [
+              13
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "configSha256": "983201d4abd568cedca8973f08044c5f5f71397e603cfbc6dbffd25650d79d24",
+  "plan": {
+    "title": "appendTo set to body breaks arrow keys on all unrelated input fields",
+    "ranking": [
+      {
+        "id": "manual",
+        "description": "Type or replace the input text, leave the field, and inspect the parsed value.",
+        "score": 2.3018337045491135
+      },
+      {
+        "id": "time",
+        "description": "Change a time field, trigger a time update and inspect the selected hours, minutes and time limits.",
+        "score": 0.7864766936784818
+      },
+      {
+        "id": "month",
+        "description": "Move forward and backward between months and years and inspect the calendar heading and grid.",
+        "score": 0
+      },
+      {
+        "id": "keys",
+        "description": "Navigate with the keyboard and inspect the focused and selected date.",
+        "score": 0
+      },
+      {
+        "id": "range",
+        "description": "Select dates in a range or multiple-date mode and check its endpoints and disabled dates.",
+        "score": 0
+      }
+    ],
+    "cues": [
+      "arrow keys"
+    ],
+    "promoted": true,
+    "displaced": "time",
+    "orders": {
+      "fixed": [
+        "month",
+        "keys",
+        "manual",
+        "range",
+        "time"
+      ],
+      "bm25": [
+        "manual",
+        "time",
+        "month",
+        "keys",
+        "range"
+      ],
+      "keyboard": [
+        "manual",
+        "keys",
+        "time",
+        "month",
+        "range"
+      ]
+    }
+  }
+}

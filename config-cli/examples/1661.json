@@ -1,0 +1,377 @@
+{
+  "schema": 1,
+  "id": "flatpickr-1661",
+  "ticket": {
+    "title": "Tabbing/Focus issue with dateTime input and altInput and keyboard only navigation",
+    "issue": "https://github.com/flatpickr/flatpickr/issues/1661",
+    "repair": "https://github.com/flatpickr/flatpickr/pull/1663"
+  },
+  "budget": 3,
+  "fixture": {
+    "adapter": "flatpickr",
+    "html": {
+      "path": "container.html",
+      "sha256": "0e757eab28dde47cf3aff7690a9b0fa77d870a171917063a152e055f784262e1"
+    },
+    "css": {
+      "path": "container.css",
+      "sha256": "3f59fc23b4dd8d204561875564d995b8df423c1213b078123009c187235c33cd"
+    },
+    "input": "#field",
+    "other": "#other",
+    "clock": "2017-10-15T12:00:00Z"
+  },
+  "builds": {
+    "reference": {
+      "version": "4.5.5",
+      "script": {
+        "path": "assets/4.5.5/library.js",
+        "sha256": "381375d1d2c2987ecdf46bc58004141ba97278958bee4692bccb2ef1c344ec50"
+      },
+      "style": {
+        "path": "assets/4.5.5/library.css",
+        "sha256": "5503aa8e0ab2bc88237f03ce696e12b5554d8c77067e353508cc01485ad040ad"
+      }
+    },
+    "candidate": {
+      "version": "4.5.4",
+      "script": {
+        "path": "assets/4.5.4/library.js",
+        "sha256": "21e34ff1b800fbfedfa6ae535ba85dd0d2b98f329e99351cc2133f04ffc90c7d"
+      },
+      "style": {
+        "path": "assets/4.5.4/library.css",
+        "sha256": "4d5eb03f979ffd46386cd15d0358768bc01273d1c772797cb9fc24f78fc73f83"
+      }
+    }
+  },
+  "keyboardAction": "keys",
+  "actions": [
+    {
+      "id": "ordinary",
+      "description": "Open a plain date picker and select a day in the current month.",
+      "scenario": {
+        "options": {
+          "disableMobile": true,
+          "dateFormat": "Y-m-d",
+          "defaultDate": "2017-10-15"
+        },
+        "open": true,
+        "setup": []
+      },
+      "steps": [
+        {
+          "op": "click",
+          "selector": ".flatpickr-day:not(.prevMonthDay):not(.nextMonthDay)",
+          "text": "16"
+        }
+      ],
+      "expect": [
+        {
+          "at": "last",
+          "field": "days",
+          "equals": [
+            16
+          ]
+        }
+      ]
+    },
+    {
+      "id": "month",
+      "description": "Move forward and backward between months and years and inspect the calendar heading and grid.",
+      "scenario": {
+        "options": {
+          "disableMobile": true,
+          "dateFormat": "Y-m-d",
+          "defaultDate": "2017-10-15"
+        },
+        "open": true,
+        "setup": []
+      },
+      "steps": [
+        {
+          "op": "click",
+          "selector": ".flatpickr-next-month"
+        },
+        {
+          "op": "click",
+          "selector": ".flatpickr-prev-month"
+        }
+      ],
+      "expect": [
+        {
+          "at": 0,
+          "field": "month",
+          "equals": 10
+        },
+        {
+          "at": 1,
+          "field": "month",
+          "equals": 11
+        },
+        {
+          "at": "last",
+          "field": "month",
+          "equals": 10
+        },
+        {
+          "at": "last",
+          "field": "year",
+          "equals": 2017
+        }
+      ]
+    },
+    {
+      "id": "keys",
+      "description": "Navigate with the keyboard and inspect the focused and selected date.",
+      "scenario": {
+        "options": {
+          "disableMobile": true,
+          "dateFormat": "Y-m-d H:i",
+          "defaultDate": "2017-10-15 12:00",
+          "altInput": true,
+          "enableTime": true,
+          "time_24hr": true
+        },
+        "open": false,
+        "setup": [
+          {
+            "op": "focus",
+            "selector": "#before"
+          }
+        ]
+      },
+      "steps": [
+        {
+          "op": "press",
+          "key": "Tab"
+        },
+        {
+          "op": "press",
+          "key": "ArrowRight"
+        },
+        {
+          "op": "press",
+          "key": "Enter"
+        },
+        {
+          "op": "press",
+          "key": "Tab"
+        },
+        {
+          "op": "press",
+          "key": "Tab"
+        },
+        {
+          "op": "press",
+          "key": "Tab"
+        }
+      ],
+      "expect": [
+        {
+          "at": 0,
+          "field": "active",
+          "equals": "before"
+        },
+        {
+          "at": 1,
+          "field": "open",
+          "equals": true
+        },
+        {
+          "at": 1,
+          "field": "withinPicker",
+          "equals": true
+        },
+        {
+          "at": 2,
+          "field": "open",
+          "equals": true
+        },
+        {
+          "at": 3,
+          "field": "days",
+          "equals": [
+            16
+          ]
+        },
+        {
+          "at": 5,
+          "field": "active",
+          "equals": "other"
+        }
+      ],
+      "failure": [
+        {
+          "at": 0,
+          "field": "active",
+          "equals": "before"
+        },
+        {
+          "at": 1,
+          "field": "open",
+          "equals": true
+        },
+        {
+          "at": 1,
+          "field": "withinPicker",
+          "equals": true
+        },
+        {
+          "at": 2,
+          "field": "open",
+          "equals": true
+        },
+        {
+          "at": 3,
+          "field": "days",
+          "equals": [
+            16
+          ]
+        },
+        {
+          "at": 5,
+          "field": "active",
+          "equals": "body"
+        },
+        {
+          "at": 6,
+          "field": "active",
+          "equals": "before"
+        }
+      ]
+    },
+    {
+      "id": "manual",
+      "description": "Type or replace the input text, leave the field, and inspect the parsed value.",
+      "scenario": {
+        "options": {
+          "disableMobile": true,
+          "dateFormat": "Y-m-d",
+          "defaultDate": "2017-10-15",
+          "allowInput": true
+        },
+        "open": true,
+        "setup": []
+      },
+      "steps": [
+        {
+          "op": "fill",
+          "selector": "#field",
+          "value": "2017-10-18"
+        },
+        {
+          "op": "press",
+          "key": "Enter",
+          "selector": "#field"
+        }
+      ],
+      "expect": [
+        {
+          "at": "last",
+          "field": "days",
+          "equals": [
+            18
+          ]
+        },
+        {
+          "at": "last",
+          "field": "value",
+          "equals": "2017-10-18"
+        }
+      ]
+    },
+    {
+      "id": "range",
+      "description": "Select dates in a range or multiple-date mode and check its endpoints and disabled dates.",
+      "scenario": {
+        "options": {
+          "disableMobile": true,
+          "dateFormat": "Y-m-d",
+          "defaultDate": null,
+          "mode": "range",
+          "disable": [
+            "2017-10-22"
+          ]
+        },
+        "open": true,
+        "setup": []
+      },
+      "steps": [
+        {
+          "op": "click",
+          "selector": ".flatpickr-day:not(.prevMonthDay):not(.nextMonthDay)",
+          "text": "16"
+        },
+        {
+          "op": "click",
+          "selector": ".flatpickr-day:not(.prevMonthDay):not(.nextMonthDay)",
+          "text": "18"
+        }
+      ],
+      "expect": [
+        {
+          "at": 1,
+          "field": "open",
+          "equals": true
+        },
+        {
+          "at": 1,
+          "field": "days",
+          "equals": [
+            16
+          ]
+        },
+        {
+          "at": 2,
+          "field": "days",
+          "equals": [
+            16,
+            18
+          ]
+        }
+      ]
+    },
+    {
+      "id": "time",
+      "description": "Change a time field, trigger a time update and inspect the selected hours, minutes and time limits.",
+      "scenario": {
+        "options": {
+          "disableMobile": true,
+          "dateFormat": "Y-m-d H:i",
+          "defaultDate": "2017-10-15 12:00",
+          "enableTime": true,
+          "time_24hr": true
+        },
+        "open": true,
+        "setup": []
+      },
+      "steps": [
+        {
+          "op": "click",
+          "selector": ".flatpickr-hour"
+        },
+        {
+          "op": "press",
+          "key": "ArrowUp"
+        }
+      ],
+      "expect": [
+        {
+          "at": 0,
+          "field": "hours",
+          "equals": [
+            12
+          ]
+        },
+        {
+          "at": "last",
+          "field": "hours",
+          "equals": [
+            13
+          ]
+        }
+      ]
+    }
+  ]
+}

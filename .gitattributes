@@ -1,3 +1,5 @@
 **/vendor/** linguist-vendored
 work/vpa-keyboard-2026-11-25/assets/** linguist-vendored
 work/vpa-keyboard-2026-11-25/flatpickr-1661-attempt/frozen/** linguist-generated
+config-cli/examples/assets/** linguist-vendored
+config-cli/runs/** linguist-generated

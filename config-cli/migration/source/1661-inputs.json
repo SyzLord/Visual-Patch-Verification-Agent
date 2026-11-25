@@ -1,0 +1,114 @@
+{
+  "config": {
+    "id": "1661",
+    "family": "flatpickr",
+    "panel": "flatpickr",
+    "package": "flatpickr",
+    "old": "4.5.4",
+    "fixed": "4.5.5",
+    "issue": "https://github.com/flatpickr/flatpickr/issues/1661",
+    "repair": "https://github.com/flatpickr/flatpickr/pull/1663",
+    "mergeCommit": "4d582a3ad50ac610f1bb357de8fa817c912b1716",
+    "merged": "2019-02-25T15:42:17Z",
+    "target": "keys",
+    "why": "The report names 4.5.4. The maintainer merged PR #1663, and 4.5.5 is the first stable release after it."
+  },
+  "source": {
+    "position": 1229,
+    "family": "flatpickr",
+    "panel": "flatpickr",
+    "number": 1661,
+    "title": "Tabbing/Focus issue with dateTime input and altInput and keyboard only navigation",
+    "url": "https://github.com/flatpickr/flatpickr/issues/1661",
+    "promoted": false,
+    "cues": [
+      "keyboard",
+      "tabbing"
+    ],
+    "bm25": [
+      "keys",
+      "manual",
+      "month",
+      "range",
+      "time"
+    ]
+  },
+  "actions": [
+    {
+      "id": "ordinary",
+      "description": "Open a plain date picker and select a day in the current month."
+    },
+    {
+      "id": "month",
+      "description": "Move forward and backward between months and years and inspect the calendar heading and grid."
+    },
+    {
+      "id": "keys",
+      "description": "Navigate with the keyboard and inspect the focused and selected date."
+    },
+    {
+      "id": "manual",
+      "description": "Type or replace the input text, leave the field, and inspect the parsed value."
+    },
+    {
+      "id": "range",
+      "description": "Select dates in a range or multiple-date mode and check its endpoints and disabled dates."
+    },
+    {
+      "id": "time",
+      "description": "Change a time field, trigger a time update and inspect the selected hours, minutes and time limits."
+    }
+  ],
+  "routing": {
+    "title": "Tabbing/Focus issue with dateTime input and altInput and keyboard only navigation",
+    "ranking": [
+      {
+        "id": "keys",
+        "description": "Navigate with the keyboard and inspect the focused and selected date.",
+        "score": 1.6270469573189181
+      },
+      {
+        "id": "manual",
+        "description": "Type or replace the input text, leave the field, and inspect the parsed value.",
+        "score": 1.4108546942893374
+      },
+      {
+        "id": "month",
+        "description": "Move forward and backward between months and years and inspect the calendar heading and grid.",
+        "score": 0
+      },
+      {
+        "id": "range",
+        "description": "Select dates in a range or multiple-date mode and check its endpoints and disabled dates.",
+        "score": 0
+      },
+      {
+        "id": "time",
+        "description": "Change a time field, trigger a time update and inspect the selected hours, minutes and time limits.",
+        "score": 0
+      }
+    ],
+    "cues": [
+      "keyboard",
+      "tabbing"
+    ],
+    "promoted": false,
+    "displaced": null,
+    "orders": {
+      "bm25": [
+        "keys",
+        "manual",
+        "month",
+        "range",
+        "time"
+      ],
+      "keyboard": [
+        "keys",
+        "manual",
+        "month",
+        "range",
+        "time"
+      ]
+    }
+  }
+}
