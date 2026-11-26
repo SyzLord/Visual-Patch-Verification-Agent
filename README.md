@@ -3,6 +3,18 @@ Detects UI regressions by testing official before-and-after releases within a fi
 
 The agent ranks candidate interactions and records the first action that exposes a confirmed functional regression. Its latest study compares BM25 with a keyboard-aware route on two published Flatpickr issues. Within the same three-step budget, the route found both regressions and BM25 found one. Both browser runs agreed. This result covers two issues in one library.
 
+## Windows quick start
+
+Install Node.js LTS (20+) and Google Chrome. Open PowerShell at the repository root, change into `config-cli`, and install the pinned dependencies.
+
+```powershell
+Set-Location .\config-cli
+npm.cmd ci --ignore-scripts
+npm.cmd test
+```
+
+Follow the [Windows PowerShell guide](config-cli/README.md#windows-powershell) to run both cases and open the reports. Exit code `1` is expected for these samples because the CLI confirms a known regression.
+
 ## Configurable browser verification
 
 The [config-driven CLI](config-cli/README.md) accepts pinned local builds, a fixture, a menu of interactions, and explicit assertions. Its report includes before-and-after screenshots, the exact observed state, and the step at which each routing policy found the regression.
