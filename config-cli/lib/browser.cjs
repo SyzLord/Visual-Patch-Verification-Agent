@@ -3,11 +3,22 @@ const fs = require('node:fs');
 const os = require('node:os');
 const path = require('node:path');
 
+function resolvePlaywright() {
+  if (process.env.PLAYWRIGHT_PATH) return require.resolve(process.env.PLAYWRIGHT_PATH);
+  try {
+    return require.resolve('playwright');
+  } catch (error) {
+    if (error.code !== 'MODULE_NOT_FOUND') throw error;
+    const bundled = path.join(os.homedir(), '.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
+    if (fs.existsSync(bundled)) return require.resolve(bundled);
+    throw error;
+  }
+}
+
 async function launch() {
-  const bundled = path.join(os.homedir(), '.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
-  const modulePath = process.env.PLAYWRIGHT_PATH || (fs.existsSync(bundled) ? bundled : 'playwright');
+  const modulePath = resolvePlaywright();
   const playwright = require(modulePath);
-  const {version} = require(path.join(path.dirname(require.resolve(modulePath)), 'package.json'));
+  const {version} = require(path.join(path.dirname(modulePath), 'package.json'));
   const browser = await playwright.chromium.launch({channel:'chrome', headless:true});
   return {browser, playwright:version};
 }
