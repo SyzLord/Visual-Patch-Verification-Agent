@@ -1,0 +1,4 @@
+node_modules/
+.windows-check/
+trial-*/
+trial-index-*.html

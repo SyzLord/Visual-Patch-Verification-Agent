@@ -1,0 +1,6 @@
+# Assets and archived files are validated against their exact bytes.
+examples/*.json -text
+examples/container.html -text
+examples/container.css -text
+examples/assets/** -text
+runs/** -text

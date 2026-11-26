@@ -14,21 +14,27 @@ BUNDLED_NODE = Path('/Applications/ChatGPT.app/Contents/Resources/cua_node/bin/n
 
 
 def unpacked_checks(root):
-    runner = os.environ.get('VPA_NODE') or shutil.which('node') or str(BUNDLED_NODE)
+    runner = os.environ.get('VPA_NODE') or shutil.which('node')
+    if runner is None and BUNDLED_NODE.is_file():
+        runner = str(BUNDLED_NODE)
+    if runner is None:
+        raise SystemExit('Install Node.js 20+ or set VPA_NODE to a Node.js executable.')
     subprocess.run([runner,'--test','test/contract.test.cjs'],cwd=root,check=True)
     for ticket in ('2376','1661'):
         subprocess.run([runner,'cli.cjs','validate',f'examples/{ticket}.json'],cwd=root,check=True)
         subprocess.run([runner,'cli.cjs','verify',f'runs/{ticket}'],cwd=root,check=True)
     for report in root.rglob('*.html'):
-        for link in re.findall(r'(?:href|src)="([^"]+)"',report.read_text()):
+        for link in re.findall(r'(?:href|src)="([^"]+)"',report.read_text(encoding='utf-8')):
             assert link.startswith('https://') or (report.parent/link).is_file(), (report,link)
-    for link in re.findall(r'\]\(([^)]+)\)', (root/'README.md').read_text()):
-        assert link.startswith('https://') or (root/link).is_file(), link
+    for link in re.findall(r'\]\(([^)]+)\)', (root/'README.md').read_text(encoding='utf-8')):
+        assert link.startswith('https://') or (root/link.split('#')[0]).is_file(), link
 
 
 def main():
     file = ROOT/'visual-patch-config-cli.zip'
-    files = {name:(ROOT/name).read_bytes() for name in ('README.md','cli.cjs','package.json','package.py')}
+    files = {name:(ROOT/name).read_bytes() for name in (
+        'README.md','.gitattributes','.gitignore','cli.cjs','package.json','package-lock.json','package.py'
+    )}
     for name in ('lib','examples','migration','test','runs'):
         for source in (ROOT/name).rglob('*'):
             if source.is_file() and '__pycache__' not in source.parts and source.name != '.DS_Store':
