@@ -1,0 +1,56 @@
+{
+  "title": "The Clear method doesn't clear the selected range",
+  "ranking": [
+    {
+      "id": "range",
+      "description": "Select dates in a range or multiple-date mode and check its endpoints and disabled dates.",
+      "score": 1.8762966551890343
+    },
+    {
+      "id": "keys",
+      "description": "Navigate with the keyboard and inspect the focused and selected date.",
+      "score": 0.632602022426332
+    },
+    {
+      "id": "time",
+      "description": "Change a time field, trigger a time update and inspect the selected hours, minutes and time limits.",
+      "score": 0.48420710839061565
+    },
+    {
+      "id": "month",
+      "description": "Move forward and backward between months and years and inspect the calendar heading and grid.",
+      "score": 0
+    },
+    {
+      "id": "manual",
+      "description": "Type or replace the input text, leave the field, and inspect the parsed value.",
+      "score": 0
+    }
+  ],
+  "cues": [],
+  "promoted": false,
+  "displaced": null,
+  "orders": {
+    "fixed": [
+      "month",
+      "keys",
+      "manual",
+      "range",
+      "time"
+    ],
+    "bm25": [
+      "range",
+      "keys",
+      "time",
+      "month",
+      "manual"
+    ],
+    "keyboard": [
+      "range",
+      "keys",
+      "time",
+      "month",
+      "manual"
+    ]
+  }
+}

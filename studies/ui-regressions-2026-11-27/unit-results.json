@@ -1,0 +1,2160 @@
+{
+  "uniqueIssues": 4,
+  "totals": {
+    "fixed": {
+      "by2": 0,
+      "by3": 2
+    },
+    "bm25": {
+      "by2": 2,
+      "by3": 3
+    },
+    "keyboard": {
+      "by2": 2,
+      "by3": 4
+    }
+  },
+  "rows": [
+    {
+      "case": {
+        "id": 1943,
+        "library": "flatpickr",
+        "old": "4.6.1",
+        "fixed": "4.6.13",
+        "target": "keys",
+        "title": "rangePlugin and allowInput: Left/right arrow keys doesn't work in second input",
+        "issue": "https://github.com/flatpickr/flatpickr/issues/1943",
+        "repair": "https://github.com/flatpickr/flatpickr/issues/1943#issuecomment-1593744363",
+        "reason": "Upstream comment explicitly reproduces 4.6.1 and checks 4.6.13. Use two range input fields with real typing and ArrowLeft on the second."
+      },
+      "browserRounds": 2,
+      "sameRankAndHits": true,
+      "differentFiles": [
+        "confirmation-keys-after.png",
+        "manifest.json",
+        "report.html",
+        "result.json"
+      ],
+      "cues": [
+        "arrow keys"
+      ],
+      "displaced": "month",
+      "rounds": [
+        {
+          "browser": {
+            "chrome": "158.0.8127.37",
+            "playwright": "1.62.1"
+          },
+          "cost": {
+            "fixed": {
+              "firstHit": 3,
+              "steps": 3,
+              "gestures": 5,
+              "referenceActions": 0,
+              "referenceImages": 0,
+              "actions": [
+                "ordinary",
+                "month",
+                "keys"
+              ]
+            },
+            "bm25": {
+              "firstHit": null,
+              "steps": 3,
+              "gestures": 5,
+              "referenceActions": 0,
+              "referenceImages": 0,
+              "actions": [
+                "ordinary",
+                "manual",
+                "month"
+              ]
+            },
+            "keyboard": {
+              "firstHit": 3,
+              "steps": 3,
+              "gestures": 5,
+              "referenceActions": 0,
+              "referenceImages": 0,
+              "actions": [
+                "ordinary",
+                "manual",
+                "keys"
+              ]
+            }
+          },
+          "signatures": {
+            "reference": {
+              "states": [
+                {
+                  "open": true,
+                  "month": 10,
+                  "year": 2017,
+                  "value": "",
+                  "days": [],
+                  "hours": [],
+                  "active": "other",
+                  "withinPicker": false,
+                  "otherValue": "",
+                  "selectionStart": 0,
+                  "selectionEnd": 0,
+                  "events": [],
+                  "hourField": null,
+                  "inRange": 0,
+                  "uiErrorNames": []
+                },
+                {
+                  "open": true,
+                  "month": 10,
+                  "year": 2017,
+                  "value": "",
+                  "days": [],
+                  "hours": [],
+                  "active": "other",
+                  "withinPicker": false,
+                  "otherValue": "2017-10-18",
+                  "selectionStart": 10,
+                  "selectionEnd": 10,
+                  "events": [],
+                  "hourField": null,
+                  "inRange": 0,
+                  "uiErrorNames": []
+                },
+                {
+                  "open": true,
+                  "month": 10,
+                  "year": 2017,
+                  "value": "",
+                  "days": [],
+                  "hours": [],
+                  "active": "other",
+                  "withinPicker": false,
+                  "otherValue": "2017-10-18",
+                  "selectionStart": 9,
+                  "selectionEnd": 9,
+                  "events": [
+                    {
+                      "key": "ArrowLeft",
+                      "target": "other",
+                      "prevented": false
+                    }
+                  ],
+                  "hourField": null,
+                  "inRange": 0,
+                  "uiErrorNames": []
+                }
+              ],
+              "pageErrors": []
+            },
+            "candidate": {
+              "states": [
+                {
+                  "open": true,
+                  "month": 10,
+                  "year": 2017,
+                  "value": "",
+                  "days": [],
+                  "hours": [],
+                  "active": "other",
+                  "withinPicker": false,
+                  "otherValue": "",
+                  "selectionStart": 0,
+                  "selectionEnd": 0,
+                  "events": [],
+                  "hourField": null,
+                  "inRange": 0,
+                  "uiErrorNames": []
+                },
+                {
+                  "open": true,
+                  "month": 10,
+                  "year": 2017,
+                  "value": "",
+                  "days": [],
+                  "hours": [],
+                  "active": "other",
+                  "withinPicker": false,
+                  "otherValue": "2017-10-18",
+                  "selectionStart": 10,
+                  "selectionEnd": 10,
+                  "events": [],
+                  "hourField": null,
+                  "inRange": 0,
+                  "uiErrorNames": []
+                },
+                {
+                  "open": true,
+                  "month": 10,
+                  "year": 2017,
+                  "value": "",
+                  "days": [],
+                  "hours": [],
+                  "active": "other",
+                  "withinPicker": false,
+                  "otherValue": "2017-10-18",
+                  "selectionStart": 10,
+                  "selectionEnd": 10,
+                  "events": [
+                    {
+                      "key": "ArrowLeft",
+                      "target": "other",
+                      "prevented": true
+                    }
+                  ],
+                  "hourField": null,
+                  "inRange": 0,
+                  "uiErrorNames": []
+                }
+              ],
+              "pageErrors": []
+            },
+            "confirmations": {
+              "states": [
+                {
+                  "open": true,
+                  "month": 10,
+                  "year": 2017,
+                  "value": "",
+                  "days": [],
+                  "hours": [],
+                  "active": "other",
+                  "withinPicker": false,
+                  "otherValue": "",
+                  "selectionStart": 0,
+                  "selectionEnd": 0,
+                  "events": [],
+                  "hourField": null,
+                  "inRange": 0,
+                  "uiErrorNames": []
+                },
+                {
+                  "open": true,
+                  "month": 10,
+                  "year": 2017,
+                  "value": "",
+                  "days": [],
+                  "hours": [],
+                  "active": "other",
+                  "withinPicker": false,
+                  "otherValue": "2017-10-18",
+                  "selectionStart": 10,
+                  "selectionEnd": 10,
+                  "events": [],
+                  "hourField": null,
+                  "inRange": 0,
+                  "uiErrorNames": []
+                },
+                {
+                  "open": true,
+                  "month": 10,
+                  "year": 2017,
+                  "value": "",
+                  "days": [],
+                  "hours": [],
+                  "active": "other",
+                  "withinPicker": false,
+                  "otherValue": "2017-10-18",
+                  "selectionStart": 10,
+                  "selectionEnd": 10,
+                  "events": [
+                    {
+                      "key": "ArrowLeft",
+                      "target": "other",
+                      "prevented": true
+                    }
+                  ],
+                  "hourField": null,
+                  "inRange": 0,
+                  "uiErrorNames": []
+                }
+              ],
+              "pageErrors": []
+            }
+          },
+          "verificationImages": 6,
+          "verificationBytes": 60056,
+          "fullMenuPairs": 6
+        },
+        {
+          "browser": {
+            "chrome": "158.0.8127.37",
+            "playwright": "1.62.1"
+          },
+          "cost": {
+            "fixed": {
+              "firstHit": 3,
+              "steps": 3,
+              "gestures": 5,
+              "referenceActions": 0,
+              "referenceImages": 0,
+              "actions": [
+                "ordinary",
+                "month",
+                "keys"
+              ]
+            },
+            "bm25": {
+              "firstHit": null,
+              "steps": 3,
+              "gestures": 5,
+              "referenceActions": 0,
+              "referenceImages": 0,
+              "actions": [
+                "ordinary",
+                "manual",
+                "month"
+              ]
+            },
+            "keyboard": {
+              "firstHit": 3,
+              "steps": 3,
+              "gestures": 5,
+              "referenceActions": 0,
+              "referenceImages": 0,
+              "actions": [
+                "ordinary",
+                "manual",
+                "keys"
+              ]
+            }
+          },
+          "signatures": {
+            "reference": {
+              "states": [
+                {
+                  "open": true,
+                  "month": 10,
+                  "year": 2017,
+                  "value": "",
+                  "days": [],
+                  "hours": [],
+                  "active": "other",
+                  "withinPicker": false,
+                  "otherValue": "",
+                  "selectionStart": 0,
+                  "selectionEnd": 0,
+                  "events": [],
+                  "hourField": null,
+                  "inRange": 0,
+                  "uiErrorNames": []
+                },
+                {
+                  "open": true,
+                  "month": 10,
+                  "year": 2017,
+                  "value": "",
+                  "days": [],
+                  "hours": [],
+                  "active": "other",
+                  "withinPicker": false,
+                  "otherValue": "2017-10-18",
+                  "selectionStart": 10,
+                  "selectionEnd": 10,
+                  "events": [],
+                  "hourField": null,
+                  "inRange": 0,
+                  "uiErrorNames": []
+                },
+                {
+                  "open": true,
+                  "month": 10,
+                  "year": 2017,
+                  "value": "",
+                  "days": [],
+                  "hours": [],
+                  "active": "other",
+                  "withinPicker": false,
+                  "otherValue": "2017-10-18",
+                  "selectionStart": 9,
+                  "selectionEnd": 9,
+                  "events": [
+                    {
+                      "key": "ArrowLeft",
+                      "target": "other",
+                      "prevented": false
+                    }
+                  ],
+                  "hourField": null,
+                  "inRange": 0,
+                  "uiErrorNames": []
+                }
+              ],
+              "pageErrors": []
+            },
+            "candidate": {
+              "states": [
+                {
+                  "open": true,
+                  "month": 10,
+                  "year": 2017,
+                  "value": "",
+                  "days": [],
+                  "hours": [],
+                  "active": "other",
+                  "withinPicker": false,
+                  "otherValue": "",
+                  "selectionStart": 0,
+                  "selectionEnd": 0,
+                  "events": [],
+                  "hourField": null,
+                  "inRange": 0,
+                  "uiErrorNames": []
+                },
+                {
+                  "open": true,
+                  "month": 10,
+                  "year": 2017,
+                  "value": "",
+                  "days": [],
+                  "hours": [],
+                  "active": "other",
+                  "withinPicker": false,
+                  "otherValue": "2017-10-18",
+                  "selectionStart": 10,
+                  "selectionEnd": 10,
+                  "events": [],
+                  "hourField": null,
+                  "inRange": 0,
+                  "uiErrorNames": []
+                },
+                {
+                  "open": true,
+                  "month": 10,
+                  "year": 2017,
+                  "value": "",
+                  "days": [],
+                  "hours": [],
+                  "active": "other",
+                  "withinPicker": false,
+                  "otherValue": "2017-10-18",
+                  "selectionStart": 10,
+                  "selectionEnd": 10,
+                  "events": [
+                    {
+                      "key": "ArrowLeft",
+                      "target": "other",
+                      "prevented": true
+                    }
+                  ],
+                  "hourField": null,
+                  "inRange": 0,
+                  "uiErrorNames": []
+                }
+              ],
+              "pageErrors": []
+            },
+            "confirmations": {
+              "states": [
+                {
+                  "open": true,
+                  "month": 10,
+                  "year": 2017,
+                  "value": "",
+                  "days": [],
+                  "hours": [],
+                  "active": "other",
+                  "withinPicker": false,
+                  "otherValue": "",
+                  "selectionStart": 0,
+                  "selectionEnd": 0,
+                  "events": [],
+                  "hourField": null,
+                  "inRange": 0,
+                  "uiErrorNames": []
+                },
+                {
+                  "open": true,
+                  "month": 10,
+                  "year": 2017,
+                  "value": "",
+                  "days": [],
+                  "hours": [],
+                  "active": "other",
+                  "withinPicker": false,
+                  "otherValue": "2017-10-18",
+                  "selectionStart": 10,
+                  "selectionEnd": 10,
+                  "events": [],
+                  "hourField": null,
+                  "inRange": 0,
+                  "uiErrorNames": []
+                },
+                {
+                  "open": true,
+                  "month": 10,
+                  "year": 2017,
+                  "value": "",
+                  "days": [],
+                  "hours": [],
+                  "active": "other",
+                  "withinPicker": false,
+                  "otherValue": "2017-10-18",
+                  "selectionStart": 10,
+                  "selectionEnd": 10,
+                  "events": [
+                    {
+                      "key": "ArrowLeft",
+                      "target": "other",
+                      "prevented": true
+                    }
+                  ],
+                  "hourField": null,
+                  "inRange": 0,
+                  "uiErrorNames": []
+                }
+              ],
+              "pageErrors": []
+            }
+          },
+          "verificationImages": 6,
+          "verificationBytes": 60059,
+          "fullMenuPairs": 6
+        }
+      ]
+    },
+    {
+      "case": {
+        "id": 2342,
+        "library": "flatpickr",
+        "old": "4.6.6",
+        "fixed": "4.6.9",
+        "target": "time",
+        "title": "Issue where time won't change from 12:00 on first attempt",
+        "issue": "https://github.com/flatpickr/flatpickr/issues/2342",
+        "repair": "https://github.com/flatpickr/flatpickr/commit/479418a7a13d987d4a306f7efe3242c3d823c48a",
+        "reason": "4.6.6 is reported affected. Release notes list the fix at v4.6.9. Defer the initial date, enter hour 16 on an empty time-only picker, and press Enter."
+      },
+      "browserRounds": 2,
+      "sameRankAndHits": true,
+      "differentFiles": [],
+      "cues": [],
+      "displaced": null,
+      "rounds": [
+        {
+          "browser": {
+            "chrome": "158.0.8127.37",
+            "playwright": "1.62.1"
+          },
+          "cost": {
+            "fixed": {
+              "firstHit": null,
+              "steps": 3,
+              "gestures": 6,
+              "referenceActions": 0,
+              "referenceImages": 0,
+              "actions": [
+                "ordinary",
+                "month",
+                "keys"
+              ]
+            },
+            "bm25": {
+              "firstHit": 2,
+              "steps": 2,
+              "gestures": 4,
+              "referenceActions": 0,
+              "referenceImages": 0,
+              "actions": [
+                "ordinary",
+                "time"
+              ]
+            },
+            "keyboard": {
+              "firstHit": 2,
+              "steps": 2,
+              "gestures": 4,
+              "referenceActions": 0,
+              "referenceImages": 0,
+              "actions": [
+                "ordinary",
+                "time"
+              ]
+            }
+          },
+          "signatures": {
+            "reference": {
+              "states": [
+                {
+                  "open": false,
+                  "month": 10,
+                  "year": 2017,
+                  "value": "",
+                  "days": [],
+                  "hours": [],
+                  "active": "body",
+                  "withinPicker": false,
+                  "otherValue": "alpha beta",
+                  "selectionStart": 0,
+                  "selectionEnd": 0,
+                  "events": [],
+                  "hourField": "12",
+                  "inRange": 0,
+                  "uiErrorNames": []
+                },
+                {
+                  "open": true,
+                  "month": 10,
+                  "year": 2017,
+                  "value": "",
+                  "days": [],
+                  "hours": [],
+                  "active": "numInput flatpickr-hour",
+                  "withinPicker": true,
+                  "otherValue": "alpha beta",
+                  "selectionStart": 0,
+                  "selectionEnd": 0,
+                  "events": [],
+                  "hourField": "12",
+                  "inRange": 0,
+                  "uiErrorNames": []
+                },
+                {
+                  "open": true,
+                  "month": 10,
+                  "year": 2017,
+                  "value": "",
+                  "days": [],
+                  "hours": [],
+                  "active": "numInput flatpickr-hour",
+                  "withinPicker": true,
+                  "otherValue": "alpha beta",
+                  "selectionStart": 0,
+                  "selectionEnd": 0,
+                  "events": [],
+                  "hourField": "16",
+                  "inRange": 0,
+                  "uiErrorNames": []
+                },
+                {
+                  "open": false,
+                  "month": 10,
+                  "year": 2017,
+                  "value": "16:00",
+                  "days": [
+                    15
+                  ],
+                  "hours": [
+                    16
+                  ],
+                  "active": "field",
+                  "withinPicker": true,
+                  "otherValue": "alpha beta",
+                  "selectionStart": 0,
+                  "selectionEnd": 0,
+                  "events": [
+                    {
+                      "key": "Enter",
+                      "target": "numInput flatpickr-hour",
+                      "prevented": true
+                    }
+                  ],
+                  "hourField": "16",
+                  "inRange": 0,
+                  "uiErrorNames": []
+                }
+              ],
+              "pageErrors": []
+            },
+            "candidate": {
+              "states": [
+                {
+                  "open": false,
+                  "month": 10,
+                  "year": 2017,
+                  "value": "",
+                  "days": [],
+                  "hours": [],
+                  "active": "body",
+                  "withinPicker": false,
+                  "otherValue": "alpha beta",
+                  "selectionStart": 0,
+                  "selectionEnd": 0,
+                  "events": [],
+                  "hourField": "12",
+                  "inRange": 0,
+                  "uiErrorNames": []
+                },
+                {
+                  "open": true,
+                  "month": 10,
+                  "year": 2017,
+                  "value": "",
+                  "days": [],
+                  "hours": [],
+                  "active": "numInput flatpickr-hour",
+                  "withinPicker": true,
+                  "otherValue": "alpha beta",
+                  "selectionStart": 0,
+                  "selectionEnd": 0,
+                  "events": [],
+                  "hourField": "12",
+                  "inRange": 0,
+                  "uiErrorNames": []
+                },
+                {
+                  "open": true,
+                  "month": 10,
+                  "year": 2017,
+                  "value": "",
+                  "days": [],
+                  "hours": [],
+                  "active": "numInput flatpickr-hour",
+                  "withinPicker": true,
+                  "otherValue": "alpha beta",
+                  "selectionStart": 0,
+                  "selectionEnd": 0,
+                  "events": [],
+                  "hourField": "16",
+                  "inRange": 0,
+                  "uiErrorNames": []
+                },
+                {
+                  "open": false,
+                  "month": 10,
+                  "year": 2017,
+                  "value": "12:00",
+                  "days": [
+                    15
+                  ],
+                  "hours": [
+                    12
+                  ],
+                  "active": "field",
+                  "withinPicker": true,
+                  "otherValue": "alpha beta",
+                  "selectionStart": 0,
+                  "selectionEnd": 0,
+                  "events": [
+                    {
+                      "key": "Enter",
+                      "target": "numInput flatpickr-hour",
+                      "prevented": true
+                    }
+                  ],
+                  "hourField": "12",
+                  "inRange": 0,
+                  "uiErrorNames": []
+                }
+              ],
+              "pageErrors": []
+            },
+            "confirmations": {
+              "states": [
+                {
+                  "open": false,
+                  "month": 10,
+                  "year": 2017,
+                  "value": "",
+                  "days": [],
+                  "hours": [],
+                  "active": "body",
+                  "withinPicker": false,
+                  "otherValue": "alpha beta",
+                  "selectionStart": 0,
+                  "selectionEnd": 0,
+                  "events": [],
+                  "hourField": "12",
+                  "inRange": 0,
+                  "uiErrorNames": []
+                },
+                {
+                  "open": true,
+                  "month": 10,
+                  "year": 2017,
+                  "value": "",
+                  "days": [],
+                  "hours": [],
+                  "active": "numInput flatpickr-hour",
+                  "withinPicker": true,
+                  "otherValue": "alpha beta",
+                  "selectionStart": 0,
+                  "selectionEnd": 0,
+                  "events": [],
+                  "hourField": "12",
+                  "inRange": 0,
+                  "uiErrorNames": []
+                },
+                {
+                  "open": true,
+                  "month": 10,
+                  "year": 2017,
+                  "value": "",
+                  "days": [],
+                  "hours": [],
+                  "active": "numInput flatpickr-hour",
+                  "withinPicker": true,
+                  "otherValue": "alpha beta",
+                  "selectionStart": 0,
+                  "selectionEnd": 0,
+                  "events": [],
+                  "hourField": "16",
+                  "inRange": 0,
+                  "uiErrorNames": []
+                },
+                {
+                  "open": false,
+                  "month": 10,
+                  "year": 2017,
+                  "value": "12:00",
+                  "days": [
+                    15
+                  ],
+                  "hours": [
+                    12
+                  ],
+                  "active": "field",
+                  "withinPicker": true,
+                  "otherValue": "alpha beta",
+                  "selectionStart": 0,
+                  "selectionEnd": 0,
+                  "events": [
+                    {
+                      "key": "Enter",
+                      "target": "numInput flatpickr-hour",
+                      "prevented": true
+                    }
+                  ],
+                  "hourField": "12",
+                  "inRange": 0,
+                  "uiErrorNames": []
+                }
+              ],
+              "pageErrors": []
+            }
+          },
+          "verificationImages": 6,
+          "verificationBytes": 51307,
+          "fullMenuPairs": 6
+        },
+        {
+          "browser": {
+            "chrome": "158.0.8127.37",
+            "playwright": "1.62.1"
+          },
+          "cost": {
+            "fixed": {
+              "firstHit": null,
+              "steps": 3,
+              "gestures": 6,
+              "referenceActions": 0,
+              "referenceImages": 0,
+              "actions": [
+                "ordinary",
+                "month",
+                "keys"
+              ]
+            },
+            "bm25": {
+              "firstHit": 2,
+              "steps": 2,
+              "gestures": 4,
+              "referenceActions": 0,
+              "referenceImages": 0,
+              "actions": [
+                "ordinary",
+                "time"
+              ]
+            },
+            "keyboard": {
+              "firstHit": 2,
+              "steps": 2,
+              "gestures": 4,
+              "referenceActions": 0,
+              "referenceImages": 0,
+              "actions": [
+                "ordinary",
+                "time"
+              ]
+            }
+          },
+          "signatures": {
+            "reference": {
+              "states": [
+                {
+                  "open": false,
+                  "month": 10,
+                  "year": 2017,
+                  "value": "",
+                  "days": [],
+                  "hours": [],
+                  "active": "body",
+                  "withinPicker": false,
+                  "otherValue": "alpha beta",
+                  "selectionStart": 0,
+                  "selectionEnd": 0,
+                  "events": [],
+                  "hourField": "12",
+                  "inRange": 0,
+                  "uiErrorNames": []
+                },
+                {
+                  "open": true,
+                  "month": 10,
+                  "year": 2017,
+                  "value": "",
+                  "days": [],
+                  "hours": [],
+                  "active": "numInput flatpickr-hour",
+                  "withinPicker": true,
+                  "otherValue": "alpha beta",
+                  "selectionStart": 0,
+                  "selectionEnd": 0,
+                  "events": [],
+                  "hourField": "12",
+                  "inRange": 0,
+                  "uiErrorNames": []
+                },
+                {
+                  "open": true,
+                  "month": 10,
+                  "year": 2017,
+                  "value": "",
+                  "days": [],
+                  "hours": [],
+                  "active": "numInput flatpickr-hour",
+                  "withinPicker": true,
+                  "otherValue": "alpha beta",
+                  "selectionStart": 0,
+                  "selectionEnd": 0,
+                  "events": [],
+                  "hourField": "16",
+                  "inRange": 0,
+                  "uiErrorNames": []
+                },
+                {
+                  "open": false,
+                  "month": 10,
+                  "year": 2017,
+                  "value": "16:00",
+                  "days": [
+                    15
+                  ],
+                  "hours": [
+                    16
+                  ],
+                  "active": "field",
+                  "withinPicker": true,
+                  "otherValue": "alpha beta",
+                  "selectionStart": 0,
+                  "selectionEnd": 0,
+                  "events": [
+                    {
+                      "key": "Enter",
+                      "target": "numInput flatpickr-hour",
+                      "prevented": true
+                    }
+                  ],
+                  "hourField": "16",
+                  "inRange": 0,
+                  "uiErrorNames": []
+                }
+              ],
+              "pageErrors": []
+            },
+            "candidate": {
+              "states": [
+                {
+                  "open": false,
+                  "month": 10,
+                  "year": 2017,
+                  "value": "",
+                  "days": [],
+                  "hours": [],
+                  "active": "body",
+                  "withinPicker": false,
+                  "otherValue": "alpha beta",
+                  "selectionStart": 0,
+                  "selectionEnd": 0,
+                  "events": [],
+                  "hourField": "12",
+                  "inRange": 0,
+                  "uiErrorNames": []
+                },
+                {
+                  "open": true,
+                  "month": 10,
+                  "year": 2017,
+                  "value": "",
+                  "days": [],
+                  "hours": [],
+                  "active": "numInput flatpickr-hour",
+                  "withinPicker": true,
+                  "otherValue": "alpha beta",
+                  "selectionStart": 0,
+                  "selectionEnd": 0,
+                  "events": [],
+                  "hourField": "12",
+                  "inRange": 0,
+                  "uiErrorNames": []
+                },
+                {
+                  "open": true,
+                  "month": 10,
+                  "year": 2017,
+                  "value": "",
+                  "days": [],
+                  "hours": [],
+                  "active": "numInput flatpickr-hour",
+                  "withinPicker": true,
+                  "otherValue": "alpha beta",
+                  "selectionStart": 0,
+                  "selectionEnd": 0,
+                  "events": [],
+                  "hourField": "16",
+                  "inRange": 0,
+                  "uiErrorNames": []
+                },
+                {
+                  "open": false,
+                  "month": 10,
+                  "year": 2017,
+                  "value": "12:00",
+                  "days": [
+                    15
+                  ],
+                  "hours": [
+                    12
+                  ],
+                  "active": "field",
+                  "withinPicker": true,
+                  "otherValue": "alpha beta",
+                  "selectionStart": 0,
+                  "selectionEnd": 0,
+                  "events": [
+                    {
+                      "key": "Enter",
+                      "target": "numInput flatpickr-hour",
+                      "prevented": true
+                    }
+                  ],
+                  "hourField": "12",
+                  "inRange": 0,
+                  "uiErrorNames": []
+                }
+              ],
+              "pageErrors": []
+            },
+            "confirmations": {
+              "states": [
+                {
+                  "open": false,
+                  "month": 10,
+                  "year": 2017,
+                  "value": "",
+                  "days": [],
+                  "hours": [],
+                  "active": "body",
+                  "withinPicker": false,
+                  "otherValue": "alpha beta",
+                  "selectionStart": 0,
+                  "selectionEnd": 0,
+                  "events": [],
+                  "hourField": "12",
+                  "inRange": 0,
+                  "uiErrorNames": []
+                },
+                {
+                  "open": true,
+                  "month": 10,
+                  "year": 2017,
+                  "value": "",
+                  "days": [],
+                  "hours": [],
+                  "active": "numInput flatpickr-hour",
+                  "withinPicker": true,
+                  "otherValue": "alpha beta",
+                  "selectionStart": 0,
+                  "selectionEnd": 0,
+                  "events": [],
+                  "hourField": "12",
+                  "inRange": 0,
+                  "uiErrorNames": []
+                },
+                {
+                  "open": true,
+                  "month": 10,
+                  "year": 2017,
+                  "value": "",
+                  "days": [],
+                  "hours": [],
+                  "active": "numInput flatpickr-hour",
+                  "withinPicker": true,
+                  "otherValue": "alpha beta",
+                  "selectionStart": 0,
+                  "selectionEnd": 0,
+                  "events": [],
+                  "hourField": "16",
+                  "inRange": 0,
+                  "uiErrorNames": []
+                },
+                {
+                  "open": false,
+                  "month": 10,
+                  "year": 2017,
+                  "value": "12:00",
+                  "days": [
+                    15
+                  ],
+                  "hours": [
+                    12
+                  ],
+                  "active": "field",
+                  "withinPicker": true,
+                  "otherValue": "alpha beta",
+                  "selectionStart": 0,
+                  "selectionEnd": 0,
+                  "events": [
+                    {
+                      "key": "Enter",
+                      "target": "numInput flatpickr-hour",
+                      "prevented": true
+                    }
+                  ],
+                  "hourField": "12",
+                  "inRange": 0,
+                  "uiErrorNames": []
+                }
+              ],
+              "pageErrors": []
+            }
+          },
+          "verificationImages": 6,
+          "verificationBytes": 51307,
+          "fullMenuPairs": 6
+        }
+      ]
+    },
+    {
+      "case": {
+        "id": 654,
+        "library": "air-datepicker",
+        "old": "3.5.3",
+        "fixed": "3.6.0",
+        "target": "range",
+        "title": "The Clear method doesn't clear the selected range",
+        "issue": "https://github.com/t1m0n/air-datepicker/issues/654",
+        "repair": "https://github.com/t1m0n/air-datepicker/commit/8496abb1c9bc9258295ce0356a7a616b3cda6b9b",
+        "reason": "Upstream identifies #654 as duplicate of #642, so count the pair once. 3.5.3 is reported affected and 3.6.0 is the first available stable npm package after the fix. Click the standard Clear button and observe stale in-range cells."
+      },
+      "browserRounds": 2,
+      "sameRankAndHits": true,
+      "differentFiles": [],
+      "cues": [],
+      "displaced": null,
+      "rounds": [
+        {
+          "browser": {
+            "chrome": "158.0.8127.37",
+            "playwright": "1.62.1"
+          },
+          "cost": {
+            "fixed": {
+              "firstHit": null,
+              "steps": 3,
+              "gestures": 5,
+              "referenceActions": 0,
+              "referenceImages": 0,
+              "actions": [
+                "ordinary",
+                "month",
+                "keys"
+              ]
+            },
+            "bm25": {
+              "firstHit": 2,
+              "steps": 2,
+              "gestures": 4,
+              "referenceActions": 0,
+              "referenceImages": 0,
+              "actions": [
+                "ordinary",
+                "range"
+              ]
+            },
+            "keyboard": {
+              "firstHit": 2,
+              "steps": 2,
+              "gestures": 4,
+              "referenceActions": 0,
+              "referenceImages": 0,
+              "actions": [
+                "ordinary",
+                "range"
+              ]
+            }
+          },
+          "signatures": {
+            "reference": {
+              "states": [
+                {
+                  "open": true,
+                  "month": 10,
+                  "year": 2017,
+                  "value": "",
+                  "days": [],
+                  "hours": [],
+                  "active": "body",
+                  "withinPicker": false,
+                  "otherValue": "alpha beta",
+                  "selectionStart": 0,
+                  "selectionEnd": 0,
+                  "events": [],
+                  "hourField": null,
+                  "inRange": 0,
+                  "uiErrorNames": []
+                },
+                {
+                  "open": true,
+                  "month": 10,
+                  "year": 2017,
+                  "value": "2017-10-15",
+                  "days": [
+                    15
+                  ],
+                  "hours": [
+                    0
+                  ],
+                  "active": "field",
+                  "withinPicker": true,
+                  "otherValue": "alpha beta",
+                  "selectionStart": 0,
+                  "selectionEnd": 0,
+                  "events": [],
+                  "hourField": null,
+                  "inRange": 0,
+                  "uiErrorNames": []
+                },
+                {
+                  "open": true,
+                  "month": 10,
+                  "year": 2017,
+                  "value": "2017-10-15, 2017-10-18",
+                  "days": [
+                    15,
+                    18
+                  ],
+                  "hours": [
+                    0,
+                    0
+                  ],
+                  "active": "field",
+                  "withinPicker": true,
+                  "otherValue": "alpha beta",
+                  "selectionStart": 0,
+                  "selectionEnd": 0,
+                  "events": [],
+                  "hourField": null,
+                  "inRange": 2,
+                  "uiErrorNames": []
+                },
+                {
+                  "open": true,
+                  "month": 10,
+                  "year": 2017,
+                  "value": "",
+                  "days": [],
+                  "hours": [],
+                  "active": "field",
+                  "withinPicker": true,
+                  "otherValue": "alpha beta",
+                  "selectionStart": 0,
+                  "selectionEnd": 0,
+                  "events": [],
+                  "hourField": null,
+                  "inRange": 0,
+                  "uiErrorNames": []
+                }
+              ],
+              "pageErrors": []
+            },
+            "candidate": {
+              "states": [
+                {
+                  "open": true,
+                  "month": 10,
+                  "year": 2017,
+                  "value": "",
+                  "days": [],
+                  "hours": [],
+                  "active": "body",
+                  "withinPicker": false,
+                  "otherValue": "alpha beta",
+                  "selectionStart": 0,
+                  "selectionEnd": 0,
+                  "events": [],
+                  "hourField": null,
+                  "inRange": 0,
+                  "uiErrorNames": []
+                },
+                {
+                  "open": true,
+                  "month": 10,
+                  "year": 2017,
+                  "value": "2017-10-15",
+                  "days": [
+                    15
+                  ],
+                  "hours": [
+                    0
+                  ],
+                  "active": "field",
+                  "withinPicker": true,
+                  "otherValue": "alpha beta",
+                  "selectionStart": 0,
+                  "selectionEnd": 0,
+                  "events": [],
+                  "hourField": null,
+                  "inRange": 0,
+                  "uiErrorNames": []
+                },
+                {
+                  "open": true,
+                  "month": 10,
+                  "year": 2017,
+                  "value": "2017-10-15, 2017-10-18",
+                  "days": [
+                    15,
+                    18
+                  ],
+                  "hours": [
+                    0,
+                    0
+                  ],
+                  "active": "field",
+                  "withinPicker": true,
+                  "otherValue": "alpha beta",
+                  "selectionStart": 0,
+                  "selectionEnd": 0,
+                  "events": [],
+                  "hourField": null,
+                  "inRange": 2,
+                  "uiErrorNames": []
+                },
+                {
+                  "open": true,
+                  "month": 10,
+                  "year": 2017,
+                  "value": "",
+                  "days": [],
+                  "hours": [],
+                  "active": "field",
+                  "withinPicker": true,
+                  "otherValue": "alpha beta",
+                  "selectionStart": 0,
+                  "selectionEnd": 0,
+                  "events": [],
+                  "hourField": null,
+                  "inRange": 2,
+                  "uiErrorNames": []
+                }
+              ],
+              "pageErrors": []
+            },
+            "confirmations": {
+              "states": [
+                {
+                  "open": true,
+                  "month": 10,
+                  "year": 2017,
+                  "value": "",
+                  "days": [],
+                  "hours": [],
+                  "active": "body",
+                  "withinPicker": false,
+                  "otherValue": "alpha beta",
+                  "selectionStart": 0,
+                  "selectionEnd": 0,
+                  "events": [],
+                  "hourField": null,
+                  "inRange": 0,
+                  "uiErrorNames": []
+                },
+                {
+                  "open": true,
+                  "month": 10,
+                  "year": 2017,
+                  "value": "2017-10-15",
+                  "days": [
+                    15
+                  ],
+                  "hours": [
+                    0
+                  ],
+                  "active": "field",
+                  "withinPicker": true,
+                  "otherValue": "alpha beta",
+                  "selectionStart": 0,
+                  "selectionEnd": 0,
+                  "events": [],
+                  "hourField": null,
+                  "inRange": 0,
+                  "uiErrorNames": []
+                },
+                {
+                  "open": true,
+                  "month": 10,
+                  "year": 2017,
+                  "value": "2017-10-15, 2017-10-18",
+                  "days": [
+                    15,
+                    18
+                  ],
+                  "hours": [
+                    0,
+                    0
+                  ],
+                  "active": "field",
+                  "withinPicker": true,
+                  "otherValue": "alpha beta",
+                  "selectionStart": 0,
+                  "selectionEnd": 0,
+                  "events": [],
+                  "hourField": null,
+                  "inRange": 2,
+                  "uiErrorNames": []
+                },
+                {
+                  "open": true,
+                  "month": 10,
+                  "year": 2017,
+                  "value": "",
+                  "days": [],
+                  "hours": [],
+                  "active": "field",
+                  "withinPicker": true,
+                  "otherValue": "alpha beta",
+                  "selectionStart": 0,
+                  "selectionEnd": 0,
+                  "events": [],
+                  "hourField": null,
+                  "inRange": 2,
+                  "uiErrorNames": []
+                }
+              ],
+              "pageErrors": []
+            }
+          },
+          "verificationImages": 6,
+          "verificationBytes": 66324,
+          "fullMenuPairs": 6
+        },
+        {
+          "browser": {
+            "chrome": "158.0.8127.37",
+            "playwright": "1.62.1"
+          },
+          "cost": {
+            "fixed": {
+              "firstHit": null,
+              "steps": 3,
+              "gestures": 5,
+              "referenceActions": 0,
+              "referenceImages": 0,
+              "actions": [
+                "ordinary",
+                "month",
+                "keys"
+              ]
+            },
+            "bm25": {
+              "firstHit": 2,
+              "steps": 2,
+              "gestures": 4,
+              "referenceActions": 0,
+              "referenceImages": 0,
+              "actions": [
+                "ordinary",
+                "range"
+              ]
+            },
+            "keyboard": {
+              "firstHit": 2,
+              "steps": 2,
+              "gestures": 4,
+              "referenceActions": 0,
+              "referenceImages": 0,
+              "actions": [
+                "ordinary",
+                "range"
+              ]
+            }
+          },
+          "signatures": {
+            "reference": {
+              "states": [
+                {
+                  "open": true,
+                  "month": 10,
+                  "year": 2017,
+                  "value": "",
+                  "days": [],
+                  "hours": [],
+                  "active": "body",
+                  "withinPicker": false,
+                  "otherValue": "alpha beta",
+                  "selectionStart": 0,
+                  "selectionEnd": 0,
+                  "events": [],
+                  "hourField": null,
+                  "inRange": 0,
+                  "uiErrorNames": []
+                },
+                {
+                  "open": true,
+                  "month": 10,
+                  "year": 2017,
+                  "value": "2017-10-15",
+                  "days": [
+                    15
+                  ],
+                  "hours": [
+                    0
+                  ],
+                  "active": "field",
+                  "withinPicker": true,
+                  "otherValue": "alpha beta",
+                  "selectionStart": 0,
+                  "selectionEnd": 0,
+                  "events": [],
+                  "hourField": null,
+                  "inRange": 0,
+                  "uiErrorNames": []
+                },
+                {
+                  "open": true,
+                  "month": 10,
+                  "year": 2017,
+                  "value": "2017-10-15, 2017-10-18",
+                  "days": [
+                    15,
+                    18
+                  ],
+                  "hours": [
+                    0,
+                    0
+                  ],
+                  "active": "field",
+                  "withinPicker": true,
+                  "otherValue": "alpha beta",
+                  "selectionStart": 0,
+                  "selectionEnd": 0,
+                  "events": [],
+                  "hourField": null,
+                  "inRange": 2,
+                  "uiErrorNames": []
+                },
+                {
+                  "open": true,
+                  "month": 10,
+                  "year": 2017,
+                  "value": "",
+                  "days": [],
+                  "hours": [],
+                  "active": "field",
+                  "withinPicker": true,
+                  "otherValue": "alpha beta",
+                  "selectionStart": 0,
+                  "selectionEnd": 0,
+                  "events": [],
+                  "hourField": null,
+                  "inRange": 0,
+                  "uiErrorNames": []
+                }
+              ],
+              "pageErrors": []
+            },
+            "candidate": {
+              "states": [
+                {
+                  "open": true,
+                  "month": 10,
+                  "year": 2017,
+                  "value": "",
+                  "days": [],
+                  "hours": [],
+                  "active": "body",
+                  "withinPicker": false,
+                  "otherValue": "alpha beta",
+                  "selectionStart": 0,
+                  "selectionEnd": 0,
+                  "events": [],
+                  "hourField": null,
+                  "inRange": 0,
+                  "uiErrorNames": []
+                },
+                {
+                  "open": true,
+                  "month": 10,
+                  "year": 2017,
+                  "value": "2017-10-15",
+                  "days": [
+                    15
+                  ],
+                  "hours": [
+                    0
+                  ],
+                  "active": "field",
+                  "withinPicker": true,
+                  "otherValue": "alpha beta",
+                  "selectionStart": 0,
+                  "selectionEnd": 0,
+                  "events": [],
+                  "hourField": null,
+                  "inRange": 0,
+                  "uiErrorNames": []
+                },
+                {
+                  "open": true,
+                  "month": 10,
+                  "year": 2017,
+                  "value": "2017-10-15, 2017-10-18",
+                  "days": [
+                    15,
+                    18
+                  ],
+                  "hours": [
+                    0,
+                    0
+                  ],
+                  "active": "field",
+                  "withinPicker": true,
+                  "otherValue": "alpha beta",
+                  "selectionStart": 0,
+                  "selectionEnd": 0,
+                  "events": [],
+                  "hourField": null,
+                  "inRange": 2,
+                  "uiErrorNames": []
+                },
+                {
+                  "open": true,
+                  "month": 10,
+                  "year": 2017,
+                  "value": "",
+                  "days": [],
+                  "hours": [],
+                  "active": "field",
+                  "withinPicker": true,
+                  "otherValue": "alpha beta",
+                  "selectionStart": 0,
+                  "selectionEnd": 0,
+                  "events": [],
+                  "hourField": null,
+                  "inRange": 2,
+                  "uiErrorNames": []
+                }
+              ],
+              "pageErrors": []
+            },
+            "confirmations": {
+              "states": [
+                {
+                  "open": true,
+                  "month": 10,
+                  "year": 2017,
+                  "value": "",
+                  "days": [],
+                  "hours": [],
+                  "active": "body",
+                  "withinPicker": false,
+                  "otherValue": "alpha beta",
+                  "selectionStart": 0,
+                  "selectionEnd": 0,
+                  "events": [],
+                  "hourField": null,
+                  "inRange": 0,
+                  "uiErrorNames": []
+                },
+                {
+                  "open": true,
+                  "month": 10,
+                  "year": 2017,
+                  "value": "2017-10-15",
+                  "days": [
+                    15
+                  ],
+                  "hours": [
+                    0
+                  ],
+                  "active": "field",
+                  "withinPicker": true,
+                  "otherValue": "alpha beta",
+                  "selectionStart": 0,
+                  "selectionEnd": 0,
+                  "events": [],
+                  "hourField": null,
+                  "inRange": 0,
+                  "uiErrorNames": []
+                },
+                {
+                  "open": true,
+                  "month": 10,
+                  "year": 2017,
+                  "value": "2017-10-15, 2017-10-18",
+                  "days": [
+                    15,
+                    18
+                  ],
+                  "hours": [
+                    0,
+                    0
+                  ],
+                  "active": "field",
+                  "withinPicker": true,
+                  "otherValue": "alpha beta",
+                  "selectionStart": 0,
+                  "selectionEnd": 0,
+                  "events": [],
+                  "hourField": null,
+                  "inRange": 2,
+                  "uiErrorNames": []
+                },
+                {
+                  "open": true,
+                  "month": 10,
+                  "year": 2017,
+                  "value": "",
+                  "days": [],
+                  "hours": [],
+                  "active": "field",
+                  "withinPicker": true,
+                  "otherValue": "alpha beta",
+                  "selectionStart": 0,
+                  "selectionEnd": 0,
+                  "events": [],
+                  "hourField": null,
+                  "inRange": 2,
+                  "uiErrorNames": []
+                }
+              ],
+              "pageErrors": []
+            }
+          },
+          "verificationImages": 6,
+          "verificationBytes": 66324,
+          "fullMenuPairs": 6
+        }
+      ]
+    },
+    {
+      "case": {
+        "id": 631,
+        "library": "air-datepicker",
+        "old": "3.5.3",
+        "fixed": "3.6.0",
+        "target": "keys",
+        "title": "Ошибка при нажатии на кнопку escape при скрытом datepicker'е",
+        "issue": "https://github.com/t1m0n/air-datepicker/issues/631",
+        "repair": "https://github.com/t1m0n/air-datepicker/commit/3692ca46293fe6149ebef5e5221e0607aed7ed59",
+        "reason": "The maintainer names 3.5.4 as fixed, but official npm has no such version. 3.6.0 is the first published stable after the linked commit, and 3.5.3 is the previous published release. Use the documented custom show event, focus the input while picker remains closed, then press Escape."
+      },
+      "browserRounds": 2,
+      "sameRankAndHits": true,
+      "differentFiles": [],
+      "cues": [],
+      "displaced": null,
+      "rounds": [
+        {
+          "browser": {
+            "chrome": "158.0.8127.37",
+            "playwright": "1.62.1"
+          },
+          "cost": {
+            "fixed": {
+              "firstHit": 3,
+              "steps": 3,
+              "gestures": 4,
+              "referenceActions": 0,
+              "referenceImages": 0,
+              "actions": [
+                "ordinary",
+                "month",
+                "keys"
+              ]
+            },
+            "bm25": {
+              "firstHit": 3,
+              "steps": 3,
+              "gestures": 4,
+              "referenceActions": 0,
+              "referenceImages": 0,
+              "actions": [
+                "ordinary",
+                "month",
+                "keys"
+              ]
+            },
+            "keyboard": {
+              "firstHit": 3,
+              "steps": 3,
+              "gestures": 4,
+              "referenceActions": 0,
+              "referenceImages": 0,
+              "actions": [
+                "ordinary",
+                "month",
+                "keys"
+              ]
+            }
+          },
+          "signatures": {
+            "reference": {
+              "states": [
+                {
+                  "open": false,
+                  "month": 10,
+                  "year": 2017,
+                  "value": "",
+                  "days": [],
+                  "hours": [],
+                  "active": "field",
+                  "withinPicker": true,
+                  "otherValue": "alpha beta",
+                  "selectionStart": 0,
+                  "selectionEnd": 0,
+                  "events": [],
+                  "hourField": null,
+                  "inRange": 0,
+                  "uiErrorNames": []
+                },
+                {
+                  "open": false,
+                  "month": 10,
+                  "year": 2017,
+                  "value": "",
+                  "days": [],
+                  "hours": [],
+                  "active": "field",
+                  "withinPicker": true,
+                  "otherValue": "alpha beta",
+                  "selectionStart": 0,
+                  "selectionEnd": 0,
+                  "events": [
+                    {
+                      "key": "Escape",
+                      "target": "field",
+                      "prevented": false
+                    }
+                  ],
+                  "hourField": null,
+                  "inRange": 0,
+                  "uiErrorNames": []
+                }
+              ],
+              "pageErrors": []
+            },
+            "candidate": {
+              "states": [
+                {
+                  "open": false,
+                  "month": 10,
+                  "year": 2017,
+                  "value": "",
+                  "days": [],
+                  "hours": [],
+                  "active": "field",
+                  "withinPicker": true,
+                  "otherValue": "alpha beta",
+                  "selectionStart": 0,
+                  "selectionEnd": 0,
+                  "events": [],
+                  "hourField": null,
+                  "inRange": 0,
+                  "uiErrorNames": []
+                },
+                {
+                  "open": false,
+                  "month": 10,
+                  "year": 2017,
+                  "value": "",
+                  "days": [],
+                  "hours": [],
+                  "active": "body",
+                  "withinPicker": false,
+                  "otherValue": "alpha beta",
+                  "selectionStart": 0,
+                  "selectionEnd": 0,
+                  "events": [
+                    {
+                      "key": "Escape",
+                      "target": "field",
+                      "prevented": false
+                    }
+                  ],
+                  "hourField": null,
+                  "inRange": 0,
+                  "uiErrorNames": [
+                    "TypeError"
+                  ]
+                }
+              ],
+              "pageErrors": [
+                {
+                  "name": "TypeError",
+                  "message": "Cannot read properties of undefined (reading 'destroy')",
+                  "stack": "TypeError: Cannot read properties of undefined (reading 'destroy')\n    at R._destroyComponents (<anonymous>:1:39637)\n    at R._finishHide (<anonymous>:1:30098)\n    at <anonymous>:1:46174\n    at R._scheduleCallAfterTransition (<anonymous>:1:32163)\n    at R.hide (<anonymous>:1:46101)\n    at HTMLInputElement.<anonymous> (<anonymous>:1:27259)"
+                }
+              ]
+            },
+            "confirmations": {
+              "states": [
+                {
+                  "open": false,
+                  "month": 10,
+                  "year": 2017,
+                  "value": "",
+                  "days": [],
+                  "hours": [],
+                  "active": "field",
+                  "withinPicker": true,
+                  "otherValue": "alpha beta",
+                  "selectionStart": 0,
+                  "selectionEnd": 0,
+                  "events": [],
+                  "hourField": null,
+                  "inRange": 0,
+                  "uiErrorNames": []
+                },
+                {
+                  "open": false,
+                  "month": 10,
+                  "year": 2017,
+                  "value": "",
+                  "days": [],
+                  "hours": [],
+                  "active": "body",
+                  "withinPicker": false,
+                  "otherValue": "alpha beta",
+                  "selectionStart": 0,
+                  "selectionEnd": 0,
+                  "events": [
+                    {
+                      "key": "Escape",
+                      "target": "field",
+                      "prevented": false
+                    }
+                  ],
+                  "hourField": null,
+                  "inRange": 0,
+                  "uiErrorNames": [
+                    "TypeError"
+                  ]
+                }
+              ],
+              "pageErrors": [
+                {
+                  "name": "TypeError",
+                  "message": "Cannot read properties of undefined (reading 'destroy')",
+                  "stack": "TypeError: Cannot read properties of undefined (reading 'destroy')\n    at R._destroyComponents (<anonymous>:1:39637)\n    at R._finishHide (<anonymous>:1:30098)\n    at <anonymous>:1:46174\n    at R._scheduleCallAfterTransition (<anonymous>:1:32163)\n    at R.hide (<anonymous>:1:46101)\n    at HTMLInputElement.<anonymous> (<anonymous>:1:27259)"
+                }
+              ]
+            }
+          },
+          "verificationImages": 6,
+          "verificationBytes": 49196,
+          "fullMenuPairs": 6
+        },
+        {
+          "browser": {
+            "chrome": "158.0.8127.37",
+            "playwright": "1.62.1"
+          },
+          "cost": {
+            "fixed": {
+              "firstHit": 3,
+              "steps": 3,
+              "gestures": 4,
+              "referenceActions": 0,
+              "referenceImages": 0,
+              "actions": [
+                "ordinary",
+                "month",
+                "keys"
+              ]
+            },
+            "bm25": {
+              "firstHit": 3,
+              "steps": 3,
+              "gestures": 4,
+              "referenceActions": 0,
+              "referenceImages": 0,
+              "actions": [
+                "ordinary",
+                "month",
+                "keys"
+              ]
+            },
+            "keyboard": {
+              "firstHit": 3,
+              "steps": 3,
+              "gestures": 4,
+              "referenceActions": 0,
+              "referenceImages": 0,
+              "actions": [
+                "ordinary",
+                "month",
+                "keys"
+              ]
+            }
+          },
+          "signatures": {
+            "reference": {
+              "states": [
+                {
+                  "open": false,
+                  "month": 10,
+                  "year": 2017,
+                  "value": "",
+                  "days": [],
+                  "hours": [],
+                  "active": "field",
+                  "withinPicker": true,
+                  "otherValue": "alpha beta",
+                  "selectionStart": 0,
+                  "selectionEnd": 0,
+                  "events": [],
+                  "hourField": null,
+                  "inRange": 0,
+                  "uiErrorNames": []
+                },
+                {
+                  "open": false,
+                  "month": 10,
+                  "year": 2017,
+                  "value": "",
+                  "days": [],
+                  "hours": [],
+                  "active": "field",
+                  "withinPicker": true,
+                  "otherValue": "alpha beta",
+                  "selectionStart": 0,
+                  "selectionEnd": 0,
+                  "events": [
+                    {
+                      "key": "Escape",
+                      "target": "field",
+                      "prevented": false
+                    }
+                  ],
+                  "hourField": null,
+                  "inRange": 0,
+                  "uiErrorNames": []
+                }
+              ],
+              "pageErrors": []
+            },
+            "candidate": {
+              "states": [
+                {
+                  "open": false,
+                  "month": 10,
+                  "year": 2017,
+                  "value": "",
+                  "days": [],
+                  "hours": [],
+                  "active": "field",
+                  "withinPicker": true,
+                  "otherValue": "alpha beta",
+                  "selectionStart": 0,
+                  "selectionEnd": 0,
+                  "events": [],
+                  "hourField": null,
+                  "inRange": 0,
+                  "uiErrorNames": []
+                },
+                {
+                  "open": false,
+                  "month": 10,
+                  "year": 2017,
+                  "value": "",
+                  "days": [],
+                  "hours": [],
+                  "active": "body",
+                  "withinPicker": false,
+                  "otherValue": "alpha beta",
+                  "selectionStart": 0,
+                  "selectionEnd": 0,
+                  "events": [
+                    {
+                      "key": "Escape",
+                      "target": "field",
+                      "prevented": false
+                    }
+                  ],
+                  "hourField": null,
+                  "inRange": 0,
+                  "uiErrorNames": [
+                    "TypeError"
+                  ]
+                }
+              ],
+              "pageErrors": [
+                {
+                  "name": "TypeError",
+                  "message": "Cannot read properties of undefined (reading 'destroy')",
+                  "stack": "TypeError: Cannot read properties of undefined (reading 'destroy')\n    at R._destroyComponents (<anonymous>:1:39637)\n    at R._finishHide (<anonymous>:1:30098)\n    at <anonymous>:1:46174\n    at R._scheduleCallAfterTransition (<anonymous>:1:32163)\n    at R.hide (<anonymous>:1:46101)\n    at HTMLInputElement.<anonymous> (<anonymous>:1:27259)"
+                }
+              ]
+            },
+            "confirmations": {
+              "states": [
+                {
+                  "open": false,
+                  "month": 10,
+                  "year": 2017,
+                  "value": "",
+                  "days": [],
+                  "hours": [],
+                  "active": "field",
+                  "withinPicker": true,
+                  "otherValue": "alpha beta",
+                  "selectionStart": 0,
+                  "selectionEnd": 0,
+                  "events": [],
+                  "hourField": null,
+                  "inRange": 0,
+                  "uiErrorNames": []
+                },
+                {
+                  "open": false,
+                  "month": 10,
+                  "year": 2017,
+                  "value": "",
+                  "days": [],
+                  "hours": [],
+                  "active": "body",
+                  "withinPicker": false,
+                  "otherValue": "alpha beta",
+                  "selectionStart": 0,
+                  "selectionEnd": 0,
+                  "events": [
+                    {
+                      "key": "Escape",
+                      "target": "field",
+                      "prevented": false
+                    }
+                  ],
+                  "hourField": null,
+                  "inRange": 0,
+                  "uiErrorNames": [
+                    "TypeError"
+                  ]
+                }
+              ],
+              "pageErrors": [
+                {
+                  "name": "TypeError",
+                  "message": "Cannot read properties of undefined (reading 'destroy')",
+                  "stack": "TypeError: Cannot read properties of undefined (reading 'destroy')\n    at R._destroyComponents (<anonymous>:1:39637)\n    at R._finishHide (<anonymous>:1:30098)\n    at <anonymous>:1:46174\n    at R._scheduleCallAfterTransition (<anonymous>:1:32163)\n    at R.hide (<anonymous>:1:46101)\n    at HTMLInputElement.<anonymous> (<anonymous>:1:27259)"
+                }
+              ]
+            }
+          },
+          "verificationImages": 6,
+          "verificationBytes": 49196,
+          "fullMenuPairs": 6
+        }
+      ]
+    }
+  ]
+}

@@ -43,3 +43,7 @@ python3 work/vpa-keyboard-2026-11-25/reproduce.py offline
 ```
 
 [Results, browser setup, and live replay commands](work/vpa-keyboard-2026-11-25/进度表.md)
+
+## November 2026 sample expansion
+
+The [four-ticket study](studies/ui-regressions-2026-11-27/) covers Flatpickr and Air Datepicker. The official before-and-after builds were verified in two independent browser rounds. Within three steps, fixed order found 2/4 regressions, BM25 found 3/4, and the keyboard-aware policy found 4/4. The study includes new fixtures, both browser runs, an [HTML index](studies/ui-regressions-2026-11-27/runs/index.html), and replay commands.

@@ -1,0 +1,271 @@
+[
+  {
+    "repo": "flatpickr/flatpickr",
+    "id": 2376,
+    "position": null,
+    "frame": null,
+    "title": null,
+    "url": "https://github.com/flatpickr/flatpickr/issues/2376",
+    "decision": "historical",
+    "reason": "Already executed in November 25 and the JSON CLI migration.",
+    "publicRepairLinks": [],
+    "publicDiscussionLinks": []
+  },
+  {
+    "repo": "flatpickr/flatpickr",
+    "id": 1943,
+    "position": 714,
+    "frame": "historical-extension",
+    "title": "rangePlugin and allowInput: Left/right arrow keys doesn't work in second input",
+    "url": "https://github.com/flatpickr/flatpickr/issues/1943",
+    "decision": "attempt",
+    "reason": "First remaining promoted title; upstream measured affected 4.6.1 and repaired 4.6.13.",
+    "publicRepairLinks": [],
+    "publicDiscussionLinks": [
+      "https://github.com/flatpickr/flatpickr/issues/1943#issuecomment-1593744363",
+      "https://github.com/flatpickr/flatpickr/issues/1943#issuecomment-1613159753"
+    ]
+  },
+  {
+    "repo": "flatpickr/flatpickr",
+    "id": 1942,
+    "position": 719,
+    "frame": "historical-extension",
+    "title": "rangePlugin and allowInput: Should look at both inputs when handling enter key",
+    "url": "https://github.com/flatpickr/flatpickr/issues/1942",
+    "decision": "after-quota",
+    "reason": "Later same-version-pair candidate left outside the declared first stratum stopping point.",
+    "publicRepairLinks": [],
+    "publicDiscussionLinks": []
+  },
+  {
+    "repo": "flatpickr/flatpickr",
+    "id": 2342,
+    "position": 145,
+    "frame": "release-notes",
+    "title": "Issue where time won't change from 12:00 on first attempt",
+    "url": "https://github.com/flatpickr/flatpickr/issues/2342",
+    "decision": "attempt",
+    "reason": "First independent time/range/date issue in the release frame. Reporter specified 4.6.6; release v4.6.9 names the time-picker initialization fix.",
+    "publicRepairLinks": [
+      "https://github.com/flatpickr/flatpickr/commit/c93061586dbde51cf19e0166ca3c15ebd8378b00",
+      "https://github.com/flatpickr/flatpickr/commit/479418a7a13d987d4a306f7efe3242c3d823c48a"
+    ],
+    "publicDiscussionLinks": [
+      "https://github.com/flatpickr/flatpickr/issues/2342#issuecomment-749669828",
+      "https://github.com/flatpickr/flatpickr/issues/2342#issuecomment-749724282"
+    ]
+  },
+  {
+    "repo": "t1m0n/air-datepicker",
+    "id": 672,
+    "position": 3,
+    "frame": "historical-extension",
+    "title": "Is it possible to parse the date from the input?",
+    "url": "https://github.com/t1m0n/air-datepicker/issues/672",
+    "decision": "usage-question",
+    "reason": "Reporter asks how to parse typed input; maintainer gives usage guidance.",
+    "publicRepairLinks": [],
+    "publicDiscussionLinks": []
+  },
+  {
+    "repo": "uxsolutions/bootstrap-datepicker",
+    "id": 2711,
+    "position": 4,
+    "frame": "historical-extension",
+    "title": "datepicker",
+    "url": "https://github.com/uxsolutions/bootstrap-datepicker/issues/2711",
+    "decision": "insufficient",
+    "reason": "Body only names the component.",
+    "publicRepairLinks": [],
+    "publicDiscussionLinks": []
+  },
+  {
+    "repo": "t1m0n/air-datepicker",
+    "id": 663,
+    "position": 20,
+    "frame": "historical-extension",
+    "title": "Show Time Only",
+    "url": "https://github.com/t1m0n/air-datepicker/issues/663",
+    "decision": "usage-question",
+    "reason": "Reporter supplies a time-only customization.",
+    "publicRepairLinks": [],
+    "publicDiscussionLinks": []
+  },
+  {
+    "repo": "mymth/vanillajs-datepicker",
+    "id": 89,
+    "position": 23,
+    "frame": "historical-extension",
+    "title": "Add variant behavior for out of range dates",
+    "url": "https://github.com/mymth/vanillajs-datepicker/issues/89",
+    "decision": "enhancement",
+    "reason": "Requested configurable handling of manually entered out-of-range dates; discussion ends with custom parseDate guidance.",
+    "publicRepairLinks": [],
+    "publicDiscussionLinks": [
+      "https://github.com/mymth/vanillajs-datepicker/issues/89#issuecomment-962749356",
+      "https://github.com/mymth/vanillajs-datepicker/issues/89#issuecomment-963076575",
+      "https://github.com/mymth/vanillajs-datepicker/issues/89#issuecomment-968391903",
+      "https://github.com/mymth/vanillajs-datepicker/issues/89#issuecomment-970054329"
+    ]
+  },
+  {
+    "repo": "uxsolutions/bootstrap-datepicker",
+    "id": 2684,
+    "position": 27,
+    "frame": "historical-extension",
+    "title": "how to disable tooltip in range date option",
+    "url": "https://github.com/uxsolutions/bootstrap-datepicker/issues/2684",
+    "decision": "configuration",
+    "reason": "Issue resolved by form autocomplete setting.",
+    "publicRepairLinks": [],
+    "publicDiscussionLinks": [
+      "https://github.com/uxsolutions/bootstrap-datepicker/issues/2684#issuecomment-1725048014",
+      "https://github.com/uxsolutions/bootstrap-datepicker/issues/2684#issuecomment-1725050242",
+      "https://github.com/uxsolutions/bootstrap-datepicker/issues/2684#issuecomment-1725052357",
+      "https://github.com/uxsolutions/bootstrap-datepicker/issues/2684#issuecomment-1726102288",
+      "https://github.com/uxsolutions/bootstrap-datepicker/issues/2684#issuecomment-1726112900",
+      "https://github.com/uxsolutions/bootstrap-datepicker/issues/2684#issuecomment-1727335773",
+      "https://github.com/uxsolutions/bootstrap-datepicker/issues/2684#issuecomment-1728400734"
+    ]
+  },
+  {
+    "repo": "t1m0n/air-datepicker",
+    "id": 654,
+    "position": 31,
+    "frame": "historical-extension",
+    "title": "The Clear method doesn't clear the selected range",
+    "url": "https://github.com/t1m0n/air-datepicker/issues/654",
+    "decision": "attempt",
+    "reason": "Reported stale intermediate range styles on Clear in 3.5.3. Upstream relates it to #642 and its explicit fix.",
+    "publicRepairLinks": [],
+    "publicDiscussionLinks": [
+      "https://github.com/t1m0n/air-datepicker/issues/654#issuecomment-2598326705",
+      "https://github.com/t1m0n/air-datepicker/issues/654#issuecomment-2850870263"
+    ]
+  },
+  {
+    "repo": "t1m0n/air-datepicker",
+    "id": 650,
+    "position": 42,
+    "frame": "historical-extension",
+    "title": "range & dateFormat bug?",
+    "url": "https://github.com/t1m0n/air-datepicker/issues/650",
+    "decision": "missing-fix-evidence",
+    "reason": "No closing comment or commit establishing a released fix.",
+    "publicRepairLinks": [],
+    "publicDiscussionLinks": []
+  },
+  {
+    "repo": "uxsolutions/bootstrap-datepicker",
+    "id": 2664,
+    "position": 43,
+    "frame": "historical-extension",
+    "title": "Uncaught TypeError: el.addClass(...).datepicker is not a function",
+    "url": "https://github.com/uxsolutions/bootstrap-datepicker/issues/2664",
+    "decision": "configuration",
+    "reason": "Reporter resolved duplicate jQuery instances in Webpack.",
+    "publicRepairLinks": [],
+    "publicDiscussionLinks": [
+      "https://github.com/uxsolutions/bootstrap-datepicker/issues/2664#issuecomment-1241642688"
+    ]
+  },
+  {
+    "repo": "uxsolutions/bootstrap-datepicker",
+    "id": 2648,
+    "position": 48,
+    "frame": "historical-extension",
+    "title": "ASP.NET MVC Datepicker Issue Formatting",
+    "url": "https://github.com/uxsolutions/bootstrap-datepicker/issues/2648",
+    "decision": "insufficient",
+    "reason": "No issue description, tested release or repair.",
+    "publicRepairLinks": [],
+    "publicDiscussionLinks": []
+  },
+  {
+    "repo": "uxsolutions/bootstrap-datepicker",
+    "id": 2637,
+    "position": 59,
+    "frame": "historical-extension",
+    "title": "getDate is not returning the new selected date",
+    "url": "https://github.com/uxsolutions/bootstrap-datepicker/issues/2637",
+    "decision": "application-code",
+    "reason": "Reporter identified code outside the event handler.",
+    "publicRepairLinks": [],
+    "publicDiscussionLinks": [
+      "https://github.com/uxsolutions/bootstrap-datepicker/issues/2637#issuecomment-920342175"
+    ]
+  },
+  {
+    "repo": "t1m0n/air-datepicker",
+    "id": 639,
+    "position": 64,
+    "frame": "historical-extension",
+    "title": "How to access API for datepicker already initialised by a seperate script?",
+    "url": "https://github.com/t1m0n/air-datepicker/issues/639",
+    "decision": "usage-question",
+    "reason": "Asked how to retrieve an initialized instance.",
+    "publicRepairLinks": [],
+    "publicDiscussionLinks": []
+  },
+  {
+    "repo": "t1m0n/air-datepicker",
+    "id": 634,
+    "position": 69,
+    "frame": "historical-extension",
+    "title": "Keyboard navigation mode exits browser's fullscreen mode on Esc",
+    "url": "https://github.com/t1m0n/air-datepicker/issues/634",
+    "decision": "browser-behavior",
+    "reason": "Maintainer declined to intercept the browser's fullscreen Escape behavior.",
+    "publicRepairLinks": [],
+    "publicDiscussionLinks": []
+  },
+  {
+    "repo": "t1m0n/air-datepicker",
+    "id": 633,
+    "position": 74,
+    "frame": "historical-extension",
+    "title": "Inconsistency between AirDatepicker.visible and checkVisibility",
+    "url": "https://github.com/t1m0n/air-datepicker/issues/633",
+    "decision": "semantics-question",
+    "reason": "Instance flag reflects hide request, whereas the DOM remains visible during transition. Maintainer explains distinction; no fix.",
+    "publicRepairLinks": [],
+    "publicDiscussionLinks": [
+      "https://github.com/t1m0n/air-datepicker/issues/633#issuecomment-2368710114",
+      "https://github.com/t1m0n/air-datepicker/issues/633#issuecomment-2368750874",
+      "https://github.com/t1m0n/air-datepicker/issues/633#issuecomment-2369246208",
+      "https://github.com/t1m0n/air-datepicker/issues/633#issuecomment-2373401369"
+    ]
+  },
+  {
+    "repo": "t1m0n/air-datepicker",
+    "id": 631,
+    "position": 79,
+    "frame": "historical-extension",
+    "title": "Ошибка при нажатии на кнопку escape при скрытом datepicker'е",
+    "url": "https://github.com/t1m0n/air-datepicker/issues/631",
+    "decision": "attempt",
+    "reason": "Public reproducer and linked fix identify a TypeError on Escape while the date popup is closed. 3.5.4 named in comment absent from npm; first published stable 3.6.0.",
+    "publicRepairLinks": [
+      "https://github.com/t1m0n/air-datepicker/commit/3692ca46293fe6149ebef5e5221e0607aed7ed59"
+    ],
+    "publicDiscussionLinks": [
+      "https://github.com/t1m0n/air-datepicker/issues/631#issuecomment-2353957912",
+      "https://github.com/t1m0n/air-datepicker/issues/631#issuecomment-2884009761",
+      "https://github.com/t1m0n/air-datepicker/issues/631#issuecomment-2885808507",
+      "https://github.com/t1m0n/air-datepicker/issues/631#issuecomment-2886790731"
+    ]
+  },
+  {
+    "repo": "t1m0n/air-datepicker",
+    "id": 642,
+    "position": null,
+    "frame": null,
+    "title": "Некорректная работа предустановленной кнопки 'clear' в версии 3.5.3",
+    "url": "https://github.com/t1m0n/air-datepicker/issues/642",
+    "decision": "duplicate",
+    "reason": "Canonical fix for #654; preserve provenance and count one independent behavior.",
+    "publicRepairLinks": [],
+    "publicDiscussionLinks": []
+  }
+]

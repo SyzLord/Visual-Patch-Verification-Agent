@@ -1,0 +1,2640 @@
+{
+  "config": {
+    "schema": 1,
+    "id": "air-datepicker-654",
+    "ticket": {
+      "title": "The Clear method doesn't clear the selected range",
+      "issue": "https://github.com/t1m0n/air-datepicker/issues/654",
+      "repair": "https://github.com/t1m0n/air-datepicker/commit/8496abb1c9bc9258295ce0356a7a616b3cda6b9b"
+    },
+    "budget": 3,
+    "fixture": {
+      "adapter": "air-datepicker",
+      "html": {
+        "path": "container.html",
+        "sha256": "0e757eab28dde47cf3aff7690a9b0fa77d870a171917063a152e055f784262e1"
+      },
+      "css": {
+        "path": "container.css",
+        "sha256": "3f59fc23b4dd8d204561875564d995b8df423c1213b078123009c187235c33cd"
+      },
+      "input": "#field",
+      "other": "#other",
+      "clock": "2017-10-15T12:00:00Z"
+    },
+    "builds": {
+      "reference": {
+        "version": "3.6.0",
+        "script": {
+          "path": "assets/air-datepicker-3.6.0/library.js",
+          "sha256": "24be9285f8a7b00ec14ca94a954f54383ea6a507067f7d3c3f1c2c2280462185"
+        },
+        "style": {
+          "path": "assets/air-datepicker-3.6.0/library.css",
+          "sha256": "110391f897ba0abc6c563bc8d1e7afa135b26955ae57a5fc0a1228e79c394f73"
+        }
+      },
+      "candidate": {
+        "version": "3.5.3",
+        "script": {
+          "path": "assets/air-datepicker-3.5.3/library.js",
+          "sha256": "96dd1f6faf045810cdccc4926c09adbb38816f2665fb1ea7aeebadd3dc3d256f"
+        },
+        "style": {
+          "path": "assets/air-datepicker-3.5.3/library.css",
+          "sha256": "cd1aa5c0e11d7179287abb3b82449b7cea9726972b71c1701dc027937208eb6b"
+        }
+      }
+    },
+    "keyboardAction": "keys",
+    "actions": [
+      {
+        "id": "ordinary",
+        "description": "Open a plain date picker and select a day in the current month.",
+        "scenario": {
+          "options": {
+            "dateFormat": "yyyy-MM-dd"
+          },
+          "open": true,
+          "setup": []
+        },
+        "steps": [
+          {
+            "op": "click",
+            "selector": ".air-datepicker-cell.-day-:not(.-other-month-)",
+            "text": "16"
+          }
+        ],
+        "expect": [
+          {
+            "at": "last",
+            "field": "days",
+            "equals": [
+              16
+            ]
+          }
+        ]
+      },
+      {
+        "id": "month",
+        "description": "Move forward and backward between months and years and inspect the calendar heading and grid.",
+        "scenario": {
+          "options": {
+            "dateFormat": "yyyy-MM-dd"
+          },
+          "open": true,
+          "setup": []
+        },
+        "steps": [
+          {
+            "op": "click",
+            "selector": ".air-datepicker-nav--action[data-action=\"next\"]"
+          },
+          {
+            "op": "click",
+            "selector": ".air-datepicker-nav--action[data-action=\"prev\"]"
+          }
+        ],
+        "expect": [
+          {
+            "at": 0,
+            "field": "month",
+            "equals": 10
+          },
+          {
+            "at": 1,
+            "field": "month",
+            "equals": 11
+          },
+          {
+            "at": 2,
+            "field": "month",
+            "equals": 10
+          }
+        ]
+      },
+      {
+        "id": "keys",
+        "description": "Navigate with the keyboard and inspect the focused and selected date.",
+        "scenario": {
+          "options": {
+            "dateFormat": "yyyy-MM-dd",
+            "selectedDates": [
+              "2017-10-15T12:00:00Z"
+            ]
+          },
+          "open": true,
+          "setup": [
+            {
+              "op": "focus",
+              "selector": "#field"
+            }
+          ]
+        },
+        "steps": [
+          {
+            "op": "press",
+            "selector": "#field",
+            "key": "ArrowRight"
+          },
+          {
+            "op": "press",
+            "selector": "#field",
+            "key": "Enter"
+          }
+        ],
+        "expect": [
+          {
+            "at": 2,
+            "field": "days",
+            "equals": [
+              16
+            ]
+          }
+        ]
+      },
+      {
+        "id": "manual",
+        "description": "Type or replace the input text, leave the field, and inspect the parsed value.",
+        "scenario": {
+          "options": {
+            "dateFormat": "yyyy-MM-dd",
+            "showEvent": "datepicker:show"
+          },
+          "open": false,
+          "setup": []
+        },
+        "steps": [
+          {
+            "op": "fill",
+            "selector": "#field",
+            "value": "2017-10-18"
+          },
+          {
+            "op": "press",
+            "selector": "#field",
+            "key": "Tab"
+          }
+        ],
+        "expect": [
+          {
+            "at": 2,
+            "field": "value",
+            "equals": "2017-10-18"
+          },
+          {
+            "at": 2,
+            "field": "days",
+            "equals": []
+          }
+        ]
+      },
+      {
+        "id": "range",
+        "description": "Select dates in a range or multiple-date mode and check its endpoints and disabled dates.",
+        "scenario": {
+          "options": {
+            "dateFormat": "yyyy-MM-dd",
+            "range": true,
+            "buttons": [
+              "clear"
+            ]
+          },
+          "open": true,
+          "setup": []
+        },
+        "steps": [
+          {
+            "op": "click",
+            "selector": ".air-datepicker-cell.-day-:not(.-other-month-)",
+            "text": "15"
+          },
+          {
+            "op": "click",
+            "selector": ".air-datepicker-cell.-day-:not(.-other-month-)",
+            "text": "18"
+          },
+          {
+            "op": "click",
+            "selector": ".air-datepicker-button"
+          }
+        ],
+        "expect": [
+          {
+            "at": 2,
+            "field": "days",
+            "equals": [
+              15,
+              18
+            ]
+          },
+          {
+            "at": 2,
+            "field": "inRange",
+            "equals": 2
+          },
+          {
+            "at": 3,
+            "field": "days",
+            "equals": []
+          },
+          {
+            "at": 3,
+            "field": "value",
+            "equals": ""
+          },
+          {
+            "at": 3,
+            "field": "inRange",
+            "equals": 0
+          }
+        ],
+        "failure": [
+          {
+            "at": 2,
+            "field": "days",
+            "equals": [
+              15,
+              18
+            ]
+          },
+          {
+            "at": 2,
+            "field": "inRange",
+            "equals": 2
+          },
+          {
+            "at": 3,
+            "field": "days",
+            "equals": []
+          },
+          {
+            "at": 3,
+            "field": "value",
+            "equals": ""
+          },
+          {
+            "at": 3,
+            "field": "inRange",
+            "equals": 2
+          }
+        ]
+      },
+      {
+        "id": "time",
+        "description": "Change a time field, trigger a time update and inspect the selected hours, minutes and time limits.",
+        "scenario": {
+          "options": {
+            "dateFormat": "yyyy-MM-dd",
+            "selectedDates": [
+              "2017-10-15T12:00:00Z"
+            ],
+            "timepicker": true,
+            "timeFormat": "HH:mm"
+          },
+          "open": true,
+          "setup": []
+        },
+        "steps": [
+          {
+            "op": "press",
+            "selector": "input[name=\"hours\"]",
+            "key": "ArrowRight"
+          }
+        ],
+        "expect": [
+          {
+            "at": 0,
+            "field": "hours",
+            "equals": [
+              12
+            ]
+          },
+          {
+            "at": 1,
+            "field": "hours",
+            "equals": [
+              13
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "configSha256": "e0e37081a34322fc2feebd2d178a0ee54b14230dd6f4acaea17bde1479c21426",
+  "plan": {
+    "title": "The Clear method doesn't clear the selected range",
+    "ranking": [
+      {
+        "id": "range",
+        "description": "Select dates in a range or multiple-date mode and check its endpoints and disabled dates.",
+        "score": 1.8762966551890343
+      },
+      {
+        "id": "keys",
+        "description": "Navigate with the keyboard and inspect the focused and selected date.",
+        "score": 0.632602022426332
+      },
+      {
+        "id": "time",
+        "description": "Change a time field, trigger a time update and inspect the selected hours, minutes and time limits.",
+        "score": 0.48420710839061565
+      },
+      {
+        "id": "month",
+        "description": "Move forward and backward between months and years and inspect the calendar heading and grid.",
+        "score": 0
+      },
+      {
+        "id": "manual",
+        "description": "Type or replace the input text, leave the field, and inspect the parsed value.",
+        "score": 0
+      }
+    ],
+    "cues": [],
+    "promoted": false,
+    "displaced": null,
+    "orders": {
+      "fixed": [
+        "month",
+        "keys",
+        "manual",
+        "range",
+        "time"
+      ],
+      "bm25": [
+        "range",
+        "keys",
+        "time",
+        "month",
+        "manual"
+      ],
+      "keyboard": [
+        "range",
+        "keys",
+        "time",
+        "month",
+        "manual"
+      ]
+    }
+  },
+  "browser": {
+    "chrome": "158.0.8127.37",
+    "playwright": "1.62.1"
+  },
+  "status": "regression",
+  "acceptance": {
+    "reference": [
+      {
+        "action": "ordinary",
+        "performed": 1,
+        "states": [
+          {
+            "open": true,
+            "month": 10,
+            "year": 2017,
+            "value": "",
+            "days": [],
+            "hours": [],
+            "active": "body",
+            "withinPicker": false,
+            "otherValue": "alpha beta",
+            "selectionStart": 0,
+            "selectionEnd": 0,
+            "events": [],
+            "hourField": null,
+            "inRange": 0,
+            "uiErrorNames": []
+          },
+          {
+            "open": true,
+            "month": 10,
+            "year": 2017,
+            "value": "2017-10-16",
+            "days": [
+              16
+            ],
+            "hours": [
+              0
+            ],
+            "active": "field",
+            "withinPicker": true,
+            "otherValue": "alpha beta",
+            "selectionStart": 0,
+            "selectionEnd": 0,
+            "events": [],
+            "hourField": null,
+            "inRange": 0,
+            "uiErrorNames": []
+          }
+        ],
+        "errors": [],
+        "pageErrors": [],
+        "frames": [],
+        "expect": [
+          {
+            "at": "last",
+            "field": "days",
+            "expected": [
+              16
+            ],
+            "actual": [
+              16
+            ],
+            "present": true,
+            "pass": true
+          }
+        ],
+        "failure": [],
+        "outcome": "pass"
+      },
+      {
+        "action": "month",
+        "performed": 2,
+        "states": [
+          {
+            "open": true,
+            "month": 10,
+            "year": 2017,
+            "value": "",
+            "days": [],
+            "hours": [],
+            "active": "body",
+            "withinPicker": false,
+            "otherValue": "alpha beta",
+            "selectionStart": 0,
+            "selectionEnd": 0,
+            "events": [],
+            "hourField": null,
+            "inRange": 0,
+            "uiErrorNames": []
+          },
+          {
+            "open": true,
+            "month": 11,
+            "year": 2017,
+            "value": "",
+            "days": [],
+            "hours": [],
+            "active": "field",
+            "withinPicker": true,
+            "otherValue": "alpha beta",
+            "selectionStart": 0,
+            "selectionEnd": 0,
+            "events": [],
+            "hourField": null,
+            "inRange": 0,
+            "uiErrorNames": []
+          },
+          {
+            "open": true,
+            "month": 10,
+            "year": 2017,
+            "value": "",
+            "days": [],
+            "hours": [],
+            "active": "field",
+            "withinPicker": true,
+            "otherValue": "alpha beta",
+            "selectionStart": 0,
+            "selectionEnd": 0,
+            "events": [],
+            "hourField": null,
+            "inRange": 0,
+            "uiErrorNames": []
+          }
+        ],
+        "errors": [],
+        "pageErrors": [],
+        "frames": [],
+        "expect": [
+          {
+            "at": 0,
+            "field": "month",
+            "expected": 10,
+            "actual": 10,
+            "present": true,
+            "pass": true
+          },
+          {
+            "at": 1,
+            "field": "month",
+            "expected": 11,
+            "actual": 11,
+            "present": true,
+            "pass": true
+          },
+          {
+            "at": 2,
+            "field": "month",
+            "expected": 10,
+            "actual": 10,
+            "present": true,
+            "pass": true
+          }
+        ],
+        "failure": [],
+        "outcome": "pass"
+      },
+      {
+        "action": "keys",
+        "performed": 2,
+        "states": [
+          {
+            "open": true,
+            "month": 10,
+            "year": 2017,
+            "value": "2017-10-15",
+            "days": [
+              15
+            ],
+            "hours": [
+              12
+            ],
+            "active": "field",
+            "withinPicker": true,
+            "otherValue": "alpha beta",
+            "selectionStart": 0,
+            "selectionEnd": 0,
+            "events": [],
+            "hourField": null,
+            "inRange": 0,
+            "uiErrorNames": []
+          },
+          {
+            "open": true,
+            "month": 10,
+            "year": 2017,
+            "value": "2017-10-15",
+            "days": [
+              15
+            ],
+            "hours": [
+              12
+            ],
+            "active": "field",
+            "withinPicker": true,
+            "otherValue": "alpha beta",
+            "selectionStart": 0,
+            "selectionEnd": 0,
+            "events": [
+              {
+                "key": "ArrowRight",
+                "target": "field",
+                "prevented": true
+              }
+            ],
+            "hourField": null,
+            "inRange": 0,
+            "uiErrorNames": []
+          },
+          {
+            "open": true,
+            "month": 10,
+            "year": 2017,
+            "value": "2017-10-16",
+            "days": [
+              16
+            ],
+            "hours": [
+              0
+            ],
+            "active": "field",
+            "withinPicker": true,
+            "otherValue": "alpha beta",
+            "selectionStart": 0,
+            "selectionEnd": 0,
+            "events": [
+              {
+                "key": "ArrowRight",
+                "target": "field",
+                "prevented": true
+              },
+              {
+                "key": "Enter",
+                "target": "field",
+                "prevented": false
+              }
+            ],
+            "hourField": null,
+            "inRange": 0,
+            "uiErrorNames": []
+          }
+        ],
+        "errors": [],
+        "pageErrors": [],
+        "frames": [],
+        "expect": [
+          {
+            "at": 2,
+            "field": "days",
+            "expected": [
+              16
+            ],
+            "actual": [
+              16
+            ],
+            "present": true,
+            "pass": true
+          }
+        ],
+        "failure": [],
+        "outcome": "pass"
+      },
+      {
+        "action": "manual",
+        "performed": 2,
+        "states": [
+          {
+            "open": false,
+            "month": 10,
+            "year": 2017,
+            "value": "",
+            "days": [],
+            "hours": [],
+            "active": "body",
+            "withinPicker": false,
+            "otherValue": "alpha beta",
+            "selectionStart": 0,
+            "selectionEnd": 0,
+            "events": [],
+            "hourField": null,
+            "inRange": 0,
+            "uiErrorNames": []
+          },
+          {
+            "open": false,
+            "month": 10,
+            "year": 2017,
+            "value": "2017-10-18",
+            "days": [],
+            "hours": [],
+            "active": "field",
+            "withinPicker": true,
+            "otherValue": "alpha beta",
+            "selectionStart": 0,
+            "selectionEnd": 0,
+            "events": [],
+            "hourField": null,
+            "inRange": 0,
+            "uiErrorNames": []
+          },
+          {
+            "open": false,
+            "month": 10,
+            "year": 2017,
+            "value": "2017-10-18",
+            "days": [],
+            "hours": [],
+            "active": "other",
+            "withinPicker": false,
+            "otherValue": "alpha beta",
+            "selectionStart": 0,
+            "selectionEnd": 10,
+            "events": [
+              {
+                "key": "Tab",
+                "target": "field",
+                "prevented": false
+              }
+            ],
+            "hourField": null,
+            "inRange": 0,
+            "uiErrorNames": []
+          }
+        ],
+        "errors": [],
+        "pageErrors": [],
+        "frames": [],
+        "expect": [
+          {
+            "at": 2,
+            "field": "value",
+            "expected": "2017-10-18",
+            "actual": "2017-10-18",
+            "present": true,
+            "pass": true
+          },
+          {
+            "at": 2,
+            "field": "days",
+            "expected": [],
+            "actual": [],
+            "present": true,
+            "pass": true
+          }
+        ],
+        "failure": [],
+        "outcome": "pass"
+      },
+      {
+        "action": "range",
+        "performed": 3,
+        "states": [
+          {
+            "open": true,
+            "month": 10,
+            "year": 2017,
+            "value": "",
+            "days": [],
+            "hours": [],
+            "active": "body",
+            "withinPicker": false,
+            "otherValue": "alpha beta",
+            "selectionStart": 0,
+            "selectionEnd": 0,
+            "events": [],
+            "hourField": null,
+            "inRange": 0,
+            "uiErrorNames": []
+          },
+          {
+            "open": true,
+            "month": 10,
+            "year": 2017,
+            "value": "2017-10-15",
+            "days": [
+              15
+            ],
+            "hours": [
+              0
+            ],
+            "active": "field",
+            "withinPicker": true,
+            "otherValue": "alpha beta",
+            "selectionStart": 0,
+            "selectionEnd": 0,
+            "events": [],
+            "hourField": null,
+            "inRange": 0,
+            "uiErrorNames": []
+          },
+          {
+            "open": true,
+            "month": 10,
+            "year": 2017,
+            "value": "2017-10-15, 2017-10-18",
+            "days": [
+              15,
+              18
+            ],
+            "hours": [
+              0,
+              0
+            ],
+            "active": "field",
+            "withinPicker": true,
+            "otherValue": "alpha beta",
+            "selectionStart": 0,
+            "selectionEnd": 0,
+            "events": [],
+            "hourField": null,
+            "inRange": 2,
+            "uiErrorNames": []
+          },
+          {
+            "open": true,
+            "month": 10,
+            "year": 2017,
+            "value": "",
+            "days": [],
+            "hours": [],
+            "active": "field",
+            "withinPicker": true,
+            "otherValue": "alpha beta",
+            "selectionStart": 0,
+            "selectionEnd": 0,
+            "events": [],
+            "hourField": null,
+            "inRange": 0,
+            "uiErrorNames": []
+          }
+        ],
+        "errors": [],
+        "pageErrors": [],
+        "frames": [
+          {
+            "stage": "before",
+            "path": "reference-range-before.png",
+            "bytes": 11220,
+            "sha256": "7dec194c108099abdb56bc2f9fd3144cabbce5e211c1b00c5d4f7d34455475fe"
+          },
+          {
+            "stage": "after",
+            "path": "reference-range-after.png",
+            "bytes": 10888,
+            "sha256": "048b6a12e3dc01fbb2b2a6e9f144c635609232ba7c48472b04b0af967997814f"
+          }
+        ],
+        "expect": [
+          {
+            "at": 2,
+            "field": "days",
+            "expected": [
+              15,
+              18
+            ],
+            "actual": [
+              15,
+              18
+            ],
+            "present": true,
+            "pass": true
+          },
+          {
+            "at": 2,
+            "field": "inRange",
+            "expected": 2,
+            "actual": 2,
+            "present": true,
+            "pass": true
+          },
+          {
+            "at": 3,
+            "field": "days",
+            "expected": [],
+            "actual": [],
+            "present": true,
+            "pass": true
+          },
+          {
+            "at": 3,
+            "field": "value",
+            "expected": "",
+            "actual": "",
+            "present": true,
+            "pass": true
+          },
+          {
+            "at": 3,
+            "field": "inRange",
+            "expected": 0,
+            "actual": 0,
+            "present": true,
+            "pass": true
+          }
+        ],
+        "failure": [
+          {
+            "at": 2,
+            "field": "days",
+            "expected": [
+              15,
+              18
+            ],
+            "actual": [
+              15,
+              18
+            ],
+            "present": true,
+            "pass": true
+          },
+          {
+            "at": 2,
+            "field": "inRange",
+            "expected": 2,
+            "actual": 2,
+            "present": true,
+            "pass": true
+          },
+          {
+            "at": 3,
+            "field": "days",
+            "expected": [],
+            "actual": [],
+            "present": true,
+            "pass": true
+          },
+          {
+            "at": 3,
+            "field": "value",
+            "expected": "",
+            "actual": "",
+            "present": true,
+            "pass": true
+          },
+          {
+            "at": 3,
+            "field": "inRange",
+            "expected": 2,
+            "actual": 0,
+            "present": true,
+            "pass": false
+          }
+        ],
+        "outcome": "pass"
+      },
+      {
+        "action": "time",
+        "performed": 1,
+        "states": [
+          {
+            "open": true,
+            "month": 10,
+            "year": 2017,
+            "value": "2017-10-15 12:00",
+            "days": [
+              15
+            ],
+            "hours": [
+              12
+            ],
+            "active": "body",
+            "withinPicker": false,
+            "otherValue": "alpha beta",
+            "selectionStart": 0,
+            "selectionEnd": 0,
+            "events": [],
+            "hourField": "12",
+            "inRange": 0,
+            "uiErrorNames": []
+          },
+          {
+            "open": true,
+            "month": 10,
+            "year": 2017,
+            "value": "2017-10-15 13:00",
+            "days": [
+              15
+            ],
+            "hours": [
+              13
+            ],
+            "active": "input",
+            "withinPicker": true,
+            "otherValue": "alpha beta",
+            "selectionStart": 0,
+            "selectionEnd": 0,
+            "events": [
+              {
+                "key": "ArrowRight",
+                "target": "",
+                "prevented": false
+              }
+            ],
+            "hourField": "13",
+            "inRange": 0,
+            "uiErrorNames": []
+          }
+        ],
+        "errors": [],
+        "pageErrors": [],
+        "frames": [],
+        "expect": [
+          {
+            "at": 0,
+            "field": "hours",
+            "expected": [
+              12
+            ],
+            "actual": [
+              12
+            ],
+            "present": true,
+            "pass": true
+          },
+          {
+            "at": 1,
+            "field": "hours",
+            "expected": [
+              13
+            ],
+            "actual": [
+              13
+            ],
+            "present": true,
+            "pass": true
+          }
+        ],
+        "failure": [],
+        "outcome": "pass"
+      }
+    ],
+    "candidate": [
+      {
+        "action": "ordinary",
+        "performed": 1,
+        "states": [
+          {
+            "open": true,
+            "month": 10,
+            "year": 2017,
+            "value": "",
+            "days": [],
+            "hours": [],
+            "active": "body",
+            "withinPicker": false,
+            "otherValue": "alpha beta",
+            "selectionStart": 0,
+            "selectionEnd": 0,
+            "events": [],
+            "hourField": null,
+            "inRange": 0,
+            "uiErrorNames": []
+          },
+          {
+            "open": true,
+            "month": 10,
+            "year": 2017,
+            "value": "2017-10-16",
+            "days": [
+              16
+            ],
+            "hours": [
+              0
+            ],
+            "active": "field",
+            "withinPicker": true,
+            "otherValue": "alpha beta",
+            "selectionStart": 0,
+            "selectionEnd": 0,
+            "events": [],
+            "hourField": null,
+            "inRange": 0,
+            "uiErrorNames": []
+          }
+        ],
+        "errors": [],
+        "pageErrors": [],
+        "frames": [],
+        "expect": [
+          {
+            "at": "last",
+            "field": "days",
+            "expected": [
+              16
+            ],
+            "actual": [
+              16
+            ],
+            "present": true,
+            "pass": true
+          }
+        ],
+        "failure": [],
+        "outcome": "pass"
+      },
+      {
+        "action": "month",
+        "performed": 2,
+        "states": [
+          {
+            "open": true,
+            "month": 10,
+            "year": 2017,
+            "value": "",
+            "days": [],
+            "hours": [],
+            "active": "body",
+            "withinPicker": false,
+            "otherValue": "alpha beta",
+            "selectionStart": 0,
+            "selectionEnd": 0,
+            "events": [],
+            "hourField": null,
+            "inRange": 0,
+            "uiErrorNames": []
+          },
+          {
+            "open": true,
+            "month": 11,
+            "year": 2017,
+            "value": "",
+            "days": [],
+            "hours": [],
+            "active": "field",
+            "withinPicker": true,
+            "otherValue": "alpha beta",
+            "selectionStart": 0,
+            "selectionEnd": 0,
+            "events": [],
+            "hourField": null,
+            "inRange": 0,
+            "uiErrorNames": []
+          },
+          {
+            "open": true,
+            "month": 10,
+            "year": 2017,
+            "value": "",
+            "days": [],
+            "hours": [],
+            "active": "field",
+            "withinPicker": true,
+            "otherValue": "alpha beta",
+            "selectionStart": 0,
+            "selectionEnd": 0,
+            "events": [],
+            "hourField": null,
+            "inRange": 0,
+            "uiErrorNames": []
+          }
+        ],
+        "errors": [],
+        "pageErrors": [],
+        "frames": [],
+        "expect": [
+          {
+            "at": 0,
+            "field": "month",
+            "expected": 10,
+            "actual": 10,
+            "present": true,
+            "pass": true
+          },
+          {
+            "at": 1,
+            "field": "month",
+            "expected": 11,
+            "actual": 11,
+            "present": true,
+            "pass": true
+          },
+          {
+            "at": 2,
+            "field": "month",
+            "expected": 10,
+            "actual": 10,
+            "present": true,
+            "pass": true
+          }
+        ],
+        "failure": [],
+        "outcome": "pass"
+      },
+      {
+        "action": "keys",
+        "performed": 2,
+        "states": [
+          {
+            "open": true,
+            "month": 10,
+            "year": 2017,
+            "value": "2017-10-15",
+            "days": [
+              15
+            ],
+            "hours": [
+              12
+            ],
+            "active": "field",
+            "withinPicker": true,
+            "otherValue": "alpha beta",
+            "selectionStart": 0,
+            "selectionEnd": 0,
+            "events": [],
+            "hourField": null,
+            "inRange": 0,
+            "uiErrorNames": []
+          },
+          {
+            "open": true,
+            "month": 10,
+            "year": 2017,
+            "value": "2017-10-15",
+            "days": [
+              15
+            ],
+            "hours": [
+              12
+            ],
+            "active": "field",
+            "withinPicker": true,
+            "otherValue": "alpha beta",
+            "selectionStart": 0,
+            "selectionEnd": 0,
+            "events": [
+              {
+                "key": "ArrowRight",
+                "target": "field",
+                "prevented": true
+              }
+            ],
+            "hourField": null,
+            "inRange": 0,
+            "uiErrorNames": []
+          },
+          {
+            "open": true,
+            "month": 10,
+            "year": 2017,
+            "value": "2017-10-16",
+            "days": [
+              16
+            ],
+            "hours": [
+              0
+            ],
+            "active": "field",
+            "withinPicker": true,
+            "otherValue": "alpha beta",
+            "selectionStart": 0,
+            "selectionEnd": 0,
+            "events": [
+              {
+                "key": "ArrowRight",
+                "target": "field",
+                "prevented": true
+              },
+              {
+                "key": "Enter",
+                "target": "field",
+                "prevented": false
+              }
+            ],
+            "hourField": null,
+            "inRange": 0,
+            "uiErrorNames": []
+          }
+        ],
+        "errors": [],
+        "pageErrors": [],
+        "frames": [],
+        "expect": [
+          {
+            "at": 2,
+            "field": "days",
+            "expected": [
+              16
+            ],
+            "actual": [
+              16
+            ],
+            "present": true,
+            "pass": true
+          }
+        ],
+        "failure": [],
+        "outcome": "pass"
+      },
+      {
+        "action": "manual",
+        "performed": 2,
+        "states": [
+          {
+            "open": false,
+            "month": 10,
+            "year": 2017,
+            "value": "",
+            "days": [],
+            "hours": [],
+            "active": "body",
+            "withinPicker": false,
+            "otherValue": "alpha beta",
+            "selectionStart": 0,
+            "selectionEnd": 0,
+            "events": [],
+            "hourField": null,
+            "inRange": 0,
+            "uiErrorNames": []
+          },
+          {
+            "open": false,
+            "month": 10,
+            "year": 2017,
+            "value": "2017-10-18",
+            "days": [],
+            "hours": [],
+            "active": "field",
+            "withinPicker": true,
+            "otherValue": "alpha beta",
+            "selectionStart": 0,
+            "selectionEnd": 0,
+            "events": [],
+            "hourField": null,
+            "inRange": 0,
+            "uiErrorNames": []
+          },
+          {
+            "open": false,
+            "month": 10,
+            "year": 2017,
+            "value": "2017-10-18",
+            "days": [],
+            "hours": [],
+            "active": "other",
+            "withinPicker": false,
+            "otherValue": "alpha beta",
+            "selectionStart": 0,
+            "selectionEnd": 10,
+            "events": [
+              {
+                "key": "Tab",
+                "target": "field",
+                "prevented": false
+              }
+            ],
+            "hourField": null,
+            "inRange": 0,
+            "uiErrorNames": []
+          }
+        ],
+        "errors": [],
+        "pageErrors": [],
+        "frames": [],
+        "expect": [
+          {
+            "at": 2,
+            "field": "value",
+            "expected": "2017-10-18",
+            "actual": "2017-10-18",
+            "present": true,
+            "pass": true
+          },
+          {
+            "at": 2,
+            "field": "days",
+            "expected": [],
+            "actual": [],
+            "present": true,
+            "pass": true
+          }
+        ],
+        "failure": [],
+        "outcome": "pass"
+      },
+      {
+        "action": "range",
+        "performed": 3,
+        "states": [
+          {
+            "open": true,
+            "month": 10,
+            "year": 2017,
+            "value": "",
+            "days": [],
+            "hours": [],
+            "active": "body",
+            "withinPicker": false,
+            "otherValue": "alpha beta",
+            "selectionStart": 0,
+            "selectionEnd": 0,
+            "events": [],
+            "hourField": null,
+            "inRange": 0,
+            "uiErrorNames": []
+          },
+          {
+            "open": true,
+            "month": 10,
+            "year": 2017,
+            "value": "2017-10-15",
+            "days": [
+              15
+            ],
+            "hours": [
+              0
+            ],
+            "active": "field",
+            "withinPicker": true,
+            "otherValue": "alpha beta",
+            "selectionStart": 0,
+            "selectionEnd": 0,
+            "events": [],
+            "hourField": null,
+            "inRange": 0,
+            "uiErrorNames": []
+          },
+          {
+            "open": true,
+            "month": 10,
+            "year": 2017,
+            "value": "2017-10-15, 2017-10-18",
+            "days": [
+              15,
+              18
+            ],
+            "hours": [
+              0,
+              0
+            ],
+            "active": "field",
+            "withinPicker": true,
+            "otherValue": "alpha beta",
+            "selectionStart": 0,
+            "selectionEnd": 0,
+            "events": [],
+            "hourField": null,
+            "inRange": 2,
+            "uiErrorNames": []
+          },
+          {
+            "open": true,
+            "month": 10,
+            "year": 2017,
+            "value": "",
+            "days": [],
+            "hours": [],
+            "active": "field",
+            "withinPicker": true,
+            "otherValue": "alpha beta",
+            "selectionStart": 0,
+            "selectionEnd": 0,
+            "events": [],
+            "hourField": null,
+            "inRange": 2,
+            "uiErrorNames": []
+          }
+        ],
+        "errors": [],
+        "pageErrors": [],
+        "frames": [
+          {
+            "stage": "before",
+            "path": "candidate-range-before.png",
+            "bytes": 11220,
+            "sha256": "7dec194c108099abdb56bc2f9fd3144cabbce5e211c1b00c5d4f7d34455475fe"
+          },
+          {
+            "stage": "after",
+            "path": "candidate-range-after.png",
+            "bytes": 10888,
+            "sha256": "048b6a12e3dc01fbb2b2a6e9f144c635609232ba7c48472b04b0af967997814f"
+          }
+        ],
+        "expect": [
+          {
+            "at": 2,
+            "field": "days",
+            "expected": [
+              15,
+              18
+            ],
+            "actual": [
+              15,
+              18
+            ],
+            "present": true,
+            "pass": true
+          },
+          {
+            "at": 2,
+            "field": "inRange",
+            "expected": 2,
+            "actual": 2,
+            "present": true,
+            "pass": true
+          },
+          {
+            "at": 3,
+            "field": "days",
+            "expected": [],
+            "actual": [],
+            "present": true,
+            "pass": true
+          },
+          {
+            "at": 3,
+            "field": "value",
+            "expected": "",
+            "actual": "",
+            "present": true,
+            "pass": true
+          },
+          {
+            "at": 3,
+            "field": "inRange",
+            "expected": 0,
+            "actual": 2,
+            "present": true,
+            "pass": false
+          }
+        ],
+        "failure": [
+          {
+            "at": 2,
+            "field": "days",
+            "expected": [
+              15,
+              18
+            ],
+            "actual": [
+              15,
+              18
+            ],
+            "present": true,
+            "pass": true
+          },
+          {
+            "at": 2,
+            "field": "inRange",
+            "expected": 2,
+            "actual": 2,
+            "present": true,
+            "pass": true
+          },
+          {
+            "at": 3,
+            "field": "days",
+            "expected": [],
+            "actual": [],
+            "present": true,
+            "pass": true
+          },
+          {
+            "at": 3,
+            "field": "value",
+            "expected": "",
+            "actual": "",
+            "present": true,
+            "pass": true
+          },
+          {
+            "at": 3,
+            "field": "inRange",
+            "expected": 2,
+            "actual": 2,
+            "present": true,
+            "pass": true
+          }
+        ],
+        "outcome": "known-failure"
+      },
+      {
+        "action": "time",
+        "performed": 1,
+        "states": [
+          {
+            "open": true,
+            "month": 10,
+            "year": 2017,
+            "value": "2017-10-15 12:00",
+            "days": [
+              15
+            ],
+            "hours": [
+              12
+            ],
+            "active": "body",
+            "withinPicker": false,
+            "otherValue": "alpha beta",
+            "selectionStart": 0,
+            "selectionEnd": 0,
+            "events": [],
+            "hourField": "12",
+            "inRange": 0,
+            "uiErrorNames": []
+          },
+          {
+            "open": true,
+            "month": 10,
+            "year": 2017,
+            "value": "2017-10-15 13:00",
+            "days": [
+              15
+            ],
+            "hours": [
+              13
+            ],
+            "active": "input",
+            "withinPicker": true,
+            "otherValue": "alpha beta",
+            "selectionStart": 0,
+            "selectionEnd": 0,
+            "events": [
+              {
+                "key": "ArrowRight",
+                "target": "",
+                "prevented": false
+              }
+            ],
+            "hourField": "13",
+            "inRange": 0,
+            "uiErrorNames": []
+          }
+        ],
+        "errors": [],
+        "pageErrors": [],
+        "frames": [],
+        "expect": [
+          {
+            "at": 0,
+            "field": "hours",
+            "expected": [
+              12
+            ],
+            "actual": [
+              12
+            ],
+            "present": true,
+            "pass": true
+          },
+          {
+            "at": 1,
+            "field": "hours",
+            "expected": [
+              13
+            ],
+            "actual": [
+              13
+            ],
+            "present": true,
+            "pass": true
+          }
+        ],
+        "failure": [],
+        "outcome": "pass"
+      }
+    ],
+    "confirmations": [
+      {
+        "action": "range",
+        "performed": 3,
+        "states": [
+          {
+            "open": true,
+            "month": 10,
+            "year": 2017,
+            "value": "",
+            "days": [],
+            "hours": [],
+            "active": "body",
+            "withinPicker": false,
+            "otherValue": "alpha beta",
+            "selectionStart": 0,
+            "selectionEnd": 0,
+            "events": [],
+            "hourField": null,
+            "inRange": 0,
+            "uiErrorNames": []
+          },
+          {
+            "open": true,
+            "month": 10,
+            "year": 2017,
+            "value": "2017-10-15",
+            "days": [
+              15
+            ],
+            "hours": [
+              0
+            ],
+            "active": "field",
+            "withinPicker": true,
+            "otherValue": "alpha beta",
+            "selectionStart": 0,
+            "selectionEnd": 0,
+            "events": [],
+            "hourField": null,
+            "inRange": 0,
+            "uiErrorNames": []
+          },
+          {
+            "open": true,
+            "month": 10,
+            "year": 2017,
+            "value": "2017-10-15, 2017-10-18",
+            "days": [
+              15,
+              18
+            ],
+            "hours": [
+              0,
+              0
+            ],
+            "active": "field",
+            "withinPicker": true,
+            "otherValue": "alpha beta",
+            "selectionStart": 0,
+            "selectionEnd": 0,
+            "events": [],
+            "hourField": null,
+            "inRange": 2,
+            "uiErrorNames": []
+          },
+          {
+            "open": true,
+            "month": 10,
+            "year": 2017,
+            "value": "",
+            "days": [],
+            "hours": [],
+            "active": "field",
+            "withinPicker": true,
+            "otherValue": "alpha beta",
+            "selectionStart": 0,
+            "selectionEnd": 0,
+            "events": [],
+            "hourField": null,
+            "inRange": 2,
+            "uiErrorNames": []
+          }
+        ],
+        "errors": [],
+        "pageErrors": [],
+        "frames": [
+          {
+            "stage": "before",
+            "path": "confirmation-range-before.png",
+            "bytes": 11220,
+            "sha256": "7dec194c108099abdb56bc2f9fd3144cabbce5e211c1b00c5d4f7d34455475fe"
+          },
+          {
+            "stage": "after",
+            "path": "confirmation-range-after.png",
+            "bytes": 10888,
+            "sha256": "048b6a12e3dc01fbb2b2a6e9f144c635609232ba7c48472b04b0af967997814f"
+          }
+        ],
+        "expect": [
+          {
+            "at": 2,
+            "field": "days",
+            "expected": [
+              15,
+              18
+            ],
+            "actual": [
+              15,
+              18
+            ],
+            "present": true,
+            "pass": true
+          },
+          {
+            "at": 2,
+            "field": "inRange",
+            "expected": 2,
+            "actual": 2,
+            "present": true,
+            "pass": true
+          },
+          {
+            "at": 3,
+            "field": "days",
+            "expected": [],
+            "actual": [],
+            "present": true,
+            "pass": true
+          },
+          {
+            "at": 3,
+            "field": "value",
+            "expected": "",
+            "actual": "",
+            "present": true,
+            "pass": true
+          },
+          {
+            "at": 3,
+            "field": "inRange",
+            "expected": 0,
+            "actual": 2,
+            "present": true,
+            "pass": false
+          }
+        ],
+        "failure": [
+          {
+            "at": 2,
+            "field": "days",
+            "expected": [
+              15,
+              18
+            ],
+            "actual": [
+              15,
+              18
+            ],
+            "present": true,
+            "pass": true
+          },
+          {
+            "at": 2,
+            "field": "inRange",
+            "expected": 2,
+            "actual": 2,
+            "present": true,
+            "pass": true
+          },
+          {
+            "at": 3,
+            "field": "days",
+            "expected": [],
+            "actual": [],
+            "present": true,
+            "pass": true
+          },
+          {
+            "at": 3,
+            "field": "value",
+            "expected": "",
+            "actual": "",
+            "present": true,
+            "pass": true
+          },
+          {
+            "at": 3,
+            "field": "inRange",
+            "expected": 2,
+            "actual": 2,
+            "present": true,
+            "pass": true
+          }
+        ],
+        "outcome": "known-failure"
+      }
+    ],
+    "confirmed": [
+      "range"
+    ],
+    "status": "regression"
+  },
+  "comparisons": {
+    "fixed": {
+      "scheduled": [
+        "ordinary",
+        "month",
+        "keys"
+      ],
+      "firstHit": null,
+      "consistent": true,
+      "steps": 3,
+      "gestures": 5,
+      "referenceActions": 0,
+      "referenceImages": 0,
+      "trace": [
+        {
+          "action": "ordinary",
+          "performed": 1,
+          "states": [
+            {
+              "open": true,
+              "month": 10,
+              "year": 2017,
+              "value": "",
+              "days": [],
+              "hours": [],
+              "active": "body",
+              "withinPicker": false,
+              "otherValue": "alpha beta",
+              "selectionStart": 0,
+              "selectionEnd": 0,
+              "events": [],
+              "hourField": null,
+              "inRange": 0,
+              "uiErrorNames": []
+            },
+            {
+              "open": true,
+              "month": 10,
+              "year": 2017,
+              "value": "2017-10-16",
+              "days": [
+                16
+              ],
+              "hours": [
+                0
+              ],
+              "active": "field",
+              "withinPicker": true,
+              "otherValue": "alpha beta",
+              "selectionStart": 0,
+              "selectionEnd": 0,
+              "events": [],
+              "hourField": null,
+              "inRange": 0,
+              "uiErrorNames": []
+            }
+          ],
+          "errors": [],
+          "pageErrors": [],
+          "frames": [],
+          "expect": [
+            {
+              "at": "last",
+              "field": "days",
+              "expected": [
+                16
+              ],
+              "actual": [
+                16
+              ],
+              "present": true,
+              "pass": true
+            }
+          ],
+          "failure": [],
+          "outcome": "pass"
+        },
+        {
+          "action": "month",
+          "performed": 2,
+          "states": [
+            {
+              "open": true,
+              "month": 10,
+              "year": 2017,
+              "value": "",
+              "days": [],
+              "hours": [],
+              "active": "body",
+              "withinPicker": false,
+              "otherValue": "alpha beta",
+              "selectionStart": 0,
+              "selectionEnd": 0,
+              "events": [],
+              "hourField": null,
+              "inRange": 0,
+              "uiErrorNames": []
+            },
+            {
+              "open": true,
+              "month": 11,
+              "year": 2017,
+              "value": "",
+              "days": [],
+              "hours": [],
+              "active": "field",
+              "withinPicker": true,
+              "otherValue": "alpha beta",
+              "selectionStart": 0,
+              "selectionEnd": 0,
+              "events": [],
+              "hourField": null,
+              "inRange": 0,
+              "uiErrorNames": []
+            },
+            {
+              "open": true,
+              "month": 10,
+              "year": 2017,
+              "value": "",
+              "days": [],
+              "hours": [],
+              "active": "field",
+              "withinPicker": true,
+              "otherValue": "alpha beta",
+              "selectionStart": 0,
+              "selectionEnd": 0,
+              "events": [],
+              "hourField": null,
+              "inRange": 0,
+              "uiErrorNames": []
+            }
+          ],
+          "errors": [],
+          "pageErrors": [],
+          "frames": [],
+          "expect": [
+            {
+              "at": 0,
+              "field": "month",
+              "expected": 10,
+              "actual": 10,
+              "present": true,
+              "pass": true
+            },
+            {
+              "at": 1,
+              "field": "month",
+              "expected": 11,
+              "actual": 11,
+              "present": true,
+              "pass": true
+            },
+            {
+              "at": 2,
+              "field": "month",
+              "expected": 10,
+              "actual": 10,
+              "present": true,
+              "pass": true
+            }
+          ],
+          "failure": [],
+          "outcome": "pass"
+        },
+        {
+          "action": "keys",
+          "performed": 2,
+          "states": [
+            {
+              "open": true,
+              "month": 10,
+              "year": 2017,
+              "value": "2017-10-15",
+              "days": [
+                15
+              ],
+              "hours": [
+                12
+              ],
+              "active": "field",
+              "withinPicker": true,
+              "otherValue": "alpha beta",
+              "selectionStart": 0,
+              "selectionEnd": 0,
+              "events": [],
+              "hourField": null,
+              "inRange": 0,
+              "uiErrorNames": []
+            },
+            {
+              "open": true,
+              "month": 10,
+              "year": 2017,
+              "value": "2017-10-15",
+              "days": [
+                15
+              ],
+              "hours": [
+                12
+              ],
+              "active": "field",
+              "withinPicker": true,
+              "otherValue": "alpha beta",
+              "selectionStart": 0,
+              "selectionEnd": 0,
+              "events": [
+                {
+                  "key": "ArrowRight",
+                  "target": "field",
+                  "prevented": true
+                }
+              ],
+              "hourField": null,
+              "inRange": 0,
+              "uiErrorNames": []
+            },
+            {
+              "open": true,
+              "month": 10,
+              "year": 2017,
+              "value": "2017-10-16",
+              "days": [
+                16
+              ],
+              "hours": [
+                0
+              ],
+              "active": "field",
+              "withinPicker": true,
+              "otherValue": "alpha beta",
+              "selectionStart": 0,
+              "selectionEnd": 0,
+              "events": [
+                {
+                  "key": "ArrowRight",
+                  "target": "field",
+                  "prevented": true
+                },
+                {
+                  "key": "Enter",
+                  "target": "field",
+                  "prevented": false
+                }
+              ],
+              "hourField": null,
+              "inRange": 0,
+              "uiErrorNames": []
+            }
+          ],
+          "errors": [],
+          "pageErrors": [],
+          "frames": [],
+          "expect": [
+            {
+              "at": 2,
+              "field": "days",
+              "expected": [
+                16
+              ],
+              "actual": [
+                16
+              ],
+              "present": true,
+              "pass": true
+            }
+          ],
+          "failure": [],
+          "outcome": "pass"
+        }
+      ]
+    },
+    "bm25": {
+      "scheduled": [
+        "ordinary",
+        "range",
+        "keys"
+      ],
+      "firstHit": 2,
+      "consistent": true,
+      "steps": 2,
+      "gestures": 4,
+      "referenceActions": 0,
+      "referenceImages": 0,
+      "trace": [
+        {
+          "action": "ordinary",
+          "performed": 1,
+          "states": [
+            {
+              "open": true,
+              "month": 10,
+              "year": 2017,
+              "value": "",
+              "days": [],
+              "hours": [],
+              "active": "body",
+              "withinPicker": false,
+              "otherValue": "alpha beta",
+              "selectionStart": 0,
+              "selectionEnd": 0,
+              "events": [],
+              "hourField": null,
+              "inRange": 0,
+              "uiErrorNames": []
+            },
+            {
+              "open": true,
+              "month": 10,
+              "year": 2017,
+              "value": "2017-10-16",
+              "days": [
+                16
+              ],
+              "hours": [
+                0
+              ],
+              "active": "field",
+              "withinPicker": true,
+              "otherValue": "alpha beta",
+              "selectionStart": 0,
+              "selectionEnd": 0,
+              "events": [],
+              "hourField": null,
+              "inRange": 0,
+              "uiErrorNames": []
+            }
+          ],
+          "errors": [],
+          "pageErrors": [],
+          "frames": [],
+          "expect": [
+            {
+              "at": "last",
+              "field": "days",
+              "expected": [
+                16
+              ],
+              "actual": [
+                16
+              ],
+              "present": true,
+              "pass": true
+            }
+          ],
+          "failure": [],
+          "outcome": "pass"
+        },
+        {
+          "action": "range",
+          "performed": 3,
+          "states": [
+            {
+              "open": true,
+              "month": 10,
+              "year": 2017,
+              "value": "",
+              "days": [],
+              "hours": [],
+              "active": "body",
+              "withinPicker": false,
+              "otherValue": "alpha beta",
+              "selectionStart": 0,
+              "selectionEnd": 0,
+              "events": [],
+              "hourField": null,
+              "inRange": 0,
+              "uiErrorNames": []
+            },
+            {
+              "open": true,
+              "month": 10,
+              "year": 2017,
+              "value": "2017-10-15",
+              "days": [
+                15
+              ],
+              "hours": [
+                0
+              ],
+              "active": "field",
+              "withinPicker": true,
+              "otherValue": "alpha beta",
+              "selectionStart": 0,
+              "selectionEnd": 0,
+              "events": [],
+              "hourField": null,
+              "inRange": 0,
+              "uiErrorNames": []
+            },
+            {
+              "open": true,
+              "month": 10,
+              "year": 2017,
+              "value": "2017-10-15, 2017-10-18",
+              "days": [
+                15,
+                18
+              ],
+              "hours": [
+                0,
+                0
+              ],
+              "active": "field",
+              "withinPicker": true,
+              "otherValue": "alpha beta",
+              "selectionStart": 0,
+              "selectionEnd": 0,
+              "events": [],
+              "hourField": null,
+              "inRange": 2,
+              "uiErrorNames": []
+            },
+            {
+              "open": true,
+              "month": 10,
+              "year": 2017,
+              "value": "",
+              "days": [],
+              "hours": [],
+              "active": "field",
+              "withinPicker": true,
+              "otherValue": "alpha beta",
+              "selectionStart": 0,
+              "selectionEnd": 0,
+              "events": [],
+              "hourField": null,
+              "inRange": 2,
+              "uiErrorNames": []
+            }
+          ],
+          "errors": [],
+          "pageErrors": [],
+          "frames": [],
+          "expect": [
+            {
+              "at": 2,
+              "field": "days",
+              "expected": [
+                15,
+                18
+              ],
+              "actual": [
+                15,
+                18
+              ],
+              "present": true,
+              "pass": true
+            },
+            {
+              "at": 2,
+              "field": "inRange",
+              "expected": 2,
+              "actual": 2,
+              "present": true,
+              "pass": true
+            },
+            {
+              "at": 3,
+              "field": "days",
+              "expected": [],
+              "actual": [],
+              "present": true,
+              "pass": true
+            },
+            {
+              "at": 3,
+              "field": "value",
+              "expected": "",
+              "actual": "",
+              "present": true,
+              "pass": true
+            },
+            {
+              "at": 3,
+              "field": "inRange",
+              "expected": 0,
+              "actual": 2,
+              "present": true,
+              "pass": false
+            }
+          ],
+          "failure": [
+            {
+              "at": 2,
+              "field": "days",
+              "expected": [
+                15,
+                18
+              ],
+              "actual": [
+                15,
+                18
+              ],
+              "present": true,
+              "pass": true
+            },
+            {
+              "at": 2,
+              "field": "inRange",
+              "expected": 2,
+              "actual": 2,
+              "present": true,
+              "pass": true
+            },
+            {
+              "at": 3,
+              "field": "days",
+              "expected": [],
+              "actual": [],
+              "present": true,
+              "pass": true
+            },
+            {
+              "at": 3,
+              "field": "value",
+              "expected": "",
+              "actual": "",
+              "present": true,
+              "pass": true
+            },
+            {
+              "at": 3,
+              "field": "inRange",
+              "expected": 2,
+              "actual": 2,
+              "present": true,
+              "pass": true
+            }
+          ],
+          "outcome": "known-failure"
+        }
+      ]
+    },
+    "keyboard": {
+      "scheduled": [
+        "ordinary",
+        "range",
+        "keys"
+      ],
+      "firstHit": 2,
+      "consistent": true,
+      "steps": 2,
+      "gestures": 4,
+      "referenceActions": 0,
+      "referenceImages": 0,
+      "trace": [
+        {
+          "action": "ordinary",
+          "performed": 1,
+          "states": [
+            {
+              "open": true,
+              "month": 10,
+              "year": 2017,
+              "value": "",
+              "days": [],
+              "hours": [],
+              "active": "body",
+              "withinPicker": false,
+              "otherValue": "alpha beta",
+              "selectionStart": 0,
+              "selectionEnd": 0,
+              "events": [],
+              "hourField": null,
+              "inRange": 0,
+              "uiErrorNames": []
+            },
+            {
+              "open": true,
+              "month": 10,
+              "year": 2017,
+              "value": "2017-10-16",
+              "days": [
+                16
+              ],
+              "hours": [
+                0
+              ],
+              "active": "field",
+              "withinPicker": true,
+              "otherValue": "alpha beta",
+              "selectionStart": 0,
+              "selectionEnd": 0,
+              "events": [],
+              "hourField": null,
+              "inRange": 0,
+              "uiErrorNames": []
+            }
+          ],
+          "errors": [],
+          "pageErrors": [],
+          "frames": [],
+          "expect": [
+            {
+              "at": "last",
+              "field": "days",
+              "expected": [
+                16
+              ],
+              "actual": [
+                16
+              ],
+              "present": true,
+              "pass": true
+            }
+          ],
+          "failure": [],
+          "outcome": "pass"
+        },
+        {
+          "action": "range",
+          "performed": 3,
+          "states": [
+            {
+              "open": true,
+              "month": 10,
+              "year": 2017,
+              "value": "",
+              "days": [],
+              "hours": [],
+              "active": "body",
+              "withinPicker": false,
+              "otherValue": "alpha beta",
+              "selectionStart": 0,
+              "selectionEnd": 0,
+              "events": [],
+              "hourField": null,
+              "inRange": 0,
+              "uiErrorNames": []
+            },
+            {
+              "open": true,
+              "month": 10,
+              "year": 2017,
+              "value": "2017-10-15",
+              "days": [
+                15
+              ],
+              "hours": [
+                0
+              ],
+              "active": "field",
+              "withinPicker": true,
+              "otherValue": "alpha beta",
+              "selectionStart": 0,
+              "selectionEnd": 0,
+              "events": [],
+              "hourField": null,
+              "inRange": 0,
+              "uiErrorNames": []
+            },
+            {
+              "open": true,
+              "month": 10,
+              "year": 2017,
+              "value": "2017-10-15, 2017-10-18",
+              "days": [
+                15,
+                18
+              ],
+              "hours": [
+                0,
+                0
+              ],
+              "active": "field",
+              "withinPicker": true,
+              "otherValue": "alpha beta",
+              "selectionStart": 0,
+              "selectionEnd": 0,
+              "events": [],
+              "hourField": null,
+              "inRange": 2,
+              "uiErrorNames": []
+            },
+            {
+              "open": true,
+              "month": 10,
+              "year": 2017,
+              "value": "",
+              "days": [],
+              "hours": [],
+              "active": "field",
+              "withinPicker": true,
+              "otherValue": "alpha beta",
+              "selectionStart": 0,
+              "selectionEnd": 0,
+              "events": [],
+              "hourField": null,
+              "inRange": 2,
+              "uiErrorNames": []
+            }
+          ],
+          "errors": [],
+          "pageErrors": [],
+          "frames": [],
+          "expect": [
+            {
+              "at": 2,
+              "field": "days",
+              "expected": [
+                15,
+                18
+              ],
+              "actual": [
+                15,
+                18
+              ],
+              "present": true,
+              "pass": true
+            },
+            {
+              "at": 2,
+              "field": "inRange",
+              "expected": 2,
+              "actual": 2,
+              "present": true,
+              "pass": true
+            },
+            {
+              "at": 3,
+              "field": "days",
+              "expected": [],
+              "actual": [],
+              "present": true,
+              "pass": true
+            },
+            {
+              "at": 3,
+              "field": "value",
+              "expected": "",
+              "actual": "",
+              "present": true,
+              "pass": true
+            },
+            {
+              "at": 3,
+              "field": "inRange",
+              "expected": 0,
+              "actual": 2,
+              "present": true,
+              "pass": false
+            }
+          ],
+          "failure": [
+            {
+              "at": 2,
+              "field": "days",
+              "expected": [
+                15,
+                18
+              ],
+              "actual": [
+                15,
+                18
+              ],
+              "present": true,
+              "pass": true
+            },
+            {
+              "at": 2,
+              "field": "inRange",
+              "expected": 2,
+              "actual": 2,
+              "present": true,
+              "pass": true
+            },
+            {
+              "at": 3,
+              "field": "days",
+              "expected": [],
+              "actual": [],
+              "present": true,
+              "pass": true
+            },
+            {
+              "at": 3,
+              "field": "value",
+              "expected": "",
+              "actual": "",
+              "present": true,
+              "pass": true
+            },
+            {
+              "at": 3,
+              "field": "inRange",
+              "expected": 2,
+              "actual": 2,
+              "present": true,
+              "pass": true
+            }
+          ],
+          "outcome": "known-failure"
+        }
+      ]
+    }
+  }
+}

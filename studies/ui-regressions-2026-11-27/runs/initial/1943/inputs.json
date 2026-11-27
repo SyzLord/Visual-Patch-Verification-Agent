@@ -1,0 +1,437 @@
+{
+  "config": {
+    "schema": 1,
+    "id": "flatpickr-1943",
+    "ticket": {
+      "title": "rangePlugin and allowInput: Left/right arrow keys doesn't work in second input",
+      "issue": "https://github.com/flatpickr/flatpickr/issues/1943",
+      "repair": "https://github.com/flatpickr/flatpickr/issues/1943#issuecomment-1593744363"
+    },
+    "budget": 3,
+    "fixture": {
+      "adapter": "flatpickr",
+      "html": {
+        "path": "container.html",
+        "sha256": "0e757eab28dde47cf3aff7690a9b0fa77d870a171917063a152e055f784262e1"
+      },
+      "css": {
+        "path": "container.css",
+        "sha256": "3f59fc23b4dd8d204561875564d995b8df423c1213b078123009c187235c33cd"
+      },
+      "input": "#field",
+      "other": "#other",
+      "clock": "2017-10-15T12:00:00Z"
+    },
+    "builds": {
+      "reference": {
+        "version": "4.6.13",
+        "script": {
+          "path": "assets/flatpickr-4.6.13/library.js",
+          "sha256": "1eeab1cb779471a0b0aaa93dd91c2eb1aa537d696f01ab05ea9dabc55e8525a1"
+        },
+        "style": {
+          "path": "assets/flatpickr-4.6.13/library.css",
+          "sha256": "1b34a42552c96f10e4dfaaa4a367276b03868aacff63c1ac42ffe331352bc754"
+        },
+        "plugin": {
+          "path": "assets/flatpickr-4.6.13/range.js",
+          "sha256": "d27d09331a38771a9c45579a40d80b6acbf7833703eddbe738498c897aa3ff95"
+        }
+      },
+      "candidate": {
+        "version": "4.6.1",
+        "script": {
+          "path": "assets/flatpickr-4.6.1/library.js",
+          "sha256": "1e45d3947a9fc69ff36a2545b307c790a174a6d7d4c4cc8b88d8f5b3fe95cbaf"
+        },
+        "style": {
+          "path": "assets/flatpickr-4.6.1/library.css",
+          "sha256": "aa86d2781d5ac24e2b47dec8545bcbd9521b82e1a7ef8ab0794dc0357889d3a1"
+        },
+        "plugin": {
+          "path": "assets/flatpickr-4.6.1/range.js",
+          "sha256": "842b5edabe60390afe96e33e6a71c447216430a7c2f2705c7b40684efe14109a"
+        }
+      }
+    },
+    "keyboardAction": "keys",
+    "actions": [
+      {
+        "id": "ordinary",
+        "description": "Open a plain date picker and select a day in the current month.",
+        "scenario": {
+          "options": {
+            "defaultDate": "2017-10-15",
+            "dateFormat": "Y-m-d",
+            "disableMobile": true
+          },
+          "open": true,
+          "setup": []
+        },
+        "steps": [
+          {
+            "op": "click",
+            "selector": ".flatpickr-day:not(.prevMonthDay):not(.nextMonthDay)",
+            "text": "16"
+          }
+        ],
+        "expect": [
+          {
+            "at": "last",
+            "field": "days",
+            "equals": [
+              16
+            ]
+          }
+        ]
+      },
+      {
+        "id": "month",
+        "description": "Move forward and backward between months and years and inspect the calendar heading and grid.",
+        "scenario": {
+          "options": {
+            "defaultDate": "2017-10-15",
+            "dateFormat": "Y-m-d",
+            "disableMobile": true
+          },
+          "open": true,
+          "setup": []
+        },
+        "steps": [
+          {
+            "op": "click",
+            "selector": ".flatpickr-next-month"
+          },
+          {
+            "op": "click",
+            "selector": ".flatpickr-prev-month"
+          }
+        ],
+        "expect": [
+          {
+            "at": 0,
+            "field": "month",
+            "equals": 10
+          },
+          {
+            "at": 1,
+            "field": "month",
+            "equals": 11
+          },
+          {
+            "at": 2,
+            "field": "month",
+            "equals": 10
+          }
+        ]
+      },
+      {
+        "id": "keys",
+        "description": "Navigate with the keyboard and inspect the focused and selected date.",
+        "scenario": {
+          "options": {
+            "defaultDate": null,
+            "dateFormat": "Y-m-d",
+            "disableMobile": true,
+            "allowInput": true,
+            "secondInput": "#other"
+          },
+          "open": false,
+          "setup": [
+            {
+              "op": "focus",
+              "selector": "#other"
+            }
+          ]
+        },
+        "steps": [
+          {
+            "op": "fill",
+            "selector": "#other",
+            "value": "2017-10-18"
+          },
+          {
+            "op": "press",
+            "selector": "#other",
+            "key": "ArrowLeft"
+          }
+        ],
+        "expect": [
+          {
+            "at": 1,
+            "field": "active",
+            "equals": "other"
+          },
+          {
+            "at": 2,
+            "field": "active",
+            "equals": "other"
+          },
+          {
+            "at": 1,
+            "field": "otherValue",
+            "equals": "2017-10-18"
+          },
+          {
+            "at": 2,
+            "field": "otherValue",
+            "equals": "2017-10-18"
+          },
+          {
+            "at": 1,
+            "field": "selectionStart",
+            "equals": 10
+          },
+          {
+            "at": 1,
+            "field": "selectionEnd",
+            "equals": 10
+          },
+          {
+            "at": 2,
+            "field": "selectionStart",
+            "equals": 9
+          },
+          {
+            "at": 2,
+            "field": "selectionEnd",
+            "equals": 9
+          }
+        ],
+        "failure": [
+          {
+            "at": 1,
+            "field": "active",
+            "equals": "other"
+          },
+          {
+            "at": 2,
+            "field": "active",
+            "equals": "other"
+          },
+          {
+            "at": 1,
+            "field": "otherValue",
+            "equals": "2017-10-18"
+          },
+          {
+            "at": 2,
+            "field": "otherValue",
+            "equals": "2017-10-18"
+          },
+          {
+            "at": 1,
+            "field": "selectionStart",
+            "equals": 10
+          },
+          {
+            "at": 1,
+            "field": "selectionEnd",
+            "equals": 10
+          },
+          {
+            "at": 2,
+            "field": "selectionStart",
+            "equals": 10
+          },
+          {
+            "at": 2,
+            "field": "selectionEnd",
+            "equals": 10
+          }
+        ]
+      },
+      {
+        "id": "manual",
+        "description": "Type or replace the input text, leave the field, and inspect the parsed value.",
+        "scenario": {
+          "options": {
+            "defaultDate": "2017-10-15",
+            "dateFormat": "Y-m-d",
+            "disableMobile": true,
+            "allowInput": true
+          },
+          "open": true,
+          "setup": []
+        },
+        "steps": [
+          {
+            "op": "fill",
+            "selector": "#field",
+            "value": "2017-10-18"
+          },
+          {
+            "op": "press",
+            "selector": "#field",
+            "key": "Enter"
+          }
+        ],
+        "expect": [
+          {
+            "at": 2,
+            "field": "days",
+            "equals": [
+              18
+            ]
+          },
+          {
+            "at": 2,
+            "field": "value",
+            "equals": "2017-10-18"
+          }
+        ]
+      },
+      {
+        "id": "range",
+        "description": "Select dates in a range or multiple-date mode and check its endpoints and disabled dates.",
+        "scenario": {
+          "options": {
+            "defaultDate": null,
+            "dateFormat": "Y-m-d",
+            "disableMobile": true,
+            "mode": "range",
+            "disable": [
+              "2017-10-22"
+            ]
+          },
+          "open": true,
+          "setup": []
+        },
+        "steps": [
+          {
+            "op": "click",
+            "selector": ".flatpickr-day:not(.prevMonthDay):not(.nextMonthDay)",
+            "text": "16"
+          },
+          {
+            "op": "click",
+            "selector": ".flatpickr-day:not(.prevMonthDay):not(.nextMonthDay)",
+            "text": "18"
+          }
+        ],
+        "expect": [
+          {
+            "at": 1,
+            "field": "open",
+            "equals": true
+          },
+          {
+            "at": 1,
+            "field": "days",
+            "equals": [
+              16
+            ]
+          },
+          {
+            "at": 2,
+            "field": "days",
+            "equals": [
+              16,
+              18
+            ]
+          }
+        ]
+      },
+      {
+        "id": "time",
+        "description": "Change a time field, trigger a time update and inspect the selected hours, minutes and time limits.",
+        "scenario": {
+          "options": {
+            "defaultDate": "2017-10-15 12:00",
+            "dateFormat": "Y-m-d H:i",
+            "disableMobile": true,
+            "enableTime": true,
+            "time_24hr": true
+          },
+          "open": true,
+          "setup": []
+        },
+        "steps": [
+          {
+            "op": "click",
+            "selector": ".flatpickr-hour"
+          },
+          {
+            "op": "press",
+            "key": "ArrowUp"
+          }
+        ],
+        "expect": [
+          {
+            "at": 0,
+            "field": "hours",
+            "equals": [
+              12
+            ]
+          },
+          {
+            "at": 2,
+            "field": "hours",
+            "equals": [
+              13
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "configSha256": "26ebe9b5f148e6addf3bdf8858de9ee2bb844733179c567455b0335b12bd40e6",
+  "plan": {
+    "title": "rangePlugin and allowInput: Left/right arrow keys doesn't work in second input",
+    "ranking": [
+      {
+        "id": "manual",
+        "description": "Type or replace the input text, leave the field, and inspect the parsed value.",
+        "score": 1.4108546942893374
+      },
+      {
+        "id": "month",
+        "description": "Move forward and backward between months and years and inspect the calendar heading and grid.",
+        "score": 0
+      },
+      {
+        "id": "keys",
+        "description": "Navigate with the keyboard and inspect the focused and selected date.",
+        "score": 0
+      },
+      {
+        "id": "range",
+        "description": "Select dates in a range or multiple-date mode and check its endpoints and disabled dates.",
+        "score": 0
+      },
+      {
+        "id": "time",
+        "description": "Change a time field, trigger a time update and inspect the selected hours, minutes and time limits.",
+        "score": 0
+      }
+    ],
+    "cues": [
+      "arrow keys"
+    ],
+    "promoted": true,
+    "displaced": "month",
+    "orders": {
+      "fixed": [
+        "month",
+        "keys",
+        "manual",
+        "range",
+        "time"
+      ],
+      "bm25": [
+        "manual",
+        "month",
+        "keys",
+        "range",
+        "time"
+      ],
+      "keyboard": [
+        "manual",
+        "keys",
+        "month",
+        "range",
+        "time"
+      ]
+    }
+  }
+}

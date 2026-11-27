@@ -1,0 +1,8 @@
+[
+ ["ordinary","Open a plain date picker and select a day in the current month.",["default","simplify"]],
+ ["month","Move forward and backward between months and years and inspect the calendar heading and grid.",["order","context"]],
+ ["keys","Navigate with the keyboard and inspect the focused and selected date.",["order","context"]],
+ ["manual","Type or replace the input text, leave the field, and inspect the parsed value.",["parameter","context"]],
+ ["range","Select dates in a range or multiple-date mode and check its endpoints and disabled dates.",["composition","disable"]],
+ ["time","Change a time field, trigger a time update and inspect the selected hours, minutes and time limits.",["parameter","composition"]]
+]

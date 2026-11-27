@@ -1,0 +1,311 @@
+{
+  "schema": 1,
+  "id": "air-datepicker-631",
+  "ticket": {
+    "title": "Ошибка при нажатии на кнопку escape при скрытом datepicker'е",
+    "issue": "https://github.com/t1m0n/air-datepicker/issues/631",
+    "repair": "https://github.com/t1m0n/air-datepicker/commit/3692ca46293fe6149ebef5e5221e0607aed7ed59"
+  },
+  "budget": 3,
+  "fixture": {
+    "adapter": "air-datepicker",
+    "html": {
+      "path": "container.html",
+      "sha256": "0e757eab28dde47cf3aff7690a9b0fa77d870a171917063a152e055f784262e1"
+    },
+    "css": {
+      "path": "container.css",
+      "sha256": "3f59fc23b4dd8d204561875564d995b8df423c1213b078123009c187235c33cd"
+    },
+    "input": "#field",
+    "other": "#other",
+    "clock": "2017-10-15T12:00:00Z"
+  },
+  "builds": {
+    "reference": {
+      "version": "3.6.0",
+      "script": {
+        "path": "assets/air-datepicker-3.6.0/library.js",
+        "sha256": "24be9285f8a7b00ec14ca94a954f54383ea6a507067f7d3c3f1c2c2280462185"
+      },
+      "style": {
+        "path": "assets/air-datepicker-3.6.0/library.css",
+        "sha256": "110391f897ba0abc6c563bc8d1e7afa135b26955ae57a5fc0a1228e79c394f73"
+      }
+    },
+    "candidate": {
+      "version": "3.5.3",
+      "script": {
+        "path": "assets/air-datepicker-3.5.3/library.js",
+        "sha256": "96dd1f6faf045810cdccc4926c09adbb38816f2665fb1ea7aeebadd3dc3d256f"
+      },
+      "style": {
+        "path": "assets/air-datepicker-3.5.3/library.css",
+        "sha256": "cd1aa5c0e11d7179287abb3b82449b7cea9726972b71c1701dc027937208eb6b"
+      }
+    }
+  },
+  "keyboardAction": "keys",
+  "actions": [
+    {
+      "id": "ordinary",
+      "description": "Open a plain date picker and select a day in the current month.",
+      "scenario": {
+        "options": {
+          "dateFormat": "yyyy-MM-dd"
+        },
+        "open": true,
+        "setup": []
+      },
+      "steps": [
+        {
+          "op": "click",
+          "selector": ".air-datepicker-cell.-day-:not(.-other-month-)",
+          "text": "16"
+        }
+      ],
+      "expect": [
+        {
+          "at": "last",
+          "field": "days",
+          "equals": [
+            16
+          ]
+        }
+      ]
+    },
+    {
+      "id": "month",
+      "description": "Move forward and backward between months and years and inspect the calendar heading and grid.",
+      "scenario": {
+        "options": {
+          "dateFormat": "yyyy-MM-dd"
+        },
+        "open": true,
+        "setup": []
+      },
+      "steps": [
+        {
+          "op": "click",
+          "selector": ".air-datepicker-nav--action[data-action=\"next\"]"
+        },
+        {
+          "op": "click",
+          "selector": ".air-datepicker-nav--action[data-action=\"prev\"]"
+        }
+      ],
+      "expect": [
+        {
+          "at": 0,
+          "field": "month",
+          "equals": 10
+        },
+        {
+          "at": 1,
+          "field": "month",
+          "equals": 11
+        },
+        {
+          "at": 2,
+          "field": "month",
+          "equals": 10
+        }
+      ]
+    },
+    {
+      "id": "keys",
+      "description": "Navigate with the keyboard and inspect the focused and selected date.",
+      "scenario": {
+        "options": {
+          "dateFormat": "yyyy-MM-dd",
+          "showEvent": "datepicker:show"
+        },
+        "open": false,
+        "setup": [
+          {
+            "op": "focus",
+            "selector": "#field"
+          }
+        ]
+      },
+      "steps": [
+        {
+          "op": "press",
+          "selector": "#field",
+          "key": "Escape"
+        }
+      ],
+      "expect": [
+        {
+          "at": 0,
+          "field": "active",
+          "equals": "field"
+        },
+        {
+          "at": 0,
+          "field": "open",
+          "equals": false
+        },
+        {
+          "at": 1,
+          "field": "open",
+          "equals": false
+        },
+        {
+          "at": 0,
+          "field": "uiErrorNames",
+          "equals": []
+        },
+        {
+          "at": 1,
+          "field": "uiErrorNames",
+          "equals": []
+        }
+      ],
+      "failure": [
+        {
+          "at": 0,
+          "field": "active",
+          "equals": "field"
+        },
+        {
+          "at": 0,
+          "field": "open",
+          "equals": false
+        },
+        {
+          "at": 1,
+          "field": "open",
+          "equals": false
+        },
+        {
+          "at": 0,
+          "field": "uiErrorNames",
+          "equals": []
+        },
+        {
+          "at": 1,
+          "field": "uiErrorNames",
+          "equals": [
+            "TypeError"
+          ]
+        }
+      ],
+      "documentedPageError": "TypeError"
+    },
+    {
+      "id": "manual",
+      "description": "Type or replace the input text, leave the field, and inspect the parsed value.",
+      "scenario": {
+        "options": {
+          "dateFormat": "yyyy-MM-dd",
+          "showEvent": "datepicker:show"
+        },
+        "open": false,
+        "setup": []
+      },
+      "steps": [
+        {
+          "op": "fill",
+          "selector": "#field",
+          "value": "2017-10-18"
+        },
+        {
+          "op": "press",
+          "selector": "#field",
+          "key": "Tab"
+        }
+      ],
+      "expect": [
+        {
+          "at": 2,
+          "field": "value",
+          "equals": "2017-10-18"
+        },
+        {
+          "at": 2,
+          "field": "days",
+          "equals": []
+        }
+      ]
+    },
+    {
+      "id": "range",
+      "description": "Select dates in a range or multiple-date mode and check its endpoints and disabled dates.",
+      "scenario": {
+        "options": {
+          "dateFormat": "yyyy-MM-dd",
+          "range": true
+        },
+        "open": true,
+        "setup": []
+      },
+      "steps": [
+        {
+          "op": "click",
+          "selector": ".air-datepicker-cell.-day-:not(.-other-month-)",
+          "text": "16"
+        },
+        {
+          "op": "click",
+          "selector": ".air-datepicker-cell.-day-:not(.-other-month-)",
+          "text": "18"
+        }
+      ],
+      "expect": [
+        {
+          "at": 1,
+          "field": "open",
+          "equals": true
+        },
+        {
+          "at": 2,
+          "field": "days",
+          "equals": [
+            16,
+            18
+          ]
+        }
+      ]
+    },
+    {
+      "id": "time",
+      "description": "Change a time field, trigger a time update and inspect the selected hours, minutes and time limits.",
+      "scenario": {
+        "options": {
+          "dateFormat": "yyyy-MM-dd",
+          "selectedDates": [
+            "2017-10-15T12:00:00Z"
+          ],
+          "timepicker": true,
+          "timeFormat": "HH:mm"
+        },
+        "open": true,
+        "setup": []
+      },
+      "steps": [
+        {
+          "op": "press",
+          "selector": "input[name=\"hours\"]",
+          "key": "ArrowRight"
+        }
+      ],
+      "expect": [
+        {
+          "at": 0,
+          "field": "hours",
+          "equals": [
+            12
+          ]
+        },
+        {
+          "at": 1,
+          "field": "hours",
+          "equals": [
+            13
+          ]
+        }
+      ]
+    }
+  ]
+}

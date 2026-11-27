@@ -1,0 +1,72 @@
+[
+  {
+    "package": "air-datepicker",
+    "version": "3.5.3",
+    "url": "https://registry.npmjs.org/air-datepicker/-/air-datepicker-3.5.3.tgz",
+    "integrity": "sha512-Elf9gLhv/jidN1+TfeRJYMQRUfYx5apXw2dY5DuAMPRnNtQ4Iw9fTTJK772osmXSUB9xQ2Y8Q1Pt6pgBOQLPQw==",
+    "sha256": "a2332205e6395f3513cf640de6943e2b7b3830f999a17a73073f1b48dbba7806",
+    "assets": {
+      "library.js": "96dd1f6faf045810cdccc4926c09adbb38816f2665fb1ea7aeebadd3dc3d256f",
+      "library.css": "cd1aa5c0e11d7179287abb3b82449b7cea9726972b71c1701dc027937208eb6b"
+    }
+  },
+  {
+    "package": "air-datepicker",
+    "version": "3.6.0",
+    "url": "https://registry.npmjs.org/air-datepicker/-/air-datepicker-3.6.0.tgz",
+    "integrity": "sha512-+txUkqa949rXBJDmkQAIb/GehZECJYF4rm9XJxVYtEX22C9WvBpE/XwCUQZBopKIkpg4ycAySJ9lH3JOg9qQTw==",
+    "sha256": "dda047ae0435fe76eab66d4d920ecb02925a161c8874e172397a945db4e72798",
+    "assets": {
+      "library.js": "24be9285f8a7b00ec14ca94a954f54383ea6a507067f7d3c3f1c2c2280462185",
+      "library.css": "110391f897ba0abc6c563bc8d1e7afa135b26955ae57a5fc0a1228e79c394f73"
+    }
+  },
+  {
+    "package": "flatpickr",
+    "version": "4.6.1",
+    "url": "https://registry.npmjs.org/flatpickr/-/flatpickr-4.6.1.tgz",
+    "integrity": "sha512-3ULSxbXmcMIRzer/2jLNweoqHpwDvsjEawO2FUd9UFR8uPwLM+LruZcPDpuZStcEgbQKhuFOfXo4nYdGladSNw==",
+    "sha256": "26053817d18c85585da1ff8f037f26291d3a5d0b73962b602c3eb2d15b16edbe",
+    "assets": {
+      "library.js": "1e45d3947a9fc69ff36a2545b307c790a174a6d7d4c4cc8b88d8f5b3fe95cbaf",
+      "library.css": "aa86d2781d5ac24e2b47dec8545bcbd9521b82e1a7ef8ab0794dc0357889d3a1",
+      "range.js": "842b5edabe60390afe96e33e6a71c447216430a7c2f2705c7b40684efe14109a"
+    }
+  },
+  {
+    "package": "flatpickr",
+    "version": "4.6.13",
+    "url": "https://registry.npmjs.org/flatpickr/-/flatpickr-4.6.13.tgz",
+    "integrity": "sha512-97PMG/aywoYpB4IvbvUJi0RQi8vearvU0oov1WW3k0WZPBMrTQVqekSX5CjSG/M4Q3i6A/0FKXC7RyAoAUUSPw==",
+    "sha256": "912da5a92aea3447d39ab83d83706c004c999ee9b013a6267fab3d8710e8a7a8",
+    "assets": {
+      "library.js": "1eeab1cb779471a0b0aaa93dd91c2eb1aa537d696f01ab05ea9dabc55e8525a1",
+      "library.css": "1b34a42552c96f10e4dfaaa4a367276b03868aacff63c1ac42ffe331352bc754",
+      "range.js": "d27d09331a38771a9c45579a40d80b6acbf7833703eddbe738498c897aa3ff95"
+    }
+  },
+  {
+    "package": "flatpickr",
+    "version": "4.6.6",
+    "url": "https://registry.npmjs.org/flatpickr/-/flatpickr-4.6.6.tgz",
+    "integrity": "sha512-EZ48CJMttMg3maMhJoX+GvTuuEhX/RbA1YeuI19attP3pwBdbYy6+yqAEVm0o0hSBFYBiLbVxscLW6gJXq6H3A==",
+    "sha256": "d7d412f85cb392daf2bc1163b6ce0c065cbe052bb73533b5ae4e7fdbfaa9f9a6",
+    "assets": {
+      "library.js": "0526768234c92c4e591061f57ba6dec8760d3884f3e8cdba5c5adef65101771f",
+      "library.css": "4573c0cb11d5c8c2f16f44d808cd8e5b947819691c0ded368dd620c99a78d4e5",
+      "range.js": "b53c181722b9c08c3b5b95d161665b6501c086bd92a16f0135f5c013d5b99790"
+    }
+  },
+  {
+    "package": "flatpickr",
+    "version": "4.6.9",
+    "url": "https://registry.npmjs.org/flatpickr/-/flatpickr-4.6.9.tgz",
+    "integrity": "sha512-F0azNNi8foVWKSF+8X+ZJzz8r9sE1G4hl06RyceIaLvyltKvDl6vqk9Lm/6AUUCi5HWaIjiUbk7UpeE/fOXOpw==",
+    "sha256": "365ec516b00b6609d0026e3962d44c936ceb3cfebde4b9fee367f929fad71ca6",
+    "assets": {
+      "library.js": "02441aa7dd6d0dc4b863241a658d95577e148520b1bb66c31088175d7b9fe478",
+      "library.css": "4573c0cb11d5c8c2f16f44d808cd8e5b947819691c0ded368dd620c99a78d4e5",
+      "range.js": "5011e705a18a80935eaea8197cf77bafb8a4c1f2e7d6eefa81e19ce4f5f86f88"
+    }
+  }
+]

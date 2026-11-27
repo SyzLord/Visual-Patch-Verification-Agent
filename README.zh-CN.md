@@ -41,3 +41,7 @@ python3 work/vpa-keyboard-2026-11-25/reproduce.py offline
 ```
 
 [实测结果、浏览器设置与复跑命令](work/vpa-keyboard-2026-11-25/进度表.md)
+
+## 2026 年 11 月独立工单扩展
+
+[四张新工单的实验](studies/ui-regressions-2026-11-27/)覆盖 Flatpickr 和 Air Datepicker。两轮浏览器验收使用官方修复前后版本。三步内固定顺序命中 2/4，BM25 命中 3/4，键盘补位命中 4/4。新工单夹具、两轮实测、[HTML 报告](studies/ui-regressions-2026-11-27/runs/index.html)与复跑命令均已收录。

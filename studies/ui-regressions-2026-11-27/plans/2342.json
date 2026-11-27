@@ -1,0 +1,56 @@
+{
+  "title": "Issue where time won't change from 12:00 on first attempt",
+  "ranking": [
+    {
+      "id": "time",
+      "description": "Change a time field, trigger a time update and inspect the selected hours, minutes and time limits.",
+      "score": 3.3019451947435674
+    },
+    {
+      "id": "month",
+      "description": "Move forward and backward between months and years and inspect the calendar heading and grid.",
+      "score": 0
+    },
+    {
+      "id": "keys",
+      "description": "Navigate with the keyboard and inspect the focused and selected date.",
+      "score": 0
+    },
+    {
+      "id": "manual",
+      "description": "Type or replace the input text, leave the field, and inspect the parsed value.",
+      "score": 0
+    },
+    {
+      "id": "range",
+      "description": "Select dates in a range or multiple-date mode and check its endpoints and disabled dates.",
+      "score": 0
+    }
+  ],
+  "cues": [],
+  "promoted": false,
+  "displaced": null,
+  "orders": {
+    "fixed": [
+      "month",
+      "keys",
+      "manual",
+      "range",
+      "time"
+    ],
+    "bm25": [
+      "time",
+      "month",
+      "keys",
+      "manual",
+      "range"
+    ],
+    "keyboard": [
+      "time",
+      "month",
+      "keys",
+      "manual",
+      "range"
+    ]
+  }
+}

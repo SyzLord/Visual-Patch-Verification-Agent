@@ -1,0 +1,8 @@
+{
+  "name": "vpa-local-benchmark",
+  "version": "0.1.0",
+  "private": true,
+  "engines": {"node": ">=20"},
+  "scripts": {"test": "node --test test/contract.test.cjs"},
+  "dependencies": {"playwright": "1.62.1"}
+}
