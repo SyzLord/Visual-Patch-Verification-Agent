@@ -4,7 +4,41 @@
 
 Detects UI regressions by testing official before-and-after releases within a fixed interaction budget.
 
-The agent ranks candidate interactions and records the first action that exposes a confirmed functional regression. Its latest study compares BM25 with a keyboard-aware route on two published Flatpickr issues. Within the same three-step budget, the route found both regressions and BM25 found one. Both browser runs agreed. This result covers two issues in one library.
+The agent ranks candidate interactions and records the first action that exposes a confirmed functional regression. An earlier study compares BM25 with a keyboard-aware route on two published Flatpickr issues. Within the same three-step budget, the route found both regressions and BM25 found one. Both browser runs agreed. This result covers two issues in one library.
+
+## November 27, 2026 · Four new UI regressions
+
+We verified four previously unrun issues across Flatpickr and Air Datepicker using official before-and-after npm builds. Each issue was run twice in separate Chrome processes. With a three-action budget, including the smoke check, **fixed order found 2/4, BM25 found 3/4, and keyboard-aware routing found 4/4**. The search policies used zero reference screenshots.
+
+| Issue | Affected → fixed | Fixed order | BM25 | Keyboard-aware |
+| --- | --- | ---: | ---: | ---: |
+| [Flatpickr #1943](https://github.com/flatpickr/flatpickr/issues/1943) · arrow keys in the second range input | 4.6.1 → 4.6.13 | 3 | Miss | 3 |
+| [Flatpickr #2342](https://github.com/flatpickr/flatpickr/issues/2342) · initial hour resets to 12 | 4.6.6 → 4.6.9 | Miss | 2 | 2 |
+| [Air Datepicker #654](https://github.com/t1m0n/air-datepicker/issues/654) · Clear leaves range highlights | 3.5.3 → 3.6.0 | Miss | 2 | 2 |
+| [Air Datepicker #631](https://github.com/t1m0n/air-datepicker/issues/631) · Escape throws with the picker hidden | 3.5.3 → 3.6.0 | 3 | 3 | 3 |
+
+The numbers are first-hit steps. The policy improved only #1943, where it moved the keyboard check into the last available slot. This batch has no observed case where the displaced action would have caught the regression.
+
+[Study protocol and evidence](studies/ui-regressions-2026-11-27/) · [Per-issue JSON](studies/ui-regressions-2026-11-27/unit-results.json) · [Round 1 HTML index](studies/ui-regressions-2026-11-27/runs/index.html) · [Round 2 HTML index](studies/ui-regressions-2026-11-27/runs/repeat-index.html)
+
+### Replay the four issues on Windows
+
+Install Node.js LTS (20+), Python 3.9+ with the Windows launcher, and Google Chrome. Clone or download the repository and open PowerShell at its root. The first two commands after entering the study folder verify and open the saved macOS browser evidence. Installing the pinned Playwright package needs an internet connection.
+
+```powershell
+Set-Location .\studies\ui-regressions-2026-11-27
+py -3 .\replay.py offline
+Start-Process .\runs\index.html
+
+npm.cmd ci --ignore-scripts
+$trial = ".\trial-all-$(Get-Date -Format yyyyMMdd-HHmmss-fff)"
+py -3 .\replay.py live all $trial
+if ($LASTEXITCODE -eq 0) {
+    Start-Process (Join-Path $trial 'index.html')
+}
+```
+
+Replace `all` with `1943`, `2342`, `654`, or `631` to run a single issue. If `py` is unavailable, use `python` after checking its version. The replay wrapper returns `0` when it verifies the expected regressions and builds the index. The underlying CLI returns `1` for a confirmed regression.
 
 ## Windows quick start
 
@@ -43,7 +77,3 @@ python3 work/vpa-keyboard-2026-11-25/reproduce.py offline
 ```
 
 [Results, browser setup, and live replay commands](work/vpa-keyboard-2026-11-25/进度表.md)
-
-## November 2026 sample expansion
-
-The [four-ticket study](studies/ui-regressions-2026-11-27/) covers Flatpickr and Air Datepicker. The official before-and-after builds were verified in two independent browser rounds. Within three steps, fixed order found 2/4 regressions, BM25 found 3/4, and the keyboard-aware policy found 4/4. The study includes new fixtures, both browser runs, an [HTML index](studies/ui-regressions-2026-11-27/runs/index.html), and replay commands.
